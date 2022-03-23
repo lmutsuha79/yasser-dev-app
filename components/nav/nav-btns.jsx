@@ -16,7 +16,7 @@ const NavBtns = () => {
       </NavBtn>
 
       <div
-        className={`rounded-full h-[50px] w-[50px] overflow-hidden bg-cover bg-center cursor-pointer`}
+        className={`rounded-full h-[40px] w-[40px] overflow-hidden bg-cover bg-center cursor-pointer`}
         style={{ backgroundImage: `url(${profile_img})` }}
       ></div>
     </div>
