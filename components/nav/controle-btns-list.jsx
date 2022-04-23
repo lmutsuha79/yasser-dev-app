@@ -1,8 +1,8 @@
 import AlertBtn from "./ui/alert-btn";
 import DarkLigthModBtn from "./ui/drak-ligth-mode-btn";
-import NavBtn from "./ui/nav-btn";
+import NavBtn from "./ui/btn-container";
 
-const NavBtns = () => {
+const ControleBtnsList = () => {
   const profile_img =
     "https://media.istockphoto.com/photos/real-man-face-picture-id526372013?k=20&m=526372013&s=170667a&w=0&h=HX6BAYXi7MqOtAthKn0ciyq6LtQbGY7KtgkHsRIx7Nc=";
   return (
@@ -23,4 +23,4 @@ const NavBtns = () => {
   );
 };
 
-export default NavBtns;
+export default ControleBtnsList;
