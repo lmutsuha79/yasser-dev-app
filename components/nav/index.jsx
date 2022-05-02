@@ -7,21 +7,24 @@ import NavBtn from "./ui/btn-container";
 import MenuBtn from "./ui/menu-btn";
 import { useState } from "react";
 import BtnContainer from "./ui/btn-container";
+import Logo from "./logo";
 
-const NavBar = ({ pageTitle }) => {
+const NavBar = () => {
   return (
     <>
-      <nav className="bg-main-blue center_with_flex">
-        <span className="text-white text-md font-bold">{pageTitle}</span>
-      </nav>
-      <nav className="h-[100px] py-[5px] px-[10px] sm:py-[25px] sm:px-[50px] bg-white">
+      
+      <nav className="py-[5px] px-[10px] sm:py-[15px] sm:px-[50px] bg-white">
         <div className="flex items-center justify-between">
           {/* the mb_nav btn on the left side */}
-          <BtnContainer>
             <MenuBtn />
-          </BtnContainer>
 
-          {/* btn contorl list */}
+            <Logo/>
+
+          
+
+          {/* btn contorl list 
+            I make it a  list because in the futter I will add more btns
+          */}
           <ControleBtnsList />
         </div>
       </nav>

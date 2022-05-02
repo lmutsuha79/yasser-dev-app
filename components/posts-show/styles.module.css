@@ -1,0 +1,9 @@
+@tailwind components;
+@layer components {
+
+    
+      .imgWrapper img{
+            @apply rounded-xl;
+      }
+
+}
