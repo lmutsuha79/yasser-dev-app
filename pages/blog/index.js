@@ -4,24 +4,23 @@ import NavBar from "../../components/nav";
 import PostShow from "../../components/posts-show";
 import path from "path";
 import NewsLetter from "../../components/news-letter";
+import Head from "next/head";
 // import fs from 'fs'
 
 export default function Blog(props) {
   return (
     <>
+ 
       <NavBar />
       {/* <BlogContent allPosts={props.allPosts}/> */}
-      <div className="container">
+      <div className="container px-4 md:pt-8 space-y-8 lg:space-y-24">
         <HeroSection />
-      
 
         <PostShow colNum={4} sectionTitle={"Most viwed"} />
 
-
-        <PostShow colNum={2} sectionTitle={"Rescent Artciles"}/>
+        <PostShow colNum={2} sectionTitle={"Rescent Artciles"} />
 
         <NewsLetter />
-    
       </div>
     </>
   );

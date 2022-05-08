@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -7,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'Architects_Daughter': ['Architects Daughter',]
+      },
       colors: {
         'main-blue': '#303F54',
         'main-blue-hover': "#4B6588",

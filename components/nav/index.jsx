@@ -13,12 +13,12 @@ const NavBar = () => {
   return (
     <>
       
-      <nav className="py-[5px] px-[10px] sm:py-[15px] sm:px-[50px] bg-white">
+      <nav className="p-4 sm:py-[15px] sm:px-[50px] bg-white">
         <div className="flex items-center justify-between">
           {/* the mb_nav btn on the left side */}
             <MenuBtn />
-
-            <Logo/>
+            {/* make it logotype = box to  change the style of the logo */}
+            <Logo logoType={''}/>
 
           
 

@@ -3,12 +3,12 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 const NewsLetter = () => {
   return (
-    <div className="bg-main-blue-hover bg-opacity-20 py-12  space-y-8 flex flex-col items-center sm:flex-row sm:justify-around sm:items-center">
+    <div className="bg-main-blue-hover bg-opacity-20 py-12 px-8 space-y-8 flex flex-col items-center md:flex-row md:justify-around md:items-center">
       
         {/* text */}
 
-        <div className="space-y-4 sm:flex sm:flex-col">
-          <div className="sm:ml-8">
+        <div className="space-y-4 px-2 md:px-8 w-full md:w-auto md:flex md:flex-col">
+          <div className="sm:ml-8 text-center sm:text-left">
             <div className="space-x-4">
               <FontAwesomeIcon className="text-main-blue text-2xl" icon={faPaperPlane} />
               <span className="text-main-blue-hover text-xl font-medium">
@@ -22,7 +22,7 @@ const NewsLetter = () => {
 
           <form action="" method="post" className="sm:h-[60px] gap-4 flex flex-col items-center sm:flex-row sm:justify-center sm:items-center">
             <input
-              className="sm:min-w-[320px] h-full rounded-lg  py-5 px-10 text-main-blue text-base font-semibold placeholder:text-main-blue-hover placeholder:text-base placeholder:font-normal outline-none"
+              className="w-full  h-full rounded-lg  py-5 px-10 text-main-blue text-base font-semibold placeholder:text-main-blue-hover placeholder:text-base placeholder:font-normal outline-none"
               type="email"
               name="email"
               id="email_subscribe_inp"

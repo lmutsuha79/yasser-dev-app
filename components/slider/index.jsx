@@ -10,7 +10,7 @@ const HeroSlider = ({ post_obj }) => {
       style={{ boxShadow: "0px 7px 29px rgba(48,63,84,0.2)" }}
       className="px-6 py-8 md:px-6 md:py-8 lg:p-12"
     >
-      <div className="bg-white flex items-center space-x-6">
+      <div className="bg-white space-y-8 sm:flex sm:items-center space-x-6">
         {/* post info */}
         <div className="space-y-4 flex-1">
           <div className="flex space-x-2">
@@ -59,10 +59,10 @@ const HeroSlider = ({ post_obj }) => {
 
           {/* slider controller */}
           <div className={styles.controllerContainer}>
-            <div>
+            <div id="next_slide" onClick={() => {console.log("next")}}>
               <FontAwesomeIcon icon={faArrowUp} />
             </div>
-            <div>
+            <div id="prev_slide">
               <FontAwesomeIcon icon={faArrowDown} />
             </div>
           </div>

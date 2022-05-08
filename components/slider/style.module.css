@@ -7,7 +7,7 @@
         @apply bg-main-blue text-white font-semibold text-sm py-2 px-4 rounded-xl;
       }
       .controllerContainer{
-            @apply space-y-2 flex flex-col items-end mt-3
+            @apply space-y-2 flex space-x-2 flex-row justify-center sm:flex-col items-end mt-3
       }
       .controllerContainer div{
             @apply rounded-full w-10 h-10 border-4 border-main-blue grid place-content-center cursor-pointer;
