@@ -10,11 +10,11 @@
             @apply space-y-2 flex space-x-2 flex-row justify-center sm:flex-col items-end mt-3
       }
       .controllerContainer div{
-            @apply rounded-full w-10 h-10 border-4 border-main-blue grid place-content-center cursor-pointer;
+            @apply rounded-full w-10 h-10 border-4 border-main-blue hover:border-main-blue-hover text-main-blue hover:text-main-blue-hover transition-colors grid place-content-center cursor-pointer ;
       }
-      .controllerContainer div svg{
-            @apply text-main-blue;
-      }
+      /* .controllerContainer div svg{
+            @apply text-main-blue hover:text-main-blue-hover;
+      } */
      
       .imageWrapper img{
             @apply rounded-xl

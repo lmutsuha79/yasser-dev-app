@@ -11,7 +11,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
 
     return (
       <div key={item}>
-        <div className="transition-all px-4 py-6 rounded-lg bg-white shadow-main-blue drop-shadow-sm hover:drop-shadow-lg">
+        <div className="transition-all px-3 py-6 rounded-lg bg-white shadow-main-blue drop-shadow-sm hover:drop-shadow-lg">
           <div className={styles.imgWrapper}>
             <Image
               src={"/posts_img/img.png"}
@@ -23,7 +23,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
             />
           </div>
 
-          <div className="flex flex-wrap text-main-gray font-normal text-sm">
+          <div className="flex flex-wrap text-main-gray font-normal text-xs sm:text-sm">
             {/* tags slug */}
             <span>Freelance</span>
             <span>,</span>
@@ -31,11 +31,11 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
           </div>
           {/* title */}
           <Link href={"/blog"}>
-            <a className="font-bold text-main-blue text-md block">
+            <a className="font-bold text-main-blue text-sm sm:text-md block">
               10 interior designe reference and tips ideas for you
             </a>
           </Link>
-          <div className="flex justify-between text-main-gray text-sm font-normal">
+          <div className="flex justify-between text-main-gray text-xs sm:text-sm font-normal">
             {/* views + date */}
             <div>
               <span>12</span>

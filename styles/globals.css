@@ -8,7 +8,11 @@
   margin: auto
 }
 @layer components {
-
+  
+  .bg-blue-with-hover{
+    @apply bg-main-blue hover:bg-main-blue-hover transition-colors;
+  }
+ 
   .center_with_grid{
     @apply grid items-center;
   }
