@@ -1,4 +1,3 @@
-import AlertBtn from "./ui/alert-btn";
 import DarkLigthModBtn from "./ui/drak-ligth-mode-btn";
 import BtnContainer from "./ui/btn-container";
 

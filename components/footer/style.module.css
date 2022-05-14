@@ -1,0 +1,15 @@
+@tailwind components;
+@layer components{
+      .footerLine{
+            @apply h-[1px] w-full bg-nav-border-gray rounded-md;
+      }
+      .footerLinksContainer > a{
+            @apply  p-1 hover:text-white transitionScale
+      }
+      .gridContent >div{
+            @apply text-center grid justify-center
+      }
+      .transitionScale{
+            @apply transform hover:scale-110 transition-transform;
+      }
+}

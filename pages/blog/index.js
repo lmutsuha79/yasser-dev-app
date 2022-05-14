@@ -5,6 +5,7 @@ import PostShow from "../../components/posts-show";
 import path from "path";
 import NewsLetter from "../../components/news-letter";
 import Head from "next/head";
+import Footer from "../../components/footer";
 // import fs from 'fs'
 
 export default function Blog(props) {
@@ -12,8 +13,9 @@ export default function Blog(props) {
     <>
  
       <NavBar />
-      {/* <BlogContent allPosts={props.allPosts}/> */}
+
       <div className="container px-4 md:pt-8 space-y-8 lg:space-y-24">
+        {/* in container */}
         <HeroSection />
 
         <PostShow colNum={4} sectionTitle={"Most viwed"} />
@@ -22,6 +24,8 @@ export default function Blog(props) {
 
         <NewsLetter />
       </div>
+        {/* out container */}
+        <Footer />
     </>
   );
 }

@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Architects_Daughter': ['Architects Daughter',]
+        'Architects_Daughter': ['Architects Daughter']
       },
       colors: {
         'main-blue': '#303F54',
