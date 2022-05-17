@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container space-y-8 px-4">
         {/* top */}
         <span className="font-Architects_Daughter text-white text-2xl">
-          Yasser Misuha
+          Yasser Mitsuha *_*
         </span>
         <div className={style.footerLine}></div>
 
@@ -32,32 +32,32 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <FooterTitle title={"Quick link"} />
+            <FooterTitle title={"Quick links"} />
             <div className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}>
-              <Link href={"./"}>about me</Link>
-              <Link href={"./"}>contact me</Link>
-              <Link href={"./"}>refund policy</Link>
-              <Link href={"./"}>help & support</Link>
+              <Link href={"/"}>about me</Link>
+              <Link href={"/"}>contact me</Link>
+              <Link href={"/"}>refund policy</Link>
+              <Link href={"/"}>help & support</Link>
             </div>
           </div>
           <div>
             <FooterTitle title={"Tags"} />
             <ul className="flex flex-wrap justify-center gap-2">
-              <FooterTag tagTitle={"web"} tagLink={"./web"} />
-              <FooterTag tagTitle={"security"} tagLink={"./web"} />
-              <FooterTag tagTitle={"freelance"} tagLink={"./web"} />
-              <FooterTag tagTitle={"news"} tagLink={"./web"} />
-              <FooterTag tagTitle={"self improvment"} tagLink={"./web"} />
+              <FooterTag tagTitle={"web"} tagLink={"/web"} />
+              <FooterTag tagTitle={"security"} tagLink={"/web"} />
+              <FooterTag tagTitle={"freelance"} tagLink={"/web"} />
+              <FooterTag tagTitle={"news"} tagLink={"/web"} />
+              <FooterTag tagTitle={"self improvment"} tagLink={"/web"} />
             </ul>
           </div>
           <div>
             <FooterTitle title={"Follow us on"} />
 
             <ul className="flex justify-center space-x-2">
-              <FooterIcon icon={faDiscord} link="./discord" />
-              <FooterIcon icon={faTwitter} link="./twitter" />
-              <FooterIcon icon={faInstagram} link="./instagram" />
-              <FooterIcon icon={faFacebook} link="./facebook" />
+              <FooterIcon icon={faDiscord} link="/discord" />
+              <FooterIcon icon={faTwitter} link="/twitter" />
+              <FooterIcon icon={faInstagram} link="/instagram" />
+              <FooterIcon icon={faFacebook} link="/facebook" />
             </ul>
           </div>
         </div>
@@ -68,7 +68,7 @@ const Footer = () => {
           <span className="text-nav-border-gray font-light">
             © 2022, Yasser-Blog - Design and code by
           </span>
-          <Link href="./about">
+          <Link href="/about">
             <a className="text-white"> Yasser_Mitsuha</a>
           </Link>
         </div>
