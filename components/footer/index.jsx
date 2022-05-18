@@ -14,6 +14,7 @@ import {
 const Footer = () => {
   return (
     <div className="bg-main-blue mt-8 py-4">
+      
       <div className="container space-y-8 px-4">
         {/* top */}
         <span className="font-Architects_Daughter text-white text-2xl">

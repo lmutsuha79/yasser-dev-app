@@ -10,8 +10,8 @@ import Footer from "../../components/footer";
 
 export default function Blog(props) {
   return (
-    <>
- 
+    <div className="bg-yellow-200 dark:bg-blue-600">
+      
       <NavBar />
 
       <div className="container px-4 md:pt-8 space-y-8 lg:space-y-24">
@@ -26,7 +26,7 @@ export default function Blog(props) {
       </div>
         {/* out container */}
         <Footer />
-    </>
+    </div>
   );
 }
 
