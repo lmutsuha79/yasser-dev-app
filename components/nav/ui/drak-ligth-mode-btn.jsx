@@ -9,6 +9,7 @@ const DarkLigthModBtn = () => {
   return (
     <div
       onClick={() => {
+        
         theme[1](); // call the function for toggling the theme
       }}
     >

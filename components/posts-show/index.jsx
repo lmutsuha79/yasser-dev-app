@@ -6,6 +6,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
  
   
   // const {img,tags,title,date,url} = post
+  
   const posts = [1, 2, 3, 4];
   const items = posts.map((item) => {
 

@@ -4,6 +4,7 @@ config.autoAddCss = false;
 import "../styles/globals.css";
 import React from "react";
 import { useState } from "react";
+
 export const ThemeContext = React.createContext("light");
 
 function MyApp({ Component, pageProps }) {

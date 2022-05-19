@@ -10,12 +10,12 @@ const NewsLetter = () => {
         <div className="space-y-4 px-2 md:px-8 w-full md:w-auto md:flex md:flex-col">
           <div className="sm:ml-8 text-center sm:text-left">
             <div className="space-x-4">
-              <FontAwesomeIcon className="text-main-blue text-2xl" icon={faPaperPlane} />
-              <span className="text-main-blue-hover text-xl font-medium">
+              <FontAwesomeIcon className="text-main-blue dark:text-white text-2xl" icon={faPaperPlane} />
+              <span className="text-main-blue-hover dark:text-white text-xl font-medium">
                 Subscribe
               </span>
             </div>
-            <h3 className="text-main-blue text-xl font-bold">
+            <h3 className="text-main-blue dark:text-white text-xl font-bold">
               to our Newletter
             </h3>
           </div>
@@ -28,7 +28,7 @@ const NewsLetter = () => {
               id="email_subscribe_inp"
               placeholder="Entre your email"
             />
-            <div className="sm:h-full py-4 sm:py-0 px-4 rounded-lg bg-blue-with-hover text-white text-base font-blod grid items-center cursor-pointer">
+            <div className="sm:h-full py-4 sm:py-0 px-4 rounded-lg bg-blue-with-hover dark:bg-white text-white dark:text-main-blue text-base font-blod grid items-center cursor-pointer">
               <span>Subscribe</span>
             </div>
           </form>

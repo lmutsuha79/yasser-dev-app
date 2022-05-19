@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <>
       
-      <nav className="p-4 sm:py-[15px] sm:px-[50px] bg-white dark:bg-dark-bg-blue">
+      <nav className="p-4 sm:py-[15px] sm:px-[50px] bg-main-blue dark:bg-main-blue fixed w-full top-0 z-[99] ">
         <div className="flex items-center justify-between">
           {/* the mb_nav btn on the left side */}
             <MenuBtn />

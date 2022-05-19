@@ -14,7 +14,7 @@ const Logo = ({ logoType }) => {
             }
                   //     else
                   return (
-                    <a className="text-main-blue dark:text-white font-Architects_Daughter font-semibold text-lg">
+                    <a className="text-white dark:text-white font-Architects_Daughter font-semibold text-lg">
                       Yasser Dev Blog
                     </a>
                   );
