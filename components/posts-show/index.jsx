@@ -11,7 +11,8 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
 
     return (
       <div key={item}>
-        <div className="transition-all px-3 py-6 rounded-lg bg-white shadow-main-blue drop-shadow-sm hover:drop-shadow-lg">
+        <div className="transition-all px-3 py-6 rounded-lg bg-white dark:bg-dark-bg-blue shadow-sm hover:shadow-md dark:shadow-md dark:shadow-main-blue-hover/10 dark:hover:shadow-main-blue-hover/30">
+        {/* shadow-main-blue drop-shadow-sm hover:drop-shadow-lg */}
           <div className={styles.imgWrapper}>
             <Image
               src={"/posts_img/img.png"}
@@ -31,7 +32,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
           </div>
           {/* title */}
           <Link href={"/blog"}>
-            <a className="font-bold text-main-blue text-sm sm:text-md block">
+            <a className="font-bold text-main-blue dark:text-white text-sm sm:text-md block">
               10 interior designe reference and tips ideas for you
             </a>
           </Link>
@@ -63,7 +64,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
 
       <div className="flex justify-between">
             {/* title of section and link */}
-            <h4 className="font-semibold text-lg text-main-blue">{sectionTitle}</h4>
+            <h4 className="font-semibold text-lg text-main-blue dark:text-white">{sectionTitle}</h4>
             <Link href={'/blog'}>
                   <a className="text-main-gray font-medium text-base">display all</a>
             </Link>

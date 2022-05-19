@@ -10,7 +10,8 @@ import Footer from "../../components/footer";
 
 export default function Blog(props) {
   return (
-    <div className="bg-yellow-200 dark:bg-blue-600">
+    <div>
+
       
       <NavBar />
 

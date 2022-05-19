@@ -14,9 +14,11 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <ThemeContext.Provider value={[theme,toggleTheme]}>
-      <div className={theme}>
-      <Component {...pageProps} />
-      </div>
+      <body className={theme}>
+        <div className="h-full w-full bg-white dark:bg-dark-bg-blue">
+        <Component {...pageProps} />
+        </div>
+      </body>
     </ThemeContext.Provider>
   );
 }
