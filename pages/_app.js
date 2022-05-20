@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import React from "react";
 import { useState } from "react";
 
+
 export const ThemeContext = React.createContext("light");
 
 function MyApp({ Component, pageProps }) {
@@ -15,11 +16,11 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <ThemeContext.Provider value={[theme,toggleTheme]}>
-      <body className={theme}>
+      <main className={theme}>
         <div className="h-full w-full bg-white dark:bg-dark-bg-blue">
         <Component {...pageProps} />
         </div>
-      </body>
+      </main>
     </ThemeContext.Provider>
   );
 }
