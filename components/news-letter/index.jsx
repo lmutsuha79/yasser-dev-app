@@ -28,7 +28,7 @@ const NewsLetter = () => {
               id="email_subscribe_inp"
               placeholder="Entre your email"
             />
-            <div className="sm:h-full py-4 sm:py-0 px-4 rounded-lg bg-blue-with-hover dark:bg-white text-white dark:text-main-blue text-base font-blod grid items-center cursor-pointer">
+            <div className="sm:h-full py-4 sm:py-0 px-4 rounded-lg bg-main-blue hover:bg-dark-bg-blue  transition-colors  text-white  text-base font-blod grid items-center cursor-pointer">
               <span>Subscribe</span>
             </div>
           </form>
