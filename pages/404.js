@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 export default function Custom404() {
+  
   return (
     <div className="container grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 place-content-center items-center h-screen">
       {/* text */}
@@ -13,7 +14,7 @@ export default function Custom404() {
         </p>
 
         <Link href="/blog">
-          <a className="w-fit bg-main-blue transition hover:bg-dark-bg-blue text-white p-4 mt-4 rounded-lg">
+          <a  className="w-fit bg-main-blue transition hover:bg-dark-bg-blue text-white p-4 mt-4 rounded-lg">
             Back Home
           </a>
         </Link>
