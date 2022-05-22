@@ -10,7 +10,7 @@ export default function Custom404() {
         <span className="text-3xl md:text-5xl">Ooops!</span>
         <span className="text-3xl md:text-5xl">Page Not Found</span>
         <p className="font-normal text-base md:text-lg text-main-gray">
-          This page doesn't exist or was remooved! I sedgest you back to home
+          This page doesn&apos;t exist or was remooved! I sedgest you back to home
         </p>
 
         <Link href="/blog">
