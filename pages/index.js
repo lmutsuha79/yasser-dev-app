@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { ThemeContext } from "./_app";
 import { useContext } from "react";
+import { getAllPosts } from "./api/posts";
 
 
 
@@ -26,4 +27,13 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps(){
+  getAllPosts();
+  return{
+    props: {
+
+    }
+  }
 }
