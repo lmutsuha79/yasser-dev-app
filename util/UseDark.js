@@ -32,10 +32,3 @@ export async function changetheme(is_first_render) {
     }
   }
 }
-export async function UseDark(){
-  // const [isDark, setIsDark] = useState();
-
- 
-  console.log('start');
-  
-}

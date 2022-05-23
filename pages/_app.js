@@ -32,9 +32,7 @@ function MyApp({ Component, pageProps }) {
       }    }
   }, []);
 
-  useEffect(() => {
-    console.log('changed')
-  },[isOn])
+
   
   return (
     <ThemeContext.Provider value={[isOn,setIsOn,changetheme]}>

@@ -1,7 +1,6 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { time } from "console";
 
 const POSTS_PATH = path.join(process.cwd(), "posts");
 export const getAllSlugs = () => {
@@ -18,15 +17,15 @@ export const getAllPosts = () => {
     return {
           content,
           title: data.title ?? slug,
-          date: data.date ?? (new Date()).toString,
+          date: (data.date ?? (new Date())),
           excerpt: data.excerpt ?? 'no excerpt',
-          tags: (data.tags ?? []).sort()
-
+          tags: (data.tags ?? []).sort(),
+          img: data.img ?? '/posts_img/no_img.jpg',
+          // url: '/jiji'
+          url: data.url ? `/blog/posts/${data.url}` : `/blog/posts/${data.title.replace(/([^\w\s]|\s+)/g, '-')}`
     };
   });
 
-  console.log('################################')
-  console.log(posts[0])
 
   return posts;
 };
