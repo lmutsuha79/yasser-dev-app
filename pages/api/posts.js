@@ -19,7 +19,7 @@ export const getAllPosts = () => {
           title: data.title ?? slug,
           date: (data.date ?? (new Date())),
           excerpt: data.excerpt ?? 'no excerpt',
-          tags: (data.tags ?? []).sort(),
+          tags: (data.tags ?? ['no_tag','no Tag']).sort(),
           img: data.img ?? '/posts_img/no_img.jpg',
           // url: '/jiji'
           url: data.url ? `/blog/posts/${data.url}` : `/blog/posts/${data.title.replace(/([^\w\s]|\s+)/g, '-')}`
