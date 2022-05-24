@@ -55,6 +55,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug } = context.params;
   const { meta, content } = getPost(slug);
+  console.log(meta)
   const mdxSource = await serialize(content);
 
   return {
