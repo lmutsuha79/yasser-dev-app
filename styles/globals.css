@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+pre{
+  overflow: scroll;
+}
 .container{
   margin: auto
 }
