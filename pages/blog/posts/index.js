@@ -4,8 +4,24 @@ import PostContainer from "../../../components/post-container";
 import { getAllPosts } from "../../api/posts";
 
 const Posts = ({posts}) => {
-  console.log(posts);
+  // console.log(posts)
+  // const jiji = Array(...posts);
+  
+  // console.log('#################  1  ########################')
 
+  posts.forEach(post => {
+    console.log(post.date);
+  });
+
+
+  // const posts_new = jiji.sort((a,b) => {
+  //   return new Date(b.date).getTime() - new Date(a.date).getTime();
+  // });
+
+  // console.log('#################  2 ########################')
+  // posts_new.forEach(post => {
+  //   console.log(post.date);
+  // });
   return (
     <>
       <NavBar />

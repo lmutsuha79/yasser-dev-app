@@ -19,7 +19,6 @@ const PostContainer = ({ img, title, tags, exerpt, date, url }) => {
           {/* text container*/}
           <div className="text-main-gray text-sm font-light flex justify-between">
             <ul className="flex flex-wrap h-[20px] overflow-y-hidden">
-              {/* {console.log(tags.length)} */}
               {tags.map((tag) =>
                 tag == tags[tags.length - 1] ? <li key={tag}>{tag}</li> : <li key={tag}>{tag + ','}</li>
               )}
@@ -30,7 +29,6 @@ const PostContainer = ({ img, title, tags, exerpt, date, url }) => {
           <h3 className="text-main-blue hover:text-main-blue-hover transition-colors font-semibold text-lg">
             {title}
           </h3>
-                {console.log(exerpt)}
           <p className="text-main-gray text-base">{exerpt}</p>
         </div>
       </div>

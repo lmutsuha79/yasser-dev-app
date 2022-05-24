@@ -13,7 +13,6 @@ export const getAllPosts = () => {
   const posts = getAllSlugs().map((slug) => {
     const post_path = path.join(POSTS_PATH,`${slug}.mdx`);
     const {data,content} = matter(fs.readFileSync(post_path));
-
     return {
           content,
           title: data.title ?? slug,
@@ -24,8 +23,14 @@ export const getAllPosts = () => {
           // url: '/jiji'
           url: data.url ? `/blog/posts/${data.url}` : `/blog/posts/${data.title.replace(/([^\w\s]|\s+)/g, '-')}`
     };
+  }).sort((a,b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
+  // const posts_new = posts.
 
 
+ 
   return posts;
 };
+
+
