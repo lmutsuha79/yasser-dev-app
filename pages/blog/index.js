@@ -6,16 +6,7 @@ import path from "path";
 import NewsLetter from "../../components/news-letter";
 import Head from "next/head";
 import Footer from "../../components/footer";
-// import fs from 'fs'
 
-// export async function toggleDarkMode() {
-//    if (typeof window != "undefined") {
-//       const { isEnabled, enable, disable, setFetchMethod } = await import("darkreader");
-//       setFetchMethod(window.fetch);
-//       const isOn = isEnabled();
-//       isOn ? disable() : enable(darkReaderOptions);
-//    }
-// }
 
 
 export default function Blog(props) {

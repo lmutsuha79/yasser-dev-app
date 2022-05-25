@@ -10,6 +10,9 @@ img: /posts_img/nativ_vs.jpg
 url: how-does-swr-work-02122002
 ---
 
+hello {name}
+<PostTag title="hello"/>
+
 [SWR](https://swr.now.sh/) is a great package from [Zeit](http://zeit.co/) to help make it easier to fetch remote data with hooks. It is based on the [stale-while-revalidate](https://tools.ietf.org/html/rfc5861) RFC, which in simple terms says to show stale (old) data while you are fetching a new version of the data. The idea is that it is better to show something old if you have it rather than a blank screen.
 
 We will show how to use SWR, how to configure it globally, and a pattern I like to use which separates data fetching from data display.

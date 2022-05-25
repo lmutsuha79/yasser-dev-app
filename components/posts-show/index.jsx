@@ -66,7 +66,7 @@ const PostShow = ({ colNum,sectionTitle, post }) => {
       <div className="flex justify-between">
             {/* title of section and link */}
             <h4 className="font-semibold text-lg text-main-blue dark:text-white">{sectionTitle}</h4>
-            <Link href={'/blog'}>
+            <Link href={'/blog/posts'}>
                   <a className="text-main-gray font-medium text-base">display all</a>
             </Link>
       </div>

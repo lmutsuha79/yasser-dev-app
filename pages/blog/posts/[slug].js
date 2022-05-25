@@ -5,7 +5,15 @@ import NavBar from "../../../components/nav";
 import Footer from "../../../components/footer";
 import Image from "next/image";
 import PostTag from "../../../components/posts/post-tag";
+import Link from "next/link";
+import rehypeHighlight from "rehype-highlight";
+// import 'highlight.js/styles/atom-one-dark.css'
+import "highlight.js/styles/github-dark.css";
+
+
+
 const SinglePost = ({ mdxSource, meta }) => {
+  const data = { name: meta.title };
   return (
     <>
       <NavBar />
@@ -34,7 +42,7 @@ const SinglePost = ({ mdxSource, meta }) => {
             />
           </div>
           <div className="mt-6">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote {...mdxSource} scope={data} components={{ PostTag }} />
           </div>
         </div>
       </div>
@@ -55,8 +63,18 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug } = context.params;
   const { meta, content } = getPost(slug);
-  console.log(meta)
-  const mdxSource = await serialize(content);
+  console.log(meta);
+  const mdxSource = await serialize(
+    content,{
+      mdxOptions: {
+        rehypePlugins: [
+          rehypeHighlight
+        ]
+      }
+    }
+    // { parseFrontmatter: true },
+    
+  );
 
   return {
     props: {
