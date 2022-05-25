@@ -7,10 +7,9 @@ import Image from "next/image";
 import PostTag from "../../../components/posts/post-tag";
 import Link from "next/link";
 import rehypeHighlight from "rehype-highlight";
-// import 'highlight.js/styles/atom-one-dark.css'
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";// import 'highlight.js/styles/atom-one-dark.css'
 import "highlight.js/styles/github-dark.css";
-
-
 
 const SinglePost = ({ mdxSource, meta }) => {
   const data = { name: meta.title };
@@ -65,15 +64,18 @@ export async function getStaticProps(context) {
   const { meta, content } = getPost(slug);
   console.log(meta);
   const mdxSource = await serialize(
-    content,{
+    content,
+    {
       mdxOptions: {
         rehypePlugins: [
-          rehypeHighlight
-        ]
-      }
+          rehypeHighlight,
+          rehypeSlug,
+          [rehypeAutolinkHeadings, { behabior: "wrap" }],
+         
+        ],
+      },
     }
     // { parseFrontmatter: true },
-    
   );
 
   return {
