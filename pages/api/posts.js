@@ -17,7 +17,8 @@ export const getPost = (slug) => {
     excerpt: data.excerpt ?? "no excerpt",
     tags: (data.tags ?? ["no_tag", "no Tag"]).sort(),
     img: data.img ?? "/posts_img/no_img.jpg",
-    url: path.join(`/blog/posts/${slug}`)
+    url: path.join(`/blog/posts/${slug}`),
+    intro: data.intro ?? ""
     // url: '/jiji'
     // url: data.url
     //   ? `/blog/posts/${data.url}`
