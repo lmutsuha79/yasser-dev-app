@@ -3,7 +3,6 @@ import Footer from "../../../components/footer";
 import PostContainer from "../../../components/post-container";
 import { getAllPosts } from "../../api/posts";
 const Posts = ({posts}) => {
-  console.log(posts)
   return (
     <>
       <NavBar />

@@ -1,0 +1,7 @@
+@tailwind components;
+@layer components {
+      .wrapper h2{
+            @apply text-main-blue text-xl md:text-2xl font-semibold my-4;
+      }
+
+}

@@ -6,6 +6,9 @@
 /* pre{
   overflow: scroll;
 } */
+html{
+  scroll-behavior: smooth;
+}
 .container{
   margin: auto
 }
@@ -20,5 +23,18 @@
   }
   .center_with_flex{
     @apply flex justify-center items-center
+  }
+}
+
+h2, h3 {
+  scroll-margin-top: 80px;
+}
+
+/* Safari-only */
+
+@supports (-webkit-hyphens:none) {
+  h2, h3 {
+      padding-top: 80px;
+      margin-top: -80px;
   }
 }

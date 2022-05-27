@@ -12,8 +12,7 @@ intro: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quam omni
 
 ---
 
-<SectionTitle title='introduction' />
-<section>helllo world section en</section>
+## introduction
 
 [SWR](https://swr.now.sh/) is a great package from [Zeit](http://zeit.co/) to help make it easier to fetch remote data with hooks. It is based on the [stale-while-revalidate](https://tools.ietf.org/html/rfc5861) RFC, which in simple terms says to show stale (old) data while you are fetching a new version of the data. The idea is that it is better to show something old if you have it rather than a blank screen.
 
@@ -75,7 +74,8 @@ function DisplayCrimes({ crimes }) {
 
 Separating data from display also allows you to test visual changes in isolation, useful for testing or showing how the component would look like in [Storybook](https://storybook.js.org/) without having to mock all of your API calls.
 
-## Fetching Data
+
+
 
 Because we are using `SWRConfig` to configure our `useSWR` hook calls globally, we don't have to worry about passing the fetcher function to this hook, we only have to worry about passing our "key" (URL to fetch the data). As a response we get an object that we can extract `{data, error}` from.
 
@@ -98,6 +98,7 @@ function Crimes() {
   );
 }
 ```
+
 
 ### Unique Values in JavaScript
 

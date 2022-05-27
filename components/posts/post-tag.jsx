@@ -3,7 +3,7 @@ const PostTag = ({title}) => {
       return (
             <Link href={'/blog/tags/'+ title}>
 
-            <a className="w-fit bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium grid place-content-center rounded-xl px-2 py-2 sm:px-4 sm:py-2 ">
+            <a className="w-fit text-sm  bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium grid place-content-center rounded-xl px-2 py-2 sm:px-4 sm:py-2 ">
                   {title}
             </a>
 
