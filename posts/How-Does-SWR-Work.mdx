@@ -12,15 +12,26 @@ intro: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quam omni
 
 ---
 
-## introduction
+<section>
 
+## introduction
+  
 [SWR](https://swr.now.sh/) is a great package from [Zeit](http://zeit.co/) to help make it easier to fetch remote data with hooks. It is based on the [stale-while-revalidate](https://tools.ietf.org/html/rfc5861) RFC, which in simple terms says to show stale (old) data while you are fetching a new version of the data. The idea is that it is better to show something old if you have it rather than a blank screen.
 
 We will show how to use SWR, how to configure it globally, and a pattern I like to use which separates data fetching from data display.
-
-{/* <YouTube id="oWVW8IqpQ-A" /> */}
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+  
 
 Code is available at: [https://github.com/leighhalliday/crime-mapping](https://github.com/leighhalliday/crime-mapping)
+
+</section>
+<section>
 
 ## An SWR Fetcher
 
@@ -29,20 +40,43 @@ The `useSWR` hook requires two things to make it work:
 ```js
 useSWR("/crimes/passion", fetcher);
 ```
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
 
-# hello world
+  
 - A key: This is a little vague, but think it if as something that uniquely identifies the data you want to fetch... which for a RESTful API endpoint can be the URL.
 - A fetcher: This is a function who will do the work of making the actual API request. In our case we'll be using [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), but you could use [axios](https://github.com/axios/axios) if you prefer. Its only requirement is that it returns a promise which resolves the data you are fetching.
 
 The fetcher we'll be working with receives the incoming arguments (in our case the URL), passes them on to `fetch`, and then resolves the response to produce JSON.
-# Tips and Triks
-
 ```js
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 ```
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+</section>
 
-## Global Config Provider
 
+
+
+
+<section>
+
+{/* ## Global Config Provider */}
+<Title title="Global Config Provider" />
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
 Rather than having to pass the `fetcher` function, and any other config options you may want to set on every call to the `useSWR` hook, you can wrap your components with a provider called `SWRConfig`. This allows you to globally set config options to be used with every `useSWR` hook call. In our example we'll pass the fetcher function to it so it can be used globally.
 
 ```jsx
@@ -54,9 +88,13 @@ export default function App() {
   );
 }
 ```
+  
+</section>
 
+<section>
 ## Separating Data From Display
 
+  
 When working with data, be it GraphQL or data from a REST API, I like to separate out data fetching logic from display logic. We'll be doing the same here in this example, and the psuedo-code/logic looks like:
 
 ```jsx
@@ -71,7 +109,12 @@ function DisplayCrimes({ crimes }) {
   // only have to deal with displaying data
 }
 ```
-
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
 Separating data from display also allows you to test visual changes in isolation, useful for testing or showing how the component would look like in [Storybook](https://storybook.js.org/) without having to mock all of your API calls.
 
 
@@ -98,10 +141,10 @@ function Crimes() {
   );
 }
 ```
-
-
 ### Unique Values in JavaScript
 
+
+  
 In order to display (and filter) the crime data, I want a unique list of the crime categories. JavaScript doesn't have a way to do this out of the box like you might do `values.uniq` in Ruby. We can make our own very quickly though using a [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 ```js
@@ -115,12 +158,26 @@ const categories = [...categorySet];
 // final/shortened solution
 [...new Set(data.map((crime) => crime.category))];
 ```
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+</section>
 
+<section>
 ## Displaying & Filtering Data
+
 
 Displaying the data really has nothing to do with SWR at this point, but that is sort of the point. The display logic shouldn't really care where the data comes from, only how to display it to the user.
 
-We will keep track of a `filterCategory` if the user wants only a subset of all the crimes, producing a filtered list of crimes using the [array filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function.
+We will Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati, alias quas, asperiores id quam cupiditate excepturi esse iste odio fugiat enim tempora provident ipsum aliquid perspiciatis ducimus in sed ab sapiente eaque? Quas deserunt, doloribus quo odio totam atque! Velit esse tempore aliquid animi iure autem maxime cupiditate?keep track of a `filterCategory` if the user wants only a subset of all the crimes, producing a filtered list of crimes using the [array filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function.
 
 ```jsx
 function DisplayCrimes({ crimes, categories }) {
@@ -156,7 +213,11 @@ function DisplayCrimes({ crimes, categories }) {
   );
 }
 ```
+</section>
 
+<section>
 ## Conclusion
 
 Based on my experience with the SWR package, I think it would be my go-to approach when working with RESTful APIs in React. That said, I don't think I would switch from Apollo if my data were coming from GraphQL. Apollo provides a lot of nice utilities specific to GraphQL that you wouldn't get with SWR, which admittedly is a lower-level tool that you could build on top of.
+
+</section>

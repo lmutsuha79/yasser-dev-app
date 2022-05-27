@@ -6,6 +6,7 @@ import Footer from "../../../components/footer";
 import Image from "next/image";
 import PostTag from "../../../components/posts/post-tag";
 import TableContent from "../../../components/posts/table-content";
+import Title from "../../../components/posts/section-title";
 import Link from "next/link";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
@@ -15,17 +16,12 @@ import { useEffect, useState } from "react";
 import styles from './styles.module.css' 
 
 const SinglePost = ({ mdxSource, meta }) => {
-  const [activeSection,setActiveSection] = useState('#introduction');
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setActiveSection('#flow')
-  //   },3000)
-  // },[]);
+  const [activeSection,setActiveSection] = useState('introduction');
+  
   const data = { name: meta.title };
   return (
     <>
       <NavBar />
-
       <div className={"container" + " " + styles.wrapper}>
         <div className="wrapper mt-[100px]">
           <div className="space-y-2 mb-6">
@@ -66,7 +62,7 @@ const SinglePost = ({ mdxSource, meta }) => {
               />
             </aside>
             <article className="sm:col-span-2">
-              <MDXRemote {...mdxSource} scope={data} components={{ PostTag }} />
+              <MDXRemote {...mdxSource} scope={data} components={{ PostTag, Title }} />
             </article>
           </div>
         </div>
