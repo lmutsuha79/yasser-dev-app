@@ -6,6 +6,7 @@
 /* pre{
   overflow: scroll;
 } */
+
 html{
   scroll-behavior: smooth;
 }
@@ -13,7 +14,9 @@ html{
   margin: auto
 }
 @layer components {
-  
+  .container{
+    @apply px-4
+  }
   .bg-blue-with-hover{
     @apply bg-main-blue hover:bg-main-blue-hover transition-colors;
   }

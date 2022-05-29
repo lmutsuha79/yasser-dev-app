@@ -14,7 +14,7 @@ export default function Blog(props) {
     <div>
       <NavBar />
 
-      <div className="container px-4 md:pt-16 space-y-8 lg:space-y-24">
+      <div className="container md:pt-16 space-y-8 lg:space-y-24">
         {/* in container */}
         <HeroSection />
 
