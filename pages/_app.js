@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import { UseDark, changetheme } from "../util/UseDark";
+import { UseSystemTheme } from "../util/UseSystemTheme";
 
 
 
@@ -14,22 +15,15 @@ function MyApp({ Component, pageProps }) {
   const [isOn, setIsOn] = useState();
   
   useEffect(() => {
-    const isDark = localStorage.getItem('isDark');
-
     // initialize the theme
+    let isDark = localStorage.getItem('isDark');
     if (isDark === null) {
-      localStorage.setItem("isDark", "false");
-      setIsOn("false"); // stored value
-    } else {
-      // 1 to intialize the theme stored in the localstorage
+      isDark = UseSystemTheme() === "dark" ? 'true' : 'false'
+    } 
+      localStorage.setItem("isDark", isDark);
+      setIsOn(isDark); // stored value
       changetheme(1);
-      if(isDark === 'false'){
-        setIsOn('false')
-      }else if(isDark === 'true'){
-        setIsOn('true')
-      }else{
-        setIsOn('error')
-      }    }
+
   }, []);
 
 
