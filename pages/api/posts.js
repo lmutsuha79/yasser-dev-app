@@ -18,31 +18,52 @@ export const getPost = (slug) => {
     tags: (data.tags ?? ["no_tag", "no Tag"]).sort(),
     img: data.img ?? "/posts_img/no_img.jpg",
     url: path.join(`/blog/posts/${slug}`),
-    intro: data.intro ?? ""
+    intro: data.intro ?? "",
     // url: '/jiji'
     // url: data.url
     //   ? `/blog/posts/${data.url}`
     //   : `/blog/posts/${data.title.replace(/([^\w\s]|\s+)/g, "-")}`,
-  }
+  };
   return {
     content,
-    meta
+    meta,
   };
 };
 
 export const getAllPosts = () => {
   const posts = getAllSlugs()
     .map((slug) => {
-      // const post_path = path.join(POSTS_PATH, `${slug}.mdx`);
       const { meta, content } = getPost(slug);
       return {
         content,
-        ...meta
+        ...meta,
       };
     })
     .sort((a, b) => {
+      // the newest first
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
   return posts;
+};
+
+export const getRelatedPosts = (meta) => {
+  // console.log(tags)
+  const {tags,url} = meta;
+  
+  const relatedPosts = getAllPosts().filter((post) => {
+    // check if the arry of tags passed contains one of tags in other post tags
+    // return the post if one of he's tags similar to the Main post
+   
+ 
+    if(url != post.url){
+      // to not check the same post
+      return  tags.some(tag => post.tags.includes(tag))
+    }
+
+   
+    
+  });
+  console.log(relatedPosts)
+  return relatedPosts;
 };

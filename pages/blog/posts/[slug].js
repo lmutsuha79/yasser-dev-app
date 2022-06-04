@@ -1,9 +1,10 @@
-import { getAllSlugs, getPost } from "../../api/posts";
+import { getAllSlugs, getPost, getRelatedPosts } from "../../api/posts";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import NavBar from "../../../components/nav";
 import Footer from "../../../components/footer";
 import Image from "next/image";
+import PostShow from "../../../components/posts-show";
 import PostTag from "../../../components/posts/post-tag";
 import TableContent from "../../../components/posts/table-content";
 import Title from "../../../components/posts/section-title";
@@ -16,6 +17,9 @@ import { useEffect, useState } from "react";
 import styles from './styles.module.css' 
 
 const SinglePost = ({ mdxSource, meta }) => {
+  {
+
+  }
   const [activeSection,setActiveSection] = useState('introduction');
   
   const data = { name: meta.title };
@@ -65,6 +69,11 @@ const SinglePost = ({ mdxSource, meta }) => {
               <MDXRemote {...mdxSource} scope={data} components={{ PostTag, Title }} />
             </article>
           </div>
+
+          {/* related posts */}
+          <div className="mt-8">
+                  <PostShow colNum={4} sectionTitle={"Related Posts"}/>
+          </div>
         </div>
       </div>
 
@@ -96,13 +105,13 @@ export async function getStaticProps(context) {
         ],
       },
     }
-    // { parseFrontmatter: true },
   );
 
   return {
     props: {
       mdxSource,
       meta,
+      relatedPosts: getRelatedPosts(meta)
     },
   };
 }
