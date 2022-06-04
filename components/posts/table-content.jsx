@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 
 const TableContent = ({ contentList, title, active }) => {
   const [allHeaders, setAllHeaders] = useState([]);
-  // const [activeSection, setActiveSection] = useState();
   const link = useRef();
 
   useEffect(() => {
@@ -12,6 +11,7 @@ const TableContent = ({ contentList, title, active }) => {
 
     }
     const observer = new IntersectionObserver((headings) => {
+
       headings.forEach((head, index) => {
         if (head.isIntersecting) {
           // get id of the title of active section

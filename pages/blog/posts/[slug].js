@@ -57,6 +57,7 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
           <div className="mt-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 space-y-4 sm:space-x-10">
             
             <aside className="">
+              {/* {activeSection} */}
               <TableContent
                 title="Table of contents"
                 active={activeSection}
