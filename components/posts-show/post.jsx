@@ -6,8 +6,8 @@ const Post = ({post}) => {
   const { date, excerpt, img, tags, title, url } = post;
 
   return (
-    <div>
-       <div className="transition-all space-y-1 px-3 py-6 rounded-lg bg-white dark:bg-dark-bg-blue shadow-sm hover:shadow-md dark:shadow-md dark:shadow-main-blue-hover/10 dark:hover:shadow-main-blue-hover/30">
+    <Link href={url}>
+       <div className="cursor-pointer transition-all space-y-1 px-3 py-6 rounded-lg bg-white dark:bg-dark-bg-blue shadow-sm hover:shadow-md dark:shadow-md dark:shadow-main-blue-hover/10 dark:hover:shadow-main-blue-hover/30">
         {/* shadow-main-blue drop-shadow-sm hover:drop-shadow-lg */}
         <div className={styles.imgWrapper}>
           <Image
@@ -33,11 +33,9 @@ const Post = ({post}) => {
          
         </ul>
         {/* title */}
-        <Link href={url}>
-          <a className="font-bold text-main-blue hover:text-main-blue-hover transition-colors dark:text-white text-base sm:text-lg block">
+          <h3 className="font-bold text-main-blue hover:text-main-blue-hover transition-colors dark:text-white text-base sm:text-lg block">
             {title}
-          </a>
-        </Link>
+          </h3>
         <p className="text-main-blue text-base ">
           {excerpt}
         </p>
@@ -54,7 +52,7 @@ const Post = ({post}) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

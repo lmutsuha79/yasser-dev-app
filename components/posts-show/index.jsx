@@ -8,7 +8,7 @@ const PostShow = ({ colNum, sectionTitle, posts }) => {
   const item_class =
     "grid grid-cols-" + colNum / 2 + " gap-4 lg:grid-cols-" + colNum;
   return (
-    <section className="mt-6 space-y-8">
+    <section className="mt-6">
       <div className="flex justify-between">
         {/* title of section and link */}
         <h4 className="font-semibold text-lg text-main-blue dark:text-white">
@@ -18,7 +18,10 @@ const PostShow = ({ colNum, sectionTitle, posts }) => {
           <a className="text-main-gray font-medium text-base">display all</a>
         </Link>
       </div>
+      <div className={item_class}>
+
       {posts.map((post) => <Post key={post.url} post={post} />)}
+      </div>
     </section>
   );
 };
