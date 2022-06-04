@@ -16,10 +16,7 @@ import "highlight.js/styles/github-dark.css";
 import { useEffect, useState } from "react";
 import styles from './styles.module.css' 
 
-const SinglePost = ({ mdxSource, meta }) => {
-  {
-
-  }
+const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const [activeSection,setActiveSection] = useState('introduction');
   
   const data = { name: meta.title };
@@ -72,7 +69,7 @@ const SinglePost = ({ mdxSource, meta }) => {
 
           {/* related posts */}
           <div className="mt-8">
-                  <PostShow colNum={4} sectionTitle={"Related Posts"}/>
+                  <PostShow colNum={4} sectionTitle={"Related Posts"} posts={relatedPosts}/>
           </div>
         </div>
       </div>

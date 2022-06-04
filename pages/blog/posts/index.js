@@ -8,9 +8,10 @@ const Posts = ({posts}) => {
       <NavBar />
       <div className="mt-[70px]">
         <div className="container grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {posts.map((post, index) => (
-            <PostContainer key={index} title={post.title} exerpt={post.excerpt} url={post.url} date={post.date} img={post.img} tags={post.tags} />
-          ))}
+          
+          {posts.map((post, index) => {
+           return <PostContainer key={index} title={post.title} exerpt={post.excerpt} url={post.url} date={post.date} img={post.img} tags={post.tags} />
+    })}
         </div>
       </div>
       <Footer />
