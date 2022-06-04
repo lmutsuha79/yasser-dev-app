@@ -3,5 +3,8 @@
       .wrapper h2{
             @apply text-main-blue text-xl md:text-2xl font-semibold my-4;
       }
+      .tableContentMobile {
+            @apply bg-blue-400
+      }
 
 }
