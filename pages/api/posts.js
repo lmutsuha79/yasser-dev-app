@@ -1,16 +1,7 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-// const createEecerpt = (excerpt) => {
-//   const SIZE = 10;
-//   const lenght = excerpt.length;
-//   if(lenght === SIZE) return excerpt;
-//   if(lenght > SIZE) return excerpt.slice(0,SIZE);
-  
-//   return excerpt + "      ".repeat(SIZE - lenght);
 
-
-// }
 
 const POSTS_PATH = path.join(process.cwd(), "posts");
 export const getAllSlugs = () => {
@@ -30,6 +21,7 @@ export const getPost = (slug) => {
     img: data.img ?? "/posts_img/no_img.jpg",
     url: `/blog/posts/${slug}`,
     intro: data.intro ?? "",
+    twitterId: data.twitterId ?? "",
 
   };
   return {

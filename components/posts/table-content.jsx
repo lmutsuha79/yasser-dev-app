@@ -53,7 +53,7 @@ const TableContent = ({ contentList, title, active }) => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="space-y-1 sm:sticky top-[25%]">
+    <div className="space-y-1 ">
       <h3 className="text-main-blue font-bold ">
         {title ? title : "contents"}
       </h3>

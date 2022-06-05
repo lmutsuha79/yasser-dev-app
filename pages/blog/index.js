@@ -21,6 +21,7 @@ export default function Blog({mostRecentPosts}) {
 
         {/* <PostShow colNum={4} sectionTitle={"Most viwed"} /> */}
 
+
         <PostShow colNum={4} sectionTitle={"Rescent Articles"} posts={mostRecentPosts} />
         <PostShow colNum={4} sectionTitle={"Rescent Articles"} posts={mostRecentPosts} />
 

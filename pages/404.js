@@ -9,7 +9,7 @@ export default function Custom404() {
         <h2 className="font-semibold text-6xl sm:text-9xl" >404</h2>
         <span className="text-3xl md:text-5xl">Ooops!</span>
         <span className="text-3xl md:text-5xl">Page Not Found</span>
-        <p className="font-normal text-base md:text-lg text-main-gray">
+        <p className="text-center sm:text-left font-normal text-base md:text-lg text-main-gray">
           This page doesn&apos;t exist or was remooved! I sedgest you back to home
         </p>
 

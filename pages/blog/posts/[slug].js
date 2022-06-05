@@ -18,10 +18,12 @@ import styles from "./styles.module.css";
 import PostHeader from "../../../components/posts/post-header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+
+import TwitterPost from "../../../components/twitter/twitter-post";
 // <FontAwesomeIcon icon="fa-light fa-circle-ellipsis" />
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
-  const aside = useRef(null)
-  const [asideVisibility, setAsideVisibility] = useState(false)
+  const aside = useRef(null);
+  const [asideVisibility, setAsideVisibility] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
 
   // useEffect(()=>{
@@ -35,15 +37,18 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
       <div className={"container" + " " + styles.wrapper}>
         <div className="wrapper mt-[100px]">
           <PostHeader meta={meta} />
-
           {/* Post Content */}
           <div className="mt-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 space-y-4 sm:space-x-10">
-            
-            {/* <div onClick={() => {setAsideVisibility(current => !current)}} className="fixed bottom-4 right-0 w-[50px] h-[50px] bg-red-500 cursor-pointer hover:bg-green-300 sm:hidden">
-              <FontAwesomeIcon icon={<faEllipsis />}/>
-            </div> */}
-            <aside ref={aside} className="">
-              <TableContent title="Table of contents" active={activeSection} />
+            <aside
+              ref={aside}
+              className=""
+            >
+              <div className="sticky h-max w-full top-[100px] overflow-hidden">
+                <TableContent
+                  title="Table of contents"
+                  active={activeSection}
+                />
+              </div>
             </aside>
 
             <article className="sm:col-span-2">
@@ -54,6 +59,9 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
               />
             </article>
           </div>
+
+          <TwitterPost id={meta.twitterId} />
+
 
           {/* related posts */}
 
