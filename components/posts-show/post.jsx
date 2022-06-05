@@ -15,7 +15,7 @@ const Post = ({post}) => {
             width={1200}
             height={720}
             alt={title + "_img"}
-            objectFit="cover"
+            objectFit="fill"
             objectPosition="center"
           />
         </div>

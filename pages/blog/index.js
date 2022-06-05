@@ -6,10 +6,11 @@ import path from "path";
 import NewsLetter from "../../components/news-letter";
 import Head from "next/head";
 import Footer from "../../components/footer";
+import { getAllPosts } from "../api/posts";
 
 
 
-export default function Blog(props) {
+export default function Blog({mostRecentPosts}) {
   return (
     <div>
       <NavBar />
@@ -18,9 +19,10 @@ export default function Blog(props) {
         {/* in container */}
         <HeroSection />
 
-        <PostShow colNum={4} sectionTitle={"Most viwed"} />
+        {/* <PostShow colNum={4} sectionTitle={"Most viwed"} /> */}
 
-        <PostShow colNum={2} sectionTitle={"Rescent Artciles"} />
+        <PostShow colNum={4} sectionTitle={"Rescent Artciles"} posts={mostRecentPosts} />
+        <PostShow colNum={4} sectionTitle={"Rescent Artciles"} posts={mostRecentPosts} />
 
         <NewsLetter />
       </div>
@@ -30,28 +32,13 @@ export default function Blog(props) {
   );
 }
 
-// export async function getStaticProps() {
-//   const {promises:fs} = require("fs");
-//   const matter = require('gray-matter');
+export async function getStaticProps() {
+  const allPosts = getAllPosts();
+  const mostRecentPosts = allPosts.slice(0,4);
+  return{
+    props: {
+      mostRecentPosts,
 
-//   const posts_location = path.join(process.cwd(), "pages", "blog", "posts");
-//   const post_names = await fs.readdir(posts_location)
-
-//       const files = await Promise.all(post_names.map(async slug => {
-//             const file_path = path.join(posts_location,slug);
-//             const content =  await fs.readFile(file_path,'utf8');
-//             const the_matter = matter(content);
-//             // console.log(the_matter)
-//             return {
-//               slug,
-//               the_matter
-//             };
-//       }));
-//       console.log(files)
-
-//   return {
-//     props: {
-//       allPosts: 'files',
-//     },
-//   };
-// }
+    }
+  }
+}

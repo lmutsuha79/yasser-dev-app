@@ -27,3 +27,4 @@ const PostShow = ({ colNum, sectionTitle, posts }) => {
 };
 
 export default PostShow;
+
