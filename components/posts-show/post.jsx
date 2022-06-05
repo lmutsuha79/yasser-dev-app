@@ -36,7 +36,7 @@ const Post = ({post}) => {
           <h3 className="font-bold text-main-blue hover:text-main-blue-hover transition-colors dark:text-white text-base sm:text-lg block">
             {title}
           </h3>
-        <p className="text-main-blue text-base ">
+        <p className="h-[120px] overflow-clip text-main-blue text-base ">
           {excerpt}
         </p>
         <div className="flex justify-between text-main-gray text-xs sm:text-sm font-normal">
