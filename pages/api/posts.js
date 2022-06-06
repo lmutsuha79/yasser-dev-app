@@ -2,7 +2,6 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-
 const POSTS_PATH = path.join(process.cwd(), "posts");
 export const getAllSlugs = () => {
   const paths_list = fs.readdirSync(POSTS_PATH);
@@ -22,7 +21,6 @@ export const getPost = (slug) => {
     url: `/blog/posts/${slug}`,
     intro: data.intro ?? "",
     twitterId: data.twitterId ?? "",
-
   };
   return {
     content,
@@ -48,21 +46,26 @@ export const getAllPosts = () => {
 };
 
 export const getRelatedPosts = (meta) => {
-  const {tags,url} = meta;
-  
+  const { tags, url } = meta;
+
   const relatedPosts = getAllPosts().filter((post) => {
     // check if the arry of tags passed contains one of tags in other post tags
     // return the post if one of he's tags similar to the Main post
-   
- 
-    if(url != post.url){
-      // to not check the same post
-      return  tags.some(tag => post.tags.includes(tag))
-    }
 
-   
-    
+    if (url != post.url) {
+      // to not check the same post
+      return tags.some((tag) => post.tags.includes(tag));
+    }
   });
-  
+
   return relatedPosts;
+};
+
+export const getPostsByTag = (tagName) => {
+  const allPosts = getAllPosts();
+  const posts = allPosts.filter((post) => {
+    return post.tags.includes(tagName);
+  });
+  console.log(posts)
+  return posts;
 };

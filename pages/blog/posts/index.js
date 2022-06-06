@@ -1,28 +1,12 @@
 import NavBar from "../../../components/nav";
 import Footer from "../../../components/footer";
-import PostContainer from "../../../components/post-container";
+import PostsGrid from "../../../components/posts-grid";
 import { getAllPosts } from "../../api/posts";
 const Posts = ({ posts }) => {
   return (
     <>
       <NavBar />
-      <div className="mt-[70px]">
-        <div className="container grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {posts.map((post, index) => {
-            return (
-              <PostContainer
-                key={index}
-                title={post.title}
-                exerpt={post.excerpt}
-                url={post.url}
-                date={post.date}
-                img={post.img}
-                tags={post.tags}
-              />
-            );
-          })}
-        </div>
-      </div>
+        <PostsGrid title={'all posts'} posts={posts} backUrl='/blog'/>
       <Footer />
     </>
   );
