@@ -3,13 +3,18 @@ import NavBar from "../../../components/nav";
 import PostsGrid from "../../../components/posts-grid";
 import { getPostsByTag } from "../../api/posts";
 const Tag = ({ tagName, posts }) => {
+  const footer_for_no_posts = posts.length == 0 ? 'absolute bottom-0 left-0 right-0' : ''
   return (
     <>
       <NavBar />
 
+      
 
       <PostsGrid posts={posts} title={tagName} backUrl={"/blog/posts"} />
-      <Footer />
+      
+      <footer className={footer_for_no_posts}>
+        <Footer />
+      </footer>
     </>
   );
 };

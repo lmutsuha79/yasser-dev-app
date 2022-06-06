@@ -14,7 +14,6 @@ import {
 const Footer = () => {
   return (
     <div className="bg-main-blue mt-8 py-4">
-      
       <div className="container space-y-8 px-4">
         {/* top */}
         <span className="font-Architects_Daughter text-white text-2xl">
@@ -23,7 +22,9 @@ const Footer = () => {
         <div className={style.footerLine}></div>
 
         {/* main */}
-        <div className={`${style.gridContent} grid sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4`}>
+        <div
+          className={`${style.gridContent} grid sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4`}
+        >
           <div>
             <FooterTitle title={"About"} />
             <p className="text-nav-border-gray">
@@ -34,7 +35,9 @@ const Footer = () => {
           </div>
           <div>
             <FooterTitle title={"Quick links"} />
-            <div className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}>
+            <div
+              className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}
+            >
               <Link href={"/"}>about me</Link>
               <Link href={"/"}>contact me</Link>
               <Link href={"/"}>refund policy</Link>
@@ -44,11 +47,11 @@ const Footer = () => {
           <div>
             <FooterTitle title={"Tags"} />
             <ul className="flex flex-wrap justify-center gap-2">
-              <FooterTag tagTitle={"web"} tagLink={"/web"} />
-              <FooterTag tagTitle={"security"} tagLink={"/web"} />
-              <FooterTag tagTitle={"freelance"} tagLink={"/web"} />
-              <FooterTag tagTitle={"news"} tagLink={"/web"} />
-              <FooterTag tagTitle={"self improvment"} tagLink={"/web"} />
+              <FooterTag tagTitle={"web"} />
+              <FooterTag tagTitle={"security"} />
+              <FooterTag tagTitle={"freelance"} />
+              <FooterTag tagTitle={"news"} />
+              <FooterTag tagTitle={"self improvment"} />
             </ul>
           </div>
           <div>

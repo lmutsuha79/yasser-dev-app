@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const PostsGrid = ({ posts, title, backUrl }) => {
- 
   const back_to = backUrl ?? "/blog";
   return (
     <div className="mt-[100px]">
@@ -23,21 +22,25 @@ const PostsGrid = ({ posts, title, backUrl }) => {
           </Link>
         </div>
       </header>
-      <div className=" container grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {posts.map((post, index) => {
-          return (
-            <PostContainer
-              key={index}
-              title={post.title}
-              exerpt={post.excerpt}
-              url={post.url}
-              date={post.date}
-              img={post.img}
-              tags={post.tags}
-            />
-          );
-        })}
-      </div>
+      {posts.length == 0 ? (
+        <p className=" text-center text-main-blue">Opps No Result! </p>
+      ) : (
+        <div className=" container grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {posts.map((post, index) => {
+            return (
+              <PostContainer
+                key={index}
+                title={post.title}
+                exerpt={post.excerpt}
+                url={post.url}
+                date={post.date}
+                img={post.img}
+                tags={post.tags}
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
