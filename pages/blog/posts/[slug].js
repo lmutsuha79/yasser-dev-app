@@ -16,14 +16,16 @@ import "highlight.js/styles/github-dark.css";
 import { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.css";
 import PostHeader from "../../../components/posts/post-header";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import MobileTableContents from "../../../components/posts/Mobile-Table-Contents";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 import TwitterPost from "../../../components/twitter/twitter-post";
 import AboutAuthor from "../../../components/posts/about-author";
 // <FontAwesomeIcon icon="fa-light fa-circle-ellipsis" />
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
+  const [mbTableIsOpen,setTableIsOpen] = useState(false);
   const [asideVisibility, setAsideVisibility] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
 
@@ -36,15 +38,13 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
     <>
       <NavBar />
       <div className={"container" + " " + styles.wrapper}>
-        <div className="wrapper mt-[100px]">
+        <div className="wrapper mt-[100px] ">
+          <MobileTableContents activeSection={activeSection}/>
           <PostHeader meta={meta} />
           {/* Post Content */}
           <div className="mt-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 space-y-4 sm:space-x-10">
-            <aside
-              ref={aside}
-              className=""
-            >
-              <div className="sticky h-max w-full top-[100px] overflow-hidden">
+            <aside ref={aside} className="">
+              <div className="hidden sm:block sticky h-max w-full top-[100px] overflow-hidden">
                 <TableContent
                   title="Table of contents"
                   active={activeSection}
@@ -63,7 +63,6 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
 
           <TwitterPost id={meta.twitterId} />
           <AboutAuthor />
-
 
           {/* related posts */}
 

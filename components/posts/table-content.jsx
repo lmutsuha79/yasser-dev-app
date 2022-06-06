@@ -42,7 +42,7 @@ const TableContent = ({ contentList, title, active }) => {
             key={item.id}
             href={"#" + item.id}
             id={"link_" + item.id}
-            className={`text-main-blue text-sm font-medium rounded-md hover:bg-nav-border-gray px-1 py-2 transition-colors `}
+            className={`text-main-blue transform hover:translate-x-1 transition-all text-sm font-medium rounded-md hover:bg-white border-b px-1 py-2 `}
           >
             {item.textContent}
           </a>
@@ -58,7 +58,7 @@ const TableContent = ({ contentList, title, active }) => {
         {title ? title : "contents"}
       </h3>
       <ul className="pl-1 flex flex-col gap-[1px]">{allHeaders}</ul>
-      <div className="h-[2px] w-full bg-nav-border-gray rounded-xl "></div>
+      <div className="h-[2px] w-full bg-white rounded-xl "></div>
     </div>
   );
 };
