@@ -33,9 +33,9 @@ const AboutAuthor = () => {
         <p className="text-main-blue font-light">
             <FontAwesomeIcon icon={faQuoteLeft} className="text-main-blue-hover text-xl mr-2 transform -translate-y-2"/>
 
-          Hi, I'm Yasser, a passionate web application developer from Algeria. I
+          Hi, I&apos;m Yasser, a passionate web application developer from Algeria. I
           spend most of my time discovering and learning new technologies and
-          implementing different projects. I also love to help others. That's
+          implementing different projects. I also love to help others. That&apos;s
           why I decided to dedicate a large part of my time to helping startups,
           entrepreneurs, artists, business owners to build their apps and
           websites. To enhance their online presence. I also like to work in
