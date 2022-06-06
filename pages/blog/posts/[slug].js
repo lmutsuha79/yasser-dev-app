@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
 import TwitterPost from "../../../components/twitter/twitter-post";
+import AboutAuthor from "../../../components/posts/about-author";
 // <FontAwesomeIcon icon="fa-light fa-circle-ellipsis" />
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
@@ -61,6 +62,7 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
           </div>
 
           <TwitterPost id={meta.twitterId} />
+          <AboutAuthor />
 
 
           {/* related posts */}

@@ -1,11 +1,9 @@
-import { Tweet } from 'react-twitter-widgets'
-import Blockquote from '@yozora/react-blockquote'
-import '@yozora/react-blockquote/lib/esm/index.css'
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 const TwitterPost = ({ id }) => {
   return (
     <div className="rounded-md flex justify-center items-center my-4">
-          <Tweet tweetId={id} options={{theme: 'dark'}} />
+          <TwitterTweetEmbed tweetId={id}/>
  
         
     </div>
