@@ -21,6 +21,7 @@ export const getPost = (slug) => {
     url: `/blog/posts/${slug}`,
     intro: data.intro ?? "",
     twitterId: data.twitterId ?? "",
+    InSlide: data.slide ?? false
   };
   return {
     content,
@@ -69,3 +70,12 @@ export const getPostsByTag = (tagName) => {
   console.log(posts)
   return posts;
 };
+
+export const getRecentPosts = (allPosts,max) => {
+  return allPosts.slice(0,max??4);
+  
+}
+export const getSlidePosts = (allPosts) => {
+  return allPosts.filter(post => post.InSlide);
+  
+}

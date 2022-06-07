@@ -11,7 +11,7 @@ const MobileTableContents = ({ activeSection }) => {
     >
       <div className="h-[50px] cursor-pointer text-main-blue font-bold hover:text-main-blue-hover flex justify-between items-center">
         <span>TABLE OF CONTENTS</span>
-        <div className={mbTableIsOpen ? 'transform rotate-180 transition' : 'transtion'}>
+        <div className={mbTableIsOpen ? 'transform rotate-180 ' : '0'}>
           <FontAwesomeIcon icon={faArrowUp} />
         </div>
       </div>

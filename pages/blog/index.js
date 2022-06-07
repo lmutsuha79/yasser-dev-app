@@ -6,18 +6,18 @@ import path from "path";
 import NewsLetter from "../../components/news-letter";
 import Head from "next/head";
 import Footer from "../../components/footer";
-import { getAllPosts } from "../api/posts";
+import { getAllPosts, getSlidePosts, getRecentPosts } from "../api/posts";
 
 
 
-export default function Blog({mostRecentPosts}) {
+export default function Blog({mostRecentPosts,slidePosts}) {
   return (
     <div>
       <NavBar />
 
       <div className="container md:pt-16 space-y-8 lg:space-y-24">
         {/* in container */}
-        <HeroSection />
+        <HeroSection slidePosts= {slidePosts} />
 
         {/* <PostShow colNum={4} sectionTitle={"Most viwed"} /> */}
 
@@ -35,10 +35,12 @@ export default function Blog({mostRecentPosts}) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
-  const mostRecentPosts = allPosts.slice(0,4);
+  const mostRecentPosts = getRecentPosts(allPosts,4)
+  const slidePosts = getSlidePosts(allPosts);
   return{
     props: {
       mostRecentPosts,
+      slidePosts,
 
     }
   }

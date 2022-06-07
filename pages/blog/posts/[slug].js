@@ -22,7 +22,7 @@ import MobileTableContents from "../../../components/posts/Mobile-Table-Contents
 
 import TwitterPost from "../../../components/twitter/twitter-post";
 import AboutAuthor from "../../../components/posts/about-author";
-// <FontAwesomeIcon icon="fa-light fa-circle-ellipsis" />
+import { TwitterVideoEmbed } from "react-twitter-embed";
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
   const [mbTableIsOpen,setTableIsOpen] = useState(false);
@@ -32,6 +32,8 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   // useEffect(()=>{
   //   asideVisibility ? aside.current.classList = 'bg-main-blue-hover fixed top-[40vh] p-4 rounded-md right-0' : aside.current.classList = 'hidden'
   // },[asideVisibility])
+
+  
 
   const data = { name: meta.title };
   return (
