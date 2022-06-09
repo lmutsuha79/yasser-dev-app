@@ -48,12 +48,13 @@ const SliderItem = ({ post, nextPost, prevPost, setVariantsMode, variantsNext, v
       <div className="flex-1">
       
           <div
-            className={`${styles.imageWrapper} max-w-[420px] max-h-[300px] sm:max-w-[470px] sm:max-h-[300px] overflow-hidden transform md:-translate-y-28`}
+            className={`${styles.imageWrapper} max-w-[400px] max-h-[300px] sm:max-w-[470px] sm:max-h-[300px] overflow-hidden transform md:-translate-y-28`}
           >
             <Image
               src={post.img}
               width={1200}
-              height={720}
+              height={680}
+              
               alt={post.title + " img"}
               objectFit="cover"
               objectPosition="center"

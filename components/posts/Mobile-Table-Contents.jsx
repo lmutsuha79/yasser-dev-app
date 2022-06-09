@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableContent from "./table-content";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { motion } from "framer-motion";
 const MobileTableContents = ({ activeSection }) => {
   const [mbTableIsOpen, setMbTableIsOpen] = useState(false);
   return (
@@ -11,20 +12,26 @@ const MobileTableContents = ({ activeSection }) => {
     >
       <div className="h-[50px] cursor-pointer text-main-blue font-bold hover:text-main-blue-hover flex justify-between items-center">
         <span>TABLE OF CONTENTS</span>
-        <div className={mbTableIsOpen ? 'transform rotate-180 ' : '0'}>
+        <motion.div
+          animate={mbTableIsOpen ? { rotate: 180 } : { rotate: 0 }}
+          transition={{ duration: 0.2 }}
+        >
           <FontAwesomeIcon icon={faArrowUp} />
-        </div>
+        </motion.div>
       </div>
       <div className="h-[1px] rounded-md bg-white"></div>
-      <div
-        className={
+
+      <motion.div
+        initial={false}
+        animate={
           mbTableIsOpen
-            ? "transition-all h-[280px] ease-in"
-            : "transition-all ease-out h-[0px]"
+            ? { height: 280, opacity: 1 }
+            : { height: 0, opacity: 0 }
         }
+        transition={{ duration: 0.3,type:"spring" }}
       >
         <TableContent title="" active={activeSection} />
-      </div>
+      </motion.div>
     </div>
   );
 };
