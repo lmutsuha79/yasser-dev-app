@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 import { ThemeContext } from "./_app";
@@ -14,7 +12,6 @@ export default function Home() {
     <div className="h-screen bg-blue-200 dark:bg-blue-900">
       <div>the theme = {theme}</div>
       <button className="bg-black text-white" onClick={() => {
-        // theme[1]();
         theme[1](); // call the function for toggling the theme
       }}>
         toggle

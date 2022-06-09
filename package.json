@@ -15,6 +15,7 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@yozora/react-blockquote": "^2.0.0-alpha.4",
     "darkreader": "^4.9.46",
+    "framer-motion": "^6.3.10",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "12.1.0",

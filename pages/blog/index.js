@@ -4,10 +4,8 @@ import NavBar from "../../components/nav";
 import PostShow from "../../components/posts-show";
 import path from "path";
 import NewsLetter from "../../components/news-letter";
-import Head from "next/head";
 import Footer from "../../components/footer";
 import { getAllPosts, getSlidePosts, getRecentPosts } from "../api/posts";
-
 
 
 export default function Blog({mostRecentPosts,slidePosts}) {

@@ -4,11 +4,17 @@ import styles from "./style.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import PostTag from "../posts/post-tag";
-const SliderItem = ({ post, setPostIndex, postLength }) => {
+
+const SliderItem = ({ post, nextPost, prevPost, setVariantsMode, variantsNext, variantsPrev }) => {
   return (
-    <div className="space-y-8 sm:flex sm:items-center space-x-6">
+    // <AnimatePresence>
+    <div
+      key={post}
+      // exit={{ y:-100 }}
+      className={"absolute top-0 left-0 space-y-4 sm:flex sm:items-center space-x-6" + " "}
+    >
       {/* post info */}
-      <div className="space-y-4 flex-1">
+      <div className="space-y-2 flex-1">
         <div className="flex items-center space-x-2">
           {/* top post info tags + date */}
           {/* <PostTag title={"web"} />
@@ -18,7 +24,12 @@ const SliderItem = ({ post, setPostIndex, postLength }) => {
           ))}
 
           {/* date */}
-          <span className="text-main-blue font-semibold text-sm">
+
+          <span
+            exit={{ y: 100 }}
+            key={post}
+            className={"text-main-blue font-semibold text-sm" + " "}
+          >
             {post.date}
           </span>
         </div>
@@ -35,19 +46,21 @@ const SliderItem = ({ post, setPostIndex, postLength }) => {
       </div>
       {/* post img */}
       <div className="flex-1">
-        <div
-          className={`${styles.imageWrapper} overflow-hidden transform md:-translate-y-32`}
-        >
-          <Image
-            src={post.img}
-            width={1200}
-            height={720}
-            alt={post.title + " img"}
-            objectFit="cover"
-            objectPosition="center"
-            draggable="false"
-          />
-        </div>
+      
+          <div
+            className={`${styles.imageWrapper} overflow-hidden transform md:-translate-y-28`}
+          >
+            <Image
+              src={post.img}
+              width={1200}
+              height={720}
+              alt={post.title + " img"}
+              objectFit="cover"
+              objectPosition="center"
+              draggable="false"
+            />
+          </div>
+        
 
         {/* slider controller */}
         <div className={styles.controllerContainer}>
@@ -55,10 +68,8 @@ const SliderItem = ({ post, setPostIndex, postLength }) => {
             className="border-main-blue dark:border-white hover:border-main-blue-hover dark:hover:border-nav-border-gray text-main-blue dark:text-white hover:text-main-blue-hover dark:hover:text-nav-border-gray"
             id="next_slide"
             onClick={() => {
-              setPostIndex((curr) => {
-                if (curr + 1 >= postLength) return 0;
-                return ++curr;
-              });
+              nextPost();
+              setVariantsMode(variantsNext)
             }}
           >
             <FontAwesomeIcon icon={faArrowUp} />
@@ -67,10 +78,9 @@ const SliderItem = ({ post, setPostIndex, postLength }) => {
             className="border-main-blue dark:border-white hover:border-main-blue-hover dark:hover:border-nav-border-gray text-main-blue dark:text-white hover:text-main-blue-hover dark:hover:text-nav-border-gray"
             id="prev_slide"
             onClick={() => {
-              setPostIndex((curr) => {
-                if (curr - 1 >= 0) return --curr;
-                return postLength - 1;
-              });
+              prevPost();
+              setVariantsMode(variantsPrev)
+
             }}
           >
             <FontAwesomeIcon icon={faArrowDown} />
@@ -78,6 +88,7 @@ const SliderItem = ({ post, setPostIndex, postLength }) => {
         </div>
       </div>
     </div>
+    // </AnimatePresence>
   );
 };
 
