@@ -47,7 +47,7 @@ const HeroSlider = ({ posts }) => {
     >
       <div
         ref={parent}
-        className="relative min-h-[550px] sm:min-h-[350px] h-auto"
+        className="relative min-h-[420px] sm:min-h-[300px] md:min-h-[300px] xl:min-h-[400px] h-auto"
       >
         <div className="current_post" key={posts[postIndex]}>
           <AnimatePresence initial={true}>
