@@ -7,9 +7,10 @@ export default async function subscription(req, res) {
     return res.status(400).json({ error: "Email is required" });
   }
 
-  const API_KEY = "8c9e3d0af3db7f9ae090d0f66e11d50e-us11";
-  const API_SERVER = "us11";
-  const AUDIENCE_ID = "5c99ac9823";
+  const API_KEY = process.env.MAILCHIMP_API_KEY;
+  const API_SERVER = process.env.MAILCHIMP_API_SERVER;
+  const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
+  console.log(API_KEY)
 
   const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
