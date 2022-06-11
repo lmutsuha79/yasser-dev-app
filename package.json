@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@yozora/react-blockquote": "^2.0.0-alpha.4",
+    "axios": "^0.27.2",
     "darkreader": "^4.9.46",
     "framer-motion": "^6.3.10",
     "fs": "^0.0.1-security",
