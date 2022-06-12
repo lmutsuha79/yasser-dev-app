@@ -15,7 +15,8 @@ const Logo = ({ logoType }) => {
                   //     else
                   return (
                     <a className="text-white dark:text-white font-Architects_Daughter font-semibold text-lg">
-                      Yasser Dev Blog
+                      <div>Yasser Mitsuha Blog</div>
+                      <div className="text-center text-xs font-sans">(alfa version)</div>
                     </a>
                   );
       }

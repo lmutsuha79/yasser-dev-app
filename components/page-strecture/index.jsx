@@ -7,6 +7,7 @@ const PageStrecture = ({children,title}) => {
 
                   <NavBar/>
                   <div className="container">
+
                         <div className="pt-[70px]">{children}</div>
                   </div>
                   <Footer/>
