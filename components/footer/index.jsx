@@ -1,10 +1,10 @@
 import Link from "next/link";
 import style from "./style.module.css";
-import FooterIcon from "./footer-icon";
+import SocialLink from "./social-link";
 import FooterTag from "./footer-tag";
 import FooterTitle from "./footer-title";
 import {
-  faDiscord,
+  faLinkedin,
   faFacebook,
   faTwitter,
   faInstagram,
@@ -28,9 +28,9 @@ const Footer = () => {
           <div>
             <FooterTitle title={"About"} />
             <p className="text-nav-border-gray">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
-              suspendisse leo neque iaculis molestie sagittis maecenas aenean
-              eget molestie sagittis.
+              I hope, through this blog, to share with others my long journey
+              revolving around computer science and self-development, and to
+              inspire those who are interested.
             </p>
           </div>
           <div>
@@ -38,10 +38,12 @@ const Footer = () => {
             <div
               className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}
             >
-              <Link href={"/"}>about me</Link>
-              <Link href={"/"}>contact me</Link>
-              <Link href={"/"}>refund policy</Link>
-              <Link href={"/"}>help & support</Link>
+              <Link href={"/about"}>about me</Link>
+              <Link href={"/contact"}>contact me</Link>
+              <Link href={"/privacy-policy"}>Privacy & Policy</Link>
+              <Link href={"/privacy-policy"}>Terms of service</Link>
+
+              <Link href={"/site-map"}>site-map</Link>
             </div>
           </div>
           <div>
@@ -55,26 +57,37 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <FooterTitle title={"Follow us on"} />
+            <FooterTitle title={"Follow me on"} />
 
             <ul className="flex justify-center space-x-2">
-              <FooterIcon icon={faDiscord} link="/discord" />
-              <FooterIcon icon={faTwitter} link="/twitter" />
-              <FooterIcon icon={faInstagram} link="/instagram" />
-              <FooterIcon icon={faFacebook} link="/facebook" />
+              <SocialLink
+                icon={faLinkedin}
+                link="https://www.linkedin.com/in/mitsuha79/"
+              />
+              <SocialLink
+                icon={faTwitter}
+                link="https://twitter.com/YasserKhelil"
+              />
+              <SocialLink
+                icon={faInstagram}
+                link="https://www.instagram.com/khelil__yasser/"
+              />
+              <SocialLink
+                icon={faFacebook}
+                link="https://www.facebook.com/khelil.yasserdjameledine/"
+              />
             </ul>
           </div>
         </div>
         <div className={style.footerLine}></div>
 
         {/* bottom footer */}
-        <div className="text-sm text-center ">
-          <span className="text-nav-border-gray font-light">
-            © 2022, Yasser-Blog - Design and code by
-          </span>
+        <div className="text-sm text-nav-border-gray font-light text-center ">
+          <span className="">Yasser-Mitsuha-Blog - Design and code by:</span>
           <Link href="/about">
-            <a className="text-white"> Yasser_Mitsuha</a>
+            <a className="text-white font-bold "> Me</a>
           </Link>
+          <div>© 2022-present Yasser Mitsuha. All Rights Reserved.</div>
         </div>
       </div>
     </div>

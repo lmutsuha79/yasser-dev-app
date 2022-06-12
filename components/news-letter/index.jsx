@@ -61,13 +61,13 @@ const NewsLetter = () => {
                 className="text-main-blue dark:text-white text-2xl"
                 icon={faPaperPlane}
               />
-              <span className="text-main-blue-hover dark:text-white text-xl font-medium">
+              <span className="text-main-blue-hover dark:text-white text-2xl font-bold">
                 Subscribe
               </span>
             </div>
-            <h3 className="text-main-blue dark:text-white text-xl font-bold">
-              to our Newletter
-            </h3>
+            <span className="text-main-blue dark:text-white text-md font-medium">
+              to my newsletter to don&apos;t miss any updates
+            </span>
           </div>
 
           <form
