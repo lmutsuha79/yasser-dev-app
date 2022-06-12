@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
 import Image from "next/image";
 import { useRef, useState } from "react";
 import axios from "axios";
 import ResultMessage from "./result-message";
+import { UseValideEmail } from "../../util/UseValideEmail";
 
 const NewsLetter = () => {
+  
   const emailRef = useRef(null);
   const [resultIsVisible, setResultIsVisible] = useState(false);
   function closeMessage() {
@@ -17,22 +18,23 @@ const NewsLetter = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     setState("Loading");
-
+    
     const email = emailRef.current.value.trim();
-    if (!email || !email.length) {
+    // email != null && email.length > 0 && email.match(regExp);
+    if (!UseValideEmail(email)) {
       setState("Error");
       setErrorMsg("please entre a valide email address");
-
-    } 
+    }
+    
     else {
       try {
         const res = await axios.post("/api/subscription", { email });
         console.log(`response of the internal api is: ${res}`);
         setState("Success");
       } catch (e) {
-        console.log(e.response.data);
-        console.log(e.response.data.errorDescription);
-        setErrorMsg(e.response.data.errorDescription);
+        
+        console.log(e.response.data.error);
+        setErrorMsg(e.response.data.error);
         setState("Error");
       }
     }
