@@ -22,16 +22,13 @@ import MobileTableContents from "../../../components/posts/Mobile-Table-Contents
 
 import TwitterPost from "../../../components/twitter/twitter-post";
 import AboutAuthor from "../../../components/posts/about-author";
-import { TwitterVideoEmbed } from "react-twitter-embed";
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
   const [mbTableIsOpen,setTableIsOpen] = useState(false);
   const [asideVisibility, setAsideVisibility] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
 
-  // useEffect(()=>{
-  //   asideVisibility ? aside.current.classList = 'bg-main-blue-hover fixed top-[40vh] p-4 rounded-md right-0' : aside.current.classList = 'hidden'
-  // },[asideVisibility])
+ 
 
   
 
@@ -41,16 +38,17 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
       <NavBar />
       <div className={"container" + " " + styles.wrapper}>
         <div className="wrapper mt-[100px] ">
-          <MobileTableContents activeSection={activeSection}/>
+          {/* <MobileTableContents activeSection={activeSection}/> */}
           <PostHeader meta={meta} />
           {/* Post Content */}
           <div className="mt-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 space-y-4 sm:space-x-10">
+            {/* aside */}
             <aside ref={aside} className="">
               <div className="hidden sm:block sticky h-max w-full top-[100px] overflow-hidden">
-                <TableContent
+                {/* <TableContent
                   title="Table of contents"
                   active={activeSection}
-                />
+                /> */}
               </div>
             </aside>
 

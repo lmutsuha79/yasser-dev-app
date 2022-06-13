@@ -39,7 +39,6 @@ const Footer = () => {
               className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}
             >
               <Link href={"/about"}>about me</Link>
-              <Link href={"/contact"}>contact me</Link>
               <Link href={"/privacy-policy"}>Privacy & Policy</Link>
               <Link href={"/terms-of-use"}>Terms of use</Link>
 
@@ -49,11 +48,10 @@ const Footer = () => {
           <div>
             <FooterTitle title={"Tags"} />
             <ul className="flex flex-wrap justify-center gap-2">
+              <FooterTag tagTitle={"react"} />
               <FooterTag tagTitle={"web"} />
-              <FooterTag tagTitle={"security"} />
               <FooterTag tagTitle={"freelance"} />
-              <FooterTag tagTitle={"news"} />
-              <FooterTag tagTitle={"self improvment"} />
+              <FooterTag tagTitle={"JavaScript"} />
             </ul>
           </div>
           <div>
