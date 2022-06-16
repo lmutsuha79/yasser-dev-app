@@ -30,12 +30,7 @@ const PostsGrid = ({ posts, title, backUrl }) => {
             return (
               <PostContainer
                 key={index}
-                title={post.title}
-                exerpt={post.excerpt}
-                url={post.url}
-                date={post.date}
-                img={post.img}
-                tags={post.tags}
+                post={post}
               />
             );
           })}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Post from "./post";
+import PostContainer from "../post-container";
 
 const PostShow = ({ colNum, sectionTitle, posts }) => {
   // const {img,tags,title,date,url} = post
@@ -21,7 +21,8 @@ const PostShow = ({ colNum, sectionTitle, posts }) => {
       </div>
       <div className={item_class}>
         {posts.map((post) => (
-          <Post key={post.url} post={post} />
+          <PostContainer post={post} key={post.url} />
+          
         ))}
       </div>
     </section>

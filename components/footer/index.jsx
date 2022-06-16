@@ -51,7 +51,7 @@ const Footer = () => {
               <FooterTag tagTitle={"react"} />
               <FooterTag tagTitle={"web"} />
               <FooterTag tagTitle={"freelance"} />
-              <FooterTag tagTitle={"JavaScript"} />
+              <FooterTag tagTitle={"javaScript"} />
             </ul>
           </div>
           <div>

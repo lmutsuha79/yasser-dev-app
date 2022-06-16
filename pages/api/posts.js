@@ -2,6 +2,14 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
+// function fill_excerpt(excerpt){
+//   const n = 20;
+//   const splited = excerpt.split(' ');
+//   // the splited contains less then n words
+//   // we must fill out the aplited arry to get 20 
+ 
+// }
+
 const POSTS_PATH = path.join(process.cwd(), "posts");
 export const getAllSlugs = () => {
   const paths_list = fs.readdirSync(POSTS_PATH);
