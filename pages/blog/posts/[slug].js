@@ -22,19 +22,28 @@ import MobileTableContents from "../../../components/posts/Mobile-Table-Contents
 
 import TwitterPost from "../../../components/twitter/twitter-post";
 import AboutAuthor from "../../../components/posts/about-author";
+
+import { BlogSEO } from "../../../components/SEO/SEO";
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
-  const [mbTableIsOpen,setTableIsOpen] = useState(false);
+  const [mbTableIsOpen, setTableIsOpen] = useState(false);
   const [asideVisibility, setAsideVisibility] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
-
- 
-
-  
 
   const data = { name: meta.title };
   return (
     <>
+  
+      <BlogSEO
+        // authorDetails={}
+        title={meta.title}
+        summary={meta.excerpt}
+        images={meta.img}
+        // canonicalUrl={""}
+        publishedAt={meta.date}
+        modifiedAt={meta.date}
+
+   />
       <NavBar />
       <div className={"container" + " " + styles.wrapper}>
         <div className="wrapper mt-[100px] ">
@@ -91,6 +100,17 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug } = context.params;
   const { meta, content } = getPost(slug);
+  // content: string;
+  //   meta: {
+  //       title: any;
+  //       date: any;
+  //       excerpt: any;
+  //       tags: any;
+  //       img: any;
+  //       url: string;
+  //       intro: any;
+  //       twitterId: any;
+  //       InSlide: any
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [

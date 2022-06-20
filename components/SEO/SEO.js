@@ -60,3 +60,88 @@ export const PageSEO = ({ title, description }) => {
     />
   );
 };
+
+export const BlogSEO = ({
+  authorDetails,
+  title,
+  summary,
+  images = [],
+  canonicalUrl,
+  publishedAt,
+  modifiedAt
+}) => {
+  const router = useRouter();
+  // const publishedAt = new Date(date).toISOString();
+  // const modifiedAt = new Date(lastmod || date).toISOString();
+  let imagesArr =
+    images.length === 0
+      ? [siteMetadata.socialBanner]
+      : typeof images === "string"
+      ? [images]
+      : images;
+
+  const featuredImages = imagesArr.map((img) => {
+    return {
+      "@type": "ImageObject",
+      url: img.includes("http") ? img : siteMetadata.siteUrl + img,
+    };
+  });
+
+  const author = {
+    "@type": "Person",
+    name: authorDetails ? authorDetails : siteMetadata.author,
+  };
+  
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteMetadata.siteUrl}${router.asPath}`,
+    },
+    headline: title,
+    image: featuredImages,
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
+    author: author,
+    publisher: {
+      "@type": "Organization",
+      name: siteMetadata.author,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
+      },
+    },
+    description: summary,
+  };
+
+  const twImageUrl = featuredImages[0].url;
+
+  return (
+    <>
+      <CommonSEO
+        title={title}
+        description={summary}
+        ogType="article"
+        ogImage={featuredImages}
+        twImage={twImageUrl}
+        canonicalUrl={canonicalUrl ? canonicalUrl : `${siteMetadata.siteUrl}${router.asPath}`}
+      />
+      <Head>
+        {publishedAt && (
+          <meta property="article:published_time" content={publishedAt} />
+        )}
+        {modifiedAt && (
+          <meta property="article:modified_time" content={modifiedAt} />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData, null, 2),
+          }}
+        />
+      </Head>
+    </>
+  );
+};
