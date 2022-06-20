@@ -12,6 +12,7 @@ const PostContainer = ({post}) => {
             src={img}
             width="1200"
             height="720"
+            sizes={1200}
             objectFit="fill"
             objectPosition="center"
             alt={`${title} img`}

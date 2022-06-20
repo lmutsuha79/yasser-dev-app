@@ -33,9 +33,9 @@ const DarkLigthModBtn = () => {
       }}
     >
       {isOn === "true" ? (
-        <Image src={"/icons/sun.png"} width={25} height={25} />
+        <img src="/icons/sun.webp" alt="btn" width='25px' height='25px'/>
       ) : (
-        <Image src={"/icons/Moon.png"} width={25} height={25} />
+        <img src="/icons/Moon.webp" alt="btn" width='25px' height='25px'/>
       )}
     </div>
   );

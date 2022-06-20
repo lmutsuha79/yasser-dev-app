@@ -54,7 +54,8 @@ const SliderItem = ({ post, nextPost, prevPost, setVariantsMode, variantsNext, v
               src={post.img}
               width={1200}
               height={680}
-              
+              priority={true}
+              sizes={1200}
               alt={post.title + " img"}
               objectFit="cover"
               objectPosition="center"
