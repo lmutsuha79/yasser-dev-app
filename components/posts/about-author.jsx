@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TwitterFollowButton } from "react-twitter-embed";
+// import { TwitterFollowButton } from "react-twitter-embed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 const AboutAuthor = () => {
@@ -27,7 +27,7 @@ const AboutAuthor = () => {
             Khelil Yasser Djamel Eddine
           </h3>
           <div className="flex justify-center md:justify-start">
-            <TwitterFollowButton screenName="YasserKhelil" />
+            {/* <TwitterFollowButton screenName="YasserKhelil" /> */}
           </div>
         </div>
         <p className="text-main-blue font-light">
