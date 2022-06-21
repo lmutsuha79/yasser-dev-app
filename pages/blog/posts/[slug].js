@@ -20,7 +20,7 @@ import MobileTableContents from "../../../components/posts/Mobile-Table-Contents
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-import TwitterPost from "../../../components/twitter/twitter-post";
+// import TwitterPost from "../../../components/twitter/twitter-post";
 import AboutAuthor from "../../../components/posts/about-author";
 
 import { BlogSEO } from "../../../components/SEO/SEO";
@@ -70,7 +70,7 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
             </article>
           </div>
 
-          <TwitterPost id={meta.twitterId} />
+          {/* <TwitterPost id={meta.twitterId} /> */}
           <AboutAuthor />
 
           {/* related posts */}
