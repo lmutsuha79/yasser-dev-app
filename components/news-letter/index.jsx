@@ -93,19 +93,21 @@ const NewsLetter = () => {
           </form>
         </div>
 
-        <div className="">
+        <div className="min-w-[242px] overflow-hidden">
           {/* img */}
-          <div>
+
+       
             <Image
               src={"/news-letter.png"}
               alt="subscribe to my newsletter"
               width={242}
               height={326}
+              sizes={242}
               objectFit="cover"
               objectPosition="center"
               draggable="false"
             />
-          </div>
+      
         </div>
       </div>
     </div>
