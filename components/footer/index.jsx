@@ -47,17 +47,17 @@ const Footer = () => {
           </div>
           <div>
             <FooterTitle title={"Tags"} />
-            <ul className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               <FooterTag tagTitle={"react"} />
               <FooterTag tagTitle={"web"} />
               <FooterTag tagTitle={"freelance"} />
               <FooterTag tagTitle={"javaScript"} />
-            </ul>
+            </div>
           </div>
           <div>
             <FooterTitle title={"Follow me on"} />
 
-            <ul className="flex justify-center space-x-2">
+            <div className="flex justify-center space-x-2">
               <SocialLink
                 label={"linkedin profile"}
                 icon={faLinkedin}
@@ -78,7 +78,7 @@ const Footer = () => {
                 icon={faFacebook}
                 link="https://www.facebook.com/khelil.yasserdjameledine/"
               />
-            </ul>
+            </div>
           </div>
         </div>
         <div className={style.footerLine}></div>
