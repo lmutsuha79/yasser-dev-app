@@ -12,39 +12,39 @@ const CommonSEO = ({
 }) => {
   const router = useRouter();
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="robots" content="follow, index" />
-      <meta name="description" content={description} />
-      <meta
-        property="og:url"
-        content={`${siteMetadata.siteUrl}${router.asPath}`}
-      />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={siteMetadata.title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:title" content={title} />
-      {ogImage.constructor.name === "Array" ? (
-        ogImage.map(({ url }) => (
-          <meta property="og:image" content={url} key={url} />
-        ))
-      ) : (
-        <meta property="og:image" content={ogImage} key={ogImage} />
-      )}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={siteMetadata.twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twImage} />
-      <link
-        rel="canonical"
-        href={
-          canonicalUrl
-            ? canonicalUrl
-            : `${siteMetadata.siteUrl}${router.asPath}`
-        }
-      />
-    </Head>
+      <Head>
+        <title>{title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta name="description" content={description} />
+        <meta
+          property="og:url"
+          content={`${siteMetadata.siteUrl}${router.asPath}`}
+        />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:site_name" content={siteMetadata.title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        {ogImage.constructor.name === "Array" ? (
+          ogImage.map(({ url }) => (
+            <meta property="og:image" content={url} key={url} />
+          ))
+        ) : (
+          <meta property="og:image" content={ogImage} key={ogImage} />
+        )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={siteMetadata.twitter} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={twImage} />
+        <link
+          rel="canonical"
+          href={
+            canonicalUrl
+              ? canonicalUrl
+              : `${siteMetadata.siteUrl}${router.asPath}`
+          }
+        />
+      </Head>
   );
 };
 export const PageSEO = ({ title, description }) => {
@@ -68,7 +68,7 @@ export const BlogSEO = ({
   images = [],
   canonicalUrl,
   publishedAt,
-  modifiedAt
+  modifiedAt,
 }) => {
   const router = useRouter();
   // const publishedAt = new Date(date).toISOString();
@@ -91,7 +91,6 @@ export const BlogSEO = ({
     "@type": "Person",
     name: authorDetails ? authorDetails : siteMetadata.author,
   };
-  
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -126,7 +125,11 @@ export const BlogSEO = ({
         ogType="article"
         ogImage={featuredImages}
         twImage={twImageUrl}
-        canonicalUrl={canonicalUrl ? canonicalUrl : `${siteMetadata.siteUrl}${router.asPath}`}
+        canonicalUrl={
+          canonicalUrl
+            ? canonicalUrl
+            : `${siteMetadata.siteUrl}${router.asPath}`
+        }
       />
       <Head>
         {publishedAt && (

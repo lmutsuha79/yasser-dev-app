@@ -6,10 +6,12 @@ import path from "path";
 import NewsLetter from "../../components/news-letter";
 import Footer from "../../components/footer";
 import { getAllPosts, getSlidePosts, getRecentPosts } from "../api/posts";
+import { PageSEO } from "../../components/SEO/SEO";
 
 export default function Blog({ mostRecentPosts, slidePosts }) {
   return (
-    <div>
+    <>
+      <PageSEO title={"the blog"} description={"the index page of yasser mitsuha blog"}/>
       <NavBar />
 
       <div className="container md:pt-16 space-y-8 lg:space-y-24">
@@ -33,7 +35,7 @@ export default function Blog({ mostRecentPosts, slidePosts }) {
       </div>
       {/* out container */}
       <Footer />
-    </div>
+    </>
   );
 }
 

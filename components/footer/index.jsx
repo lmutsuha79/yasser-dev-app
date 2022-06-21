@@ -59,18 +59,22 @@ const Footer = () => {
 
             <ul className="flex justify-center space-x-2">
               <SocialLink
+                label={"linkedin profile"}
                 icon={faLinkedin}
                 link="https://www.linkedin.com/in/mitsuha79/"
               />
               <SocialLink
+                label={"twitter profile"}
                 icon={faTwitter}
                 link="https://twitter.com/YasserKhelil"
               />
               <SocialLink
+                label={"instagram profile"}
                 icon={faInstagram}
                 link="https://www.instagram.com/khelil__yasser/"
               />
               <SocialLink
+                label={"facebook profile"}
                 icon={faFacebook}
                 link="https://www.facebook.com/khelil.yasserdjameledine/"
               />
