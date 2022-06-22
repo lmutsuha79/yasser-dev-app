@@ -24,14 +24,18 @@ const PostHeader = ({meta}) => {
       </div>
 
       {/* Post Hero Img  */}
-      <div className="text-center">
+      <div className="text-center w-[">
         <Image
           src={meta.img}
-          width={760}
-          height={350}
+          width={"760"}
+          height={"350"}
+          sizes={"760"}
           alt={meta.title + " img"}
           objectFit="contain"
+          objectPosition={'center'}
           draggable="false"
+
+         
         />
       </div>
     </div>

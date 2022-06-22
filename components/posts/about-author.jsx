@@ -14,6 +14,7 @@ const AboutAuthor = () => {
             alt="khelil_yasser_profile"
             width="100%"
             height="100%"
+            sizes="90"
             objectFit="cover"
             objectPosition="top"
             draggable="false"
