@@ -44,19 +44,34 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
       />
       <NavBar />
       <div className={"container" + " " + styles.wrapper}>
-        <div className="wrapper mt-[100px] ">
+        <div className="wrapper mt-[100px] overflow-hidden">
           {/* <MobileTableContents activeSection={activeSection}/> */}
           <PostHeader meta={meta} />
           {/* Post Content */}
-          <div className="mt-6">
+          <div className="max-w-[1100px] mx-auto mt-6 flex flex-row-reverse items-start justify-center">
             {/* aside */}
-            {/* <aside ref={aside} className="">
-              <div className="hidden sm:block sticky h-max w-full top-[100px] overflow-hidden">
-                
+            <aside
+              ref={aside}
+              className="hidden lg:block shrink-[1000] basis-[250px] ml-auto sticky top-[100px] right-0 h-[calc(100vh-100px)] mb-4"
+            >
+              <div>
+                <h3>Table of content </h3>
+                <ul>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum</li>
+                  <li>Lorem ipsum sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li></li>
+                  <li></li>
+                </ul>
               </div>
-            </aside> */}
+            </aside>
 
-            <article className="sm:col-span-2">
+            <article className="max-w-[min(100%,668px)] sm:col-span-2">
               <MDXRemote
                 {...mdxSource}
                 scope={data}

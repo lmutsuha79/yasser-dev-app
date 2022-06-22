@@ -51,10 +51,10 @@ const NewsLetter = () => {
         errorMsg={errorMsg}
       />
 
-      <div className="bg-main-blue-hover rounded-xl bg-opacity-20 py-12 px-8 space-y-8 flex flex-col items-center md:flex-row md:justify-around md:items-center">
+      <div className="bg-main-blue-hover rounded-xl bg-opacity-20 py-12 px-8 space-y-8 flex flex-col items-center md:flex-row md:justify-around md:items-center 2xl:justify-center 2xl:gap-8">
         {/* text */}
 
-        <div className="space-y-4 px-2 md:px-8 w-full md:w-auto md:flex md:flex-col">
+        <div className="space-y-4 min-w-[50%] px-2 md:px-8 w-full md:w-auto md:flex md:flex-col">
           <div className="sm:ml-8 text-center sm:text-left">
             <div className="space-x-4">
               <FontAwesomeIcon
