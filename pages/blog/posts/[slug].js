@@ -33,7 +33,6 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const data = { name: meta.title };
   return (
     <>
-  
       <BlogSEO
         // authorDetails={}
         title={meta.title}
@@ -42,24 +41,20 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
         // canonicalUrl={""}
         publishedAt={meta.date}
         modifiedAt={meta.date}
-
-   />
+      />
       <NavBar />
       <div className={"container" + " " + styles.wrapper}>
         <div className="wrapper mt-[100px] ">
           {/* <MobileTableContents activeSection={activeSection}/> */}
           <PostHeader meta={meta} />
           {/* Post Content */}
-          <div className="mt-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 space-y-4 sm:space-x-10">
+          <div className="mt-6">
             {/* aside */}
-            <aside ref={aside} className="">
+            {/* <aside ref={aside} className="">
               <div className="hidden sm:block sticky h-max w-full top-[100px] overflow-hidden">
-                {/* <TableContent
-                  title="Table of contents"
-                  active={activeSection}
-                /> */}
+                
               </div>
-            </aside>
+            </aside> */}
 
             <article className="sm:col-span-2">
               <MDXRemote
@@ -71,7 +66,9 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
           </div>
 
           {/* <TwitterPost id={meta.twitterId} /> */}
-          <AboutAuthor />
+          <div className="mt-4">
+            <AboutAuthor />
+          </div>
 
           {/* related posts */}
 

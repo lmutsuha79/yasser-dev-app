@@ -24,7 +24,7 @@ const PostHeader = ({meta}) => {
       </div>
 
       {/* Post Hero Img  */}
-      <div className="text-center w-[">
+      <div className="text-center max-w-[760px] mx-auto">
         <Image
           src={meta.img}
           width={"760"}

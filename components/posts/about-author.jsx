@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 const AboutAuthor = () => {
   return (
-    <div className="overflow-clip bg-white shadow-sm px-2 py-8 hover:shadow-md transition-shadow shadow-main-blue/10 w-fit h-fit flex flex-col md:flex-row space-x-4 items-center max-w-[700px]">
+    <div className="overflow-clip bg-white shadow-sm px-2 py-8 hover:shadow-md transition-shadow shadow-main-blue/10 w-fit  h-fit flex flex-col md:flex-row space-x-4 items-center ">
       {/* img */}
       <div className=" w-[100px] h-[100px] border-8 border-main-blue-hover rounded-full  grid place-content-center">
         <div className="rounded-full w-[90px] h-[90px] overflow-hidden">
