@@ -3,15 +3,15 @@ import TableContent from "./table-content";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { motion } from "framer-motion";
-const MobileTableContents = ({ activeSection }) => {
+const MobileTableContents = ({title, pathName,startHidden }) => {
   const [mbTableIsOpen, setMbTableIsOpen] = useState(false);
   return (
     <div
       onClick={(e) => setMbTableIsOpen((curr) => !curr)}
-      className="sm:hidden overflow-hidden h-fit left-2 right-2 fixed bottom-0 z-50 drop-shadow-lg border-x border-t-2 border-main-blue-hover/80 transition-all  bg-white  rounded-lg px-4 "
+      className={`${startHidden ? startHidden : 'sm'}:hidden`+" "+ "overflow-hidden h-fit left-2 right-2 fixed bottom-0 z-50 drop-shadow-lg border-x border-t-2 border-main-blue-hover/80 transition-all  bg-white  rounded-lg px-4 "}
     >
       <div className="h-[50px] cursor-pointer text-main-blue font-bold hover:text-main-blue-hover flex justify-between items-center">
-        <span>TABLE OF CONTENTS</span>
+        <span>{title ? title : "contents"}</span>
         <motion.div
           animate={mbTableIsOpen ? { rotate: 180 } : { rotate: 0 }}
           transition={{ duration: 0.2 }}
@@ -30,7 +30,7 @@ const MobileTableContents = ({ activeSection }) => {
         }
         transition={{ duration: 0.3,type:"spring" }}
       >
-        <TableContent title="" active={activeSection} />
+        <TableContent title={' '} pathName={pathName}/>
       </motion.div>
     </div>
   );

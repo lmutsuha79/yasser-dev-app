@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
-const TableContent = ({ contentList, title, active }) => {
+const TableContent = ({ title,pathName }) => {
   const [allHeaders, setAllHeaders] = useState([]);
   const link = useRef();
-
+  // console.log(pathName)
   useEffect(() => {
     const OBSERVER_OPTIONS = {
       rootMargin: "-100px"
       // threshold: 1,
-
     }
     const observer = new IntersectionObserver((headings) => {
 
@@ -51,7 +50,7 @@ const TableContent = ({ contentList, title, active }) => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathName]);
   return (
     <div className="space-y-1 ">
       <h3 className="text-main-blue font-bold ">

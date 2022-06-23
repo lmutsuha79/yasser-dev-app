@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { getAllSlugs, getPost, getRelatedPosts } from "../../api/posts";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
@@ -29,7 +30,9 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const [mbTableIsOpen, setTableIsOpen] = useState(false);
   const [asideVisibility, setAsideVisibility] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
-
+  
+  const router = useRouter();
+  // const [pathName,setPathName] = useState(router.asPath); 
   const data = { name: meta.title };
   return (
     <>
@@ -43,8 +46,9 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
         modifiedAt={meta.date}
       />
       <NavBar />
+      <MobileTableContents title={"TABLE OF CONTENTS"} pathName={router.asPath} startHidden={'lg'}/>
       <div className={"container" + " " + styles.wrapper}>
-        <div className="wrapper mt-[100px] overflow-hidden">
+        <div className="wrapper mt-[100px] ">
           {/* <MobileTableContents activeSection={activeSection}/> */}
           <PostHeader meta={meta} />
           {/* Post Content */}
@@ -54,21 +58,7 @@ const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
               ref={aside}
               className="hidden lg:block shrink-[1000] basis-[250px] ml-auto sticky top-[100px] right-0 h-[calc(100vh-100px)] mb-4"
             >
-              <div>
-                <h3>Table of content </h3>
-                <ul>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
+              <TableContent title={"TABLE OF CONTENTS"} pathName={router.asPath} />
             </aside>
 
             <article className="max-w-[min(100%,668px)] sm:col-span-2">
