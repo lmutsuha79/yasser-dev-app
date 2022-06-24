@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const TableContent = ({ tableTitle, pathName }) => {
   const [allHeaders, setAllHeaders] = useState([]);
@@ -13,28 +13,28 @@ const TableContent = ({ tableTitle, pathName }) => {
       // threshold: 0,
     };
     const observer = new IntersectionObserver((entries, observer) => {
-
-      console.log(entries)
+      console.log(entries);
       entries.forEach((entry, index) => {
-        console.log(entry.target)
-       if(entry.isIntersecting){
-        // after first render the entry array will contain only one elemnt 
-        // wich is the current observed elemnt
-        // console.log(index,' yes')
-        document.getElementById(`link_${entry.target.firstChild.id}`).classList.add('bg-nav-border-gray')
-        
-       }else{
-        // console.log(index,' no')
-        try{
-          document.getElementById(`link_${entry.target.firstChild.id}`).classList.remove('bg-nav-border-gray')
-
-        }catch(err){
-          // pass err
+        console.log(entry.target);
+        if (entry.isIntersecting) {
+          // after first render the entry array will contain only one elemnt
+          // wich is the current observed elemnt
+          // console.log(index,' yes')
+          document
+            .getElementById(`link_${entry.target.firstChild.id}`)
+            .classList.add("bg-nav-border-gray");
+        } else {
+          // console.log(index,' no')
+          try {
+            document
+              .getElementById(`link_${entry.target.firstChild.id}`)
+              .classList.remove("bg-nav-border-gray");
+          } catch (err) {
+            // pass err
+          }
         }
-
-       }
       });
-    },options);
+    }, options);
     // observer.observe(all_headers[3].parentElement)
     all_headers.forEach((header) => observer.observe(header.parentElement));
   }, [pathName]);
@@ -44,7 +44,7 @@ const TableContent = ({ tableTitle, pathName }) => {
       <h3 className="text-main-blue font-bold ">
         {tableTitle ? tableTitle : "contents"}
       </h3>
-      <ul className="pl-1 flex flex-col gap-[1px]">
+      <div className="pl-1 flex flex-col gap-[1px]">
         {allHeaders.map((h2, index) => {
           return (
             <a
@@ -57,7 +57,7 @@ const TableContent = ({ tableTitle, pathName }) => {
             </a>
           );
         })}
-      </ul>
+      </div>
       <div className="h-[2px] w-full bg-white rounded-xl "></div>
     </div>
   );

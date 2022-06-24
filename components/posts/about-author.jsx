@@ -25,7 +25,7 @@ const AboutAuthor = () => {
       <div className="text-center md:text-left space-y-2">
         <div className="md:flex md:space-x-2 items-center">
           <h3 className="text-main-blue text-xl font-medium font-Architects_Daughter">
-            Khelil Yasser Djamel Eddine
+            About Author
           </h3>
           <div className="flex justify-center md:justify-start">
             {/* <TwitterFollowButton screenName="YasserKhelil" /> */}
