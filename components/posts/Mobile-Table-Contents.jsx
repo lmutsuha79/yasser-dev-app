@@ -11,7 +11,7 @@ const MobileTableContents = ({title, pathName,startHidden }) => {
       onClick={(e) => setMbTableIsOpen((curr) => !curr)}
       className={startHidden+':hidden '+" overflow-hidden h-fit left-2 right-2 fixed  bottom-0 z-[99] drop-shadow-lg border-x border-t-2 border-main-blue-hover/80 transition-all  bg-white  rounded-lg px-4 "}
     >
-      <dvi className='hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'></dvi>
+      <div className='hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'></div>
       <div className="h-[50px] cursor-pointer text-main-blue font-bold hover:text-main-blue-hover flex justify-between items-center">
         <span>{title ? title : "contents"}</span>
         <motion.div
@@ -32,7 +32,7 @@ const MobileTableContents = ({title, pathName,startHidden }) => {
         }
         transition={{ duration: 0.3,type:"spring" }}
       >
-        <TableContent title={' '} pathName={pathName}/>
+        <TableContent tableTitle={' '} pathName={pathName}/>
       </motion.div>
     </div>
   );

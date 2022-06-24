@@ -19,7 +19,7 @@ const PostHeader = ({ meta }) => {
           </span>
         </div>
         <div>
-          <h2 className="text-main-blue text-center text-xl md:text-2xl font-semibold my-2">Intro</h2>
+          <h2 id="intro" className="text-main-blue text-center text-xl md:text-2xl font-semibold my-2">Intro</h2>
         <p className="font-normal text-base text-main-blue text-center px-3 sm:px-[10%] lg:px-[20%]">
           {meta.intro}
         </p>

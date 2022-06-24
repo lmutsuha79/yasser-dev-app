@@ -1,62 +1,63 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const TableContent = ({ title,pathName }) => {
+const TableContent = ({ tableTitle, pathName }) => {
   const [allHeaders, setAllHeaders] = useState([]);
-  const link = useRef();
-  // console.log(pathName)
+
   useEffect(() => {
-    const OBSERVER_OPTIONS = {
-      rootMargin: "-100px"
-      // threshold: 1,
-    }
-    const observer = new IntersectionObserver((headings) => {
+    const all_headers = Array.from(document.querySelectorAll("h2"));
+    setAllHeaders(all_headers);
+    const options = {
+      // root: null,
+      rootMargin: "-100px",
 
-      headings.forEach((head, index) => {
-        if (head.isIntersecting) {
-          // get id of the title of active section
-          link.current = head.target.firstChild.id;
-          document
-            .getElementById("link_" + head.target.firstChild.id)
-            .classList.add("bg-nav-border-gray");
-          // setActiveSection(head.target.firstChild.id);
-        } else {
-          document
-            .getElementById("link_" + head.target.firstChild.id)
-            .classList.remove("bg-nav-border-gray");
+      // threshold: 0,
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
 
-        }
-      });
-    },OBSERVER_OPTIONS);
-    const all_headers = document.querySelectorAll("h2");
-    setAllHeaders((curr) => {
-      return [...all_headers].map((item) => {
-        // apply only one
+      console.log(entries)
+      entries.forEach((entry, index) => {
+        console.log(entry.target)
+       if(entry.isIntersecting){
+        // after first render the entry array will contain only one elemnt 
+        // wich is the current observed elemnt
+        // console.log(index,' yes')
+        document.getElementById(`link_${entry.target.firstChild.id}`).classList.add('bg-nav-border-gray')
+        
+       }else{
+        // console.log(index,' no')
+        try{
+          document.getElementById(`link_${entry.target.firstChild.id}`).classList.remove('bg-nav-border-gray')
 
-        {
-          observer.observe(item.parentElement);
+        }catch(err){
+          // pass err
         }
 
-        return (
-          <a
-            key={item.id}
-            href={"#" + item.id}
-            id={"link_" + item.id}
-            className={`text-main-blue transform hover:translate-x-1 transition-all text-sm font-medium rounded-md hover:bg-white border-b px-1 py-2 `}
-          >
-            {item.textContent}
-          </a>
-        );
+       }
       });
-    });
-
-    return () => observer.disconnect();
+    },options);
+    // observer.observe(all_headers[3].parentElement)
+    all_headers.forEach((header) => observer.observe(header.parentElement));
   }, [pathName]);
+
   return (
     <div className="space-y-1 ">
       <h3 className="text-main-blue font-bold ">
-        {title ? title : "contents"}
+        {tableTitle ? tableTitle : "contents"}
       </h3>
-      <ul className="pl-1 flex flex-col gap-[1px]">{allHeaders}</ul>
+      <ul className="pl-1 flex flex-col gap-[1px]">
+        {allHeaders.map((h2, index) => {
+          return (
+            <a
+              id={"link_" + h2.id}
+              key={index}
+              href={"#" + h2.id}
+              className="table_link text-main-blue transform hover:translate-x-1 transition-all text-sm font-medium rounded-md hover:bg-nav-border-gray  border-b px-1 py-2 "
+            >
+              {h2.textContent}
+            </a>
+          );
+        })}
+      </ul>
       <div className="h-[2px] w-full bg-white rounded-xl "></div>
     </div>
   );

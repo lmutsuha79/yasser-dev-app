@@ -6,5 +6,9 @@
       .tableContentMobile {
             @apply bg-blue-400
       }
+      .wrapper p{
+            @apply text-lg
+      }
+      
 
 }
