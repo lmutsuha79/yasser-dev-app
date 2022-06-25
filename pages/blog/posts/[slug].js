@@ -19,10 +19,17 @@ import { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.css";
 import PostHeader from "../../../components/posts/post-header";
 import MobileTableContents from "../../../components/posts/Mobile-Table-Contents";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-// import TwitterPost from "../../../components/twitter/twitter-post";
+import { Researcher, Paper } from "yoastseo";
+
+const paper = new Paper( "Text to analyze", {
+    keyword: "analyze",
+} );
+const researcher = new Researcher( paper );
+
+console.log( researcher.getResearch( "wordCountInText" ) );
+
+
 import AboutAuthor from "../../../components/posts/about-author";
 
 import { BlogSEO } from "../../../components/SEO/SEO";

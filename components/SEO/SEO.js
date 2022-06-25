@@ -106,14 +106,15 @@ export const BlogSEO = ({
     dateModified: modifiedAt,
     author: author,
     publisher: {
-      "@type": "Organization",
+      "@type": "persone",
       name: siteMetadata.author,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
-      },
+      // logo: {
+      //   "@type": "ImageObject",
+      //   url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
+      // },
     },
     description: summary,
+    
   };
 
   const twImageUrl = featuredImages[0].url;
