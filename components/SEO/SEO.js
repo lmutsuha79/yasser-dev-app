@@ -90,6 +90,7 @@ export const BlogSEO = ({
   const author = {
     "@type": "Person",
     name: authorDetails ? authorDetails : siteMetadata.author,
+    url: siteMetadata.authorLink,
   };
 
   const structuredData = {
