@@ -1,6 +1,8 @@
 const siteMetadata = {
   title: "yasser mitsuha",
   author: "khelil yasser djamel eddine",
+  authorEmail: "khelilyasser79@gmail.com",
+  authorLink: "https://twitter.com/YasserKhelil",
   headerTitle: "Yasser Mitsuha",
   description:
     "I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.",
@@ -9,7 +11,8 @@ const siteMetadata = {
   siteUrl: "https://yasser-dev-app.vercel.app/",
   siteRepo: "https://github.com/lamani79/yasser-dev-app/",
   siteLogo: "/site_data/logo.png",
-  image: "/static/images/avatar.png",
+  image: "/site_data/avatar.png",
+  favicon: "/favicon.ico",
   socialBanner: "/site_data/twitter-card.png",
   email: "khelilyasser79@gmail.com",
   github: "https://github.com/lamani79",

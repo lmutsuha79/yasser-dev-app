@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import { ThemeContext } from "./_app";
 import { useContext } from "react";
+import generateRssFeed from "../lib/generateRssFeed";
+
 
 
 
@@ -18,11 +20,22 @@ export default function Home() {
       </button>
       <div className=" flex justify-center py-20">
         <div className="text-center bg-main-blue hover:bg-blue-900 transition w-[100px] h-[40px] grid items-center text-blue-300 font-medium">
-          <Link href="./blog">go to blog</Link>
+          <Link href="/blog">go to blog</Link>
         </div>
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // ........
+  await generateRssFeed(); // calling to generate the feed
+  // ........
+  return {
+    props:{
+      
+    }
+  }
 }
 
 

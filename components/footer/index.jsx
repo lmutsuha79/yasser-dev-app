@@ -41,8 +41,8 @@ const Footer = () => {
               <Link href={"/about"}>about me</Link>
               <Link href={"/privacy-policy"}>Privacy & Policy</Link>
               <Link href={"/terms-of-use"}>Terms of use</Link>
-
-              <Link href={"/site-map"}>site-map</Link>
+              <Link href={"/rss/feed.xml"}>RSS FEED</Link>
+              <Link href={"/sitemap.xml"}>site-map</Link>
             </div>
           </div>
           <div>

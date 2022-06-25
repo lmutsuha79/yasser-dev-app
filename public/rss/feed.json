@@ -1,0 +1,74 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "yasser mitsuha",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000/rss/feed.json",
+    "description": "I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.",
+    "icon": "/site_data/avatar.png",
+    "author": {
+        "name": "khelil yasser djamel eddine",
+        "url": "https://twitter.com/YasserKhelil"
+    },
+    "items": [
+        {
+            "id": "url",
+            "content_html": "Higher-order functions in JavaScript are a special category of functions that either accept functions as an argument or return functions. On the other side",
+            "url": "http://localhost:3000/blog/posts/higher-order-functions-javascript",
+            "title": "Higher order functions javaScript",
+            "summary": "Higher-order functions in JavaScript are a special category of functions that either accept functions as an argument or return functions. On the other side",
+            "date_modified": "2022-06-12T23:00:00.000Z",
+            "author": {
+                "name": "khelil yasser djamel eddine",
+                "url": "https://twitter.com/YasserKhelil"
+            }
+        },
+        {
+            "id": "url",
+            "content_html": "in this course you will learn the vue js fremwork from begining to advance topics",
+            "url": "http://localhost:3000/blog/posts/vue-js-crash-course",
+            "title": "Vue.js Crash Course",
+            "summary": "in this course you will learn the vue js fremwork from begining to advance topics",
+            "date_modified": "2022-06-04T23:00:00.000Z",
+            "author": {
+                "name": "khelil yasser djamel eddine",
+                "url": "https://twitter.com/YasserKhelil"
+            }
+        },
+        {
+            "id": "url",
+            "content_html": "hello guys in this couse you will learn all about tailwind css",
+            "url": "http://localhost:3000/blog/posts/tailwind-css-crash-crouse",
+            "title": "Tailwind css crash course",
+            "summary": "hello guys in this couse you will learn all about tailwind css",
+            "date_modified": "2022-05-05T23:00:00.000Z",
+            "author": {
+                "name": "khelil yasser djamel eddine",
+                "url": "https://twitter.com/YasserKhelil"
+            }
+        },
+        {
+            "id": "url",
+            "content_html": "SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.",
+            "url": "http://localhost:3000/blog/posts/react-the-full-guid",
+            "title": "React The Full Guid",
+            "summary": "SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.",
+            "date_modified": "2020-11-21T00:00:00.000Z",
+            "author": {
+                "name": "khelil yasser djamel eddine",
+                "url": "https://twitter.com/YasserKhelil"
+            }
+        },
+        {
+            "id": "url",
+            "content_html": "SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.",
+            "url": "http://localhost:3000/blog/posts/How-Does-SWR-Work",
+            "title": "How Does SWR Work?",
+            "summary": "SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.",
+            "date_modified": "2019-05-21T23:00:00.000Z",
+            "author": {
+                "name": "khelil yasser djamel eddine",
+                "url": "https://twitter.com/YasserKhelil"
+            }
+        }
+    ]
+}

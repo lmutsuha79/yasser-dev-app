@@ -19,6 +19,7 @@
     "@yozora/react-blockquote": "^2.0.0-alpha.4",
     "axios": "^0.27.2",
     "darkreader": "^4.9.46",
+    "feed": "^4.2.2",
     "framer-motion": "^6.3.10",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
