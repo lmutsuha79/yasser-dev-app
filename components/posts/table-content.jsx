@@ -44,7 +44,7 @@ const TableContent = ({ tableTitle, pathName }) => {
       <h3 className="text-main-blue font-bold ">
         {tableTitle ? tableTitle : "contents"}
       </h3>
-      <div className="pl-1 flex flex-col gap-[1px]">
+      <div className="pl-1 flex flex-col gap-1">
         {allHeaders.map((h2, index) => {
           return (
             <a

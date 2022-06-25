@@ -6,9 +6,12 @@
       .tableContentMobile {
             @apply bg-blue-400
       }
-      .wrapper p{
+      .wrapper article p{
             @apply text-lg
       }
       
 
 }
+/* .wrapper article p{
+      color: red;
+} */
