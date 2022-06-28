@@ -61,3 +61,19 @@ h2, h3 {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+
+/* ############### */
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+li.active > a {
+  color: white;
+}
+
+li > a:hover {
+  color: white;
+}

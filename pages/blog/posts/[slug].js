@@ -20,14 +20,7 @@ import styles from "./styles.module.css";
 import PostHeader from "../../../components/posts/post-header";
 import MobileTableContents from "../../../components/posts/Mobile-Table-Contents";
 
-import { Researcher, Paper } from "yoastseo";
 
-const paper = new Paper( "Text to analyze", {
-    keyword: "analyze",
-} );
-const researcher = new Researcher( paper );
-
-console.log( researcher.getResearch( "wordCountInText" ) );
 
 
 import AboutAuthor from "../../../components/posts/about-author";
@@ -35,9 +28,9 @@ import AboutAuthor from "../../../components/posts/about-author";
 import { BlogSEO } from "../../../components/SEO/SEO";
 const SinglePost = ({ mdxSource, meta, relatedPosts }) => {
   const aside = useRef(null);
-  const [mbTableIsOpen, setTableIsOpen] = useState(false);
-  const [asideVisibility, setAsideVisibility] = useState(false);
-  const [activeSection, setActiveSection] = useState("introduction");
+  // const [mbTableIsOpen, setTableIsOpen] = useState(false);
+  // const [asideVisibility, setAsideVisibility] = useState(false);
+  // const [activeSection, setActiveSection] = useState("introduction");
 
   const router = useRouter();
   // const [pathName,setPathName] = useState(router.asPath);

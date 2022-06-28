@@ -1,5 +1,7 @@
 // /** @type {import('next').NextConfig} */
 
+const { redirect } = require("next/dist/server/api-utils");
+
 // const nextConfig = {
 //   reactStrictMode: true,
 //   images: {
@@ -14,6 +16,15 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
+  redirects: async() =>{
+    return [
+      {
+        source: '/',
+        destination: '/blog',
+        permanent: false,
+      }
+    ]
+  },
   reactStrictMode: true,
   i18n: {
     locales: ["en"],

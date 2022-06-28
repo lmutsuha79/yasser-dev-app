@@ -9,6 +9,7 @@ const TableContent = ({ tableTitle, pathName }) => {
     const options = {
       // root: null,
       rootMargin: "-100px",
+      
 
       // threshold: 0,
     };
