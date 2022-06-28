@@ -12,7 +12,6 @@ const PostContainer = ({ post }) => {
           <div className="h-full w-full grid place-content-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity absolute z-50 top-0 left-0">
             <div className="w-fit h-fit rounded-full p-2 bg-white">
             <FontAwesomeIcon className="text-main-blue text-xl" icon={faEye} />
-
             </div>
           </div>
           <Image

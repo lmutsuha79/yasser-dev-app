@@ -36,7 +36,7 @@ const Footer = () => {
           <div>
             <FooterTitle title={"Quick links"} />
             <div
-              className={`${style.footerLinksContainer} flex flex-col text-nav-border-gray`}
+              className={`${style.footerLinksContainer} flex flex-col `}
             >
               <Link href={"/about"}>about me</Link>
               <Link href={"/privacy-policy"}>Privacy & Policy</Link>

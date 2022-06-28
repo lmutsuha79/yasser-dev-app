@@ -4,7 +4,7 @@
             @apply h-[1px] w-full bg-nav-border-gray rounded-md;
       }
       .footerLinksContainer > a{
-            @apply  p-1 hover:text-white transitionScale
+            @apply  p-1 text-main-gray hover:text-white transitionScale
       }
       .gridContent >div{
             @apply text-center grid justify-center
