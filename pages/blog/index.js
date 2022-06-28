@@ -21,15 +21,15 @@ export default function Blog({ mostRecentPosts, slidePosts }) {
         {/* <PostShow colNum={4} sectionTitle={"Most viwed"} /> */}
 
         <PostShow
-          colNum={4}
+          colNum={2}
           sectionTitle={"Rescent Articles"}
           posts={mostRecentPosts}
         />
-        <PostShow
+        {/* <PostShow
           colNum={4}
           sectionTitle={"Rescent Articles"}
           posts={mostRecentPosts}
-        />
+        /> */}
 
         <NewsLetter />
       </div>
@@ -41,7 +41,7 @@ export default function Blog({ mostRecentPosts, slidePosts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
-  const mostRecentPosts = getRecentPosts(allPosts, 4);
+  const mostRecentPosts = getRecentPosts(allPosts, 12);
   const slidePosts = getSlidePosts(allPosts);
   return {
     props: {

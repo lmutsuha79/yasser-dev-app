@@ -10,6 +10,8 @@ const PostShow = ({ colNum, sectionTitle, posts }) => {
     "sm:grid sm:grid-cols-" + colNum / 2 + " gap-4  lg:grid-cols-" + colNum;
   return (
     <section className="mt-6">
+      {/* just for tailwind to not remove this classes */}
+      <div className="hidden sm:grid grid-cols-1 grid-cols-2 grid-cols-4 sm:grid-cols-4 sm:grid-cols-2 sm:grid-cols-1 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 md:grid-cols-1 md:grid-cols-2 md:grid-cols-4 "></div>
       <div className="flex justify-between">
         {/* title of section and link */}
         <h4 className="font-semibold text-lg text-main-blue dark:text-white">
