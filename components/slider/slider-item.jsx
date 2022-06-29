@@ -45,7 +45,7 @@ const SliderItem = ({
           </a>
         </Link>
         {/* desc */}
-        <p className="text-main-gray text-sm font-normal leading-6">
+        <p className="text-main-gray text-sm font-normal leading-6 overflow-hidden">
           {post.excerpt}
         </p>
       </div>

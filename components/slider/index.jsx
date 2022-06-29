@@ -50,6 +50,7 @@ const HeroSlider = ({ posts }) => {
       className="px-6 py-8 md:px-6 md:py-8 lg:p-12
        shadow-xl dark:shadow-md dark:shadow-main-blue-hover/30
         bg-white w-[min(800px,100%)] rounded-md
+       
       "
     >
       <div className="relative ">
