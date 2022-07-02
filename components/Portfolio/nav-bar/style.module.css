@@ -1,0 +1,9 @@
+@tailwind components;
+@layer components {
+  .textLinks a {
+    @apply text-main-blue font-medium text-lg pb-1;
+  }
+}
+.BlogLink:hover .icons {
+  transform: translateY(-25%);
+}

@@ -4,9 +4,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-   
     extend: {
       
+
       fontFamily: {
         Architects_Daughter: ["Architects Daughter"],
       },

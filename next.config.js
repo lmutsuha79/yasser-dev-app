@@ -16,15 +16,15 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
-  redirects: async() =>{
-    return [
-      {
-        source: '/',
-        destination: '/blog',
-        permanent: false,
-      }
-    ]
-  },
+  // redirects: async() =>{
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/blog',
+  //       permanent: false,
+  //     }
+  //   ]
+  // },
   reactStrictMode: true,
   i18n: {
     locales: ["en"],

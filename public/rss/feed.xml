@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>yasser mitsuha</title>
-        <link>http://localhost:3000</link>
+        <link>undefined</link>
         <description>I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.</description>
-        <lastBuildDate>Tue, 28 Jun 2022 15:08:11 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 02 Jul 2022 13:20:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>yasser mitsuha</title>
             <url>/site_data/avatar.png</url>
-            <link>http://localhost:3000</link>
+            <link>undefined</link>
         </image>
         <copyright>All rights reserved 2022, yasser mitsuha</copyright>
         <item>
             <title><![CDATA[Higher order functions javaScript]]></title>
-            <link>http://localhost:3000/blog/posts/higher-order-functions-javascript</link>
+            <link>undefined/blog/posts/higher-order-functions-javascript</link>
             <guid>url</guid>
             <pubDate>Sun, 12 Jun 2022 23:00:00 GMT</pubDate>
             <description><![CDATA[Higher-order functions in JavaScript are a special category of functions that either accept functions as an argument or return functions. On the other side]]></description>
@@ -24,7 +24,7 @@
         </item>
         <item>
             <title><![CDATA[Vue.js Crash Course]]></title>
-            <link>http://localhost:3000/blog/posts/vue-js-crash-course</link>
+            <link>undefined/blog/posts/vue-js-crash-course</link>
             <guid>url</guid>
             <pubDate>Sat, 04 Jun 2022 23:00:00 GMT</pubDate>
             <description><![CDATA[in this course you will learn the vue js fremwork from begining to advance topics]]></description>
@@ -33,7 +33,7 @@
         </item>
         <item>
             <title><![CDATA[Tailwind css crash course]]></title>
-            <link>http://localhost:3000/blog/posts/tailwind-css-crash-crouse</link>
+            <link>undefined/blog/posts/tailwind-css-crash-crouse</link>
             <guid>url</guid>
             <pubDate>Thu, 05 May 2022 23:00:00 GMT</pubDate>
             <description><![CDATA[hello guys in this couse you will learn all about tailwind css]]></description>
@@ -42,7 +42,7 @@
         </item>
         <item>
             <title><![CDATA[React The Full Guid]]></title>
-            <link>http://localhost:3000/blog/posts/react-the-full-guid</link>
+            <link>undefined/blog/posts/react-the-full-guid</link>
             <guid>url</guid>
             <pubDate>Sat, 21 Nov 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.]]></description>
@@ -51,7 +51,7 @@
         </item>
         <item>
             <title><![CDATA[How Does SWR Work?]]></title>
-            <link>http://localhost:3000/blog/posts/How-Does-SWR-Work</link>
+            <link>undefined/blog/posts/How-Does-SWR-Work</link>
             <guid>url</guid>
             <pubDate>Tue, 21 May 2019 23:00:00 GMT</pubDate>
             <description><![CDATA[SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.]]></description>

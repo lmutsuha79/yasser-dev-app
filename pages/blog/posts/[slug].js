@@ -13,8 +13,10 @@ import Title from "../../../components/posts/section-title";
 import Link from "next/link";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings"; // import 'highlight.js/styles/atom-one-dark.css'
+import rehypeAutolinkHeadings from "rehype-autolink-headings"; 
+// import 'highlight.js/styles/atom-one-dark.css'
 import "highlight.js/styles/github-dark.css";
+// import "highlight.js/styles/nord.css"
 import { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.css";
 import PostHeader from "../../../components/posts/post-header";

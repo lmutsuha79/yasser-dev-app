@@ -3,9 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* pre{
-  overflow: scroll;
-} */
+/* ####################
+portfolio style:
+################ */
+.img_line{
+  background-image: url('/portfolio/line_under_text.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
 
 html{
   scroll-behavior: smooth;
