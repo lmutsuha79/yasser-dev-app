@@ -6,6 +6,8 @@ const Portfolio = () => {
     <>
       <NavBar />
       <HeroSection />
+      {/* <HeroSection /> */}
+
     </>
   );
 };

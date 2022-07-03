@@ -22,15 +22,17 @@ const HeroSection = () => {
             Hi, I&apos;m Yasser<span className="text-2xl">✌️</span>
           </h3>
           <h2 className="font-bold text-5xl  sm:text-6xl">
-            <span className="img_line pb-2">Building</span> digital products, brands, and experience.
+            take your <span className="img_line pb-2">business</span> to the Next Level
           </h2>
           <p className="text-lg font-medium">
             a <span className="text-xl font-bold">Web Developer</span> and{" "}
-            <span className="text-xl font-bold">Software Engineer</span> in SF.
-            I specialize in UI/UX Design, Responsive Web Design, and Visual
-            Development.
+            <span className="text-xl font-bold">Software Engineer</span> in DZ.
+            I specialize in front end development and Responsive Web Design
+          
           </p>
-          <div className="bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium text-xl w-fit h-fit px-8 py-4 m-auto rounded-r-full rounded-l-full cursor-pointer">Connect With Me</div>
+          <div className="bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium text-xl w-fit h-fit px-8 py-4 m-auto rounded-r-full rounded-l-full cursor-pointer">
+            Connect With Me
+          </div>
         </div>
       </div>
     </section>

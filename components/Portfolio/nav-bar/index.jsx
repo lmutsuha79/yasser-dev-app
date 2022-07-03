@@ -1,9 +1,14 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useState } from "react";
 import BlogLink from "./blog-link";
+import MbNav from "./mb-nav";
+import NavLinks from "./nav-links";
 import Style from "./style.module.css";
-import TextLink from "./text-link";
 
 const NavBar = () => {
+  const [mbActive, setMbActive] = useState(false);
   return (
     <nav className="bg-white mt-[20px]">
       <div className="container">
@@ -19,17 +24,29 @@ const NavBar = () => {
                 }
               >
                 <BlogLink />
-                <a className="text-main-blue font-medium text-xl">yasser.blog</a>
+                <a className="text-main-blue font-medium text-xl">
+                  yasser.blog
+                </a>
               </div>
             </Link>
           </div>
           {/* right */}
 
-          <div className={Style.textLinks + " " + "felx  space-x-4"}>
-            <TextLink text='Work' />
-            <TextLink text='About' />
-            <TextLink text='Services' />
-            <TextLink text='Contact' />
+          <div className="">
+            <NavLinks />
+            {/* mb nav icon */}
+            {/* <div
+              className="sm:hidden"
+              onClick={() => {
+                setMbActive((curr) => !curr);
+              }}
+            >
+              <MbNav mbActive={mbActive} />
+              <FontAwesomeIcon
+                className="cursor-pointer text-main-blue hover:text-main-blue-hover transition-colors text-2xl "
+                icon={faBars}
+              />
+            </div> */}
           </div>
         </div>
       </div>
