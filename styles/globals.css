@@ -7,11 +7,19 @@
 portfolio style:
 ################ */
 .img_line{
-  background-image: url('/portfolio/line_under_text.svg');
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   
+}
+.img_line_white_green{
+  background-image: url('/portfolio/text_lines/green_white.svg');
+}
+.img_line_move{
+  background-image: url('/portfolio/text_lines/move.svg');
+}
+.img_line_orange{
+  background-image: url('/portfolio/text_lines/orange.svg');
 }
 
 html{
@@ -84,3 +92,5 @@ li.active > a {
 li > a:hover {
   color: white;
 }
+
+

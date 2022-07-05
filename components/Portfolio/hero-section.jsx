@@ -22,7 +22,7 @@ const HeroSection = () => {
             Hi, I&apos;m Yasser<span className="text-2xl">✌️</span>
           </h3>
           <h2 className="font-bold text-5xl  sm:text-6xl">
-            take your <span className="img_line pb-2">business</span> to the Next Level
+            take your <span className="img_line img_line_white_green pb-4">business</span> to the Next Level
           </h2>
           <p className="text-lg font-medium">
             a <span className="text-xl font-bold">Web Developer</span> and{" "}
