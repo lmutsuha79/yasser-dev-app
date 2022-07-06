@@ -16,6 +16,7 @@ module.exports = {
         "main-blue-hover": "#4B6588",
         "nav-border-gray": "#DBE0E7",
         "main-gray": "#C4C4C4",
+        "main-green": "#99c9cd",
       },
     },
   },

@@ -3,6 +3,7 @@ import ItemTitle from "./item-title";
 import Item from "./item";
 import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
+import Image from "next/image";
 
 const Resume = () => {
   const devSkills = [
@@ -34,7 +35,6 @@ const Resume = () => {
       <div className="container space-y-4">
         {/* title */}
 
-   
         <SectionTitle>
           <UnderLine text={"Resume"} imgName={"green_white.svg"} />
         </SectionTitle>
@@ -67,7 +67,6 @@ const Resume = () => {
                 desc={"bachelor degree in software engineering"}
                 date={"October 2020 - June 2023"}
               />
-             
             </div>
           </div>
         </div>
@@ -112,15 +111,14 @@ const Resume = () => {
             desc={
               "With HCNA certification, you demonstrate a basic understanding of small and medium-sized networks, including general network technologies, and the ability to assist the design of small and medium-sized networks, and implement the designs using Huawei routing and switching devices."
             }
-            date={'Octobre 2021'}
+            date={"Octobre 2021"}
           />
           <Item
             title={"HCIA Security "}
             desc={
               "HCIA Security Course provides engineers with the basic ability to configure and maintain small and medium-sized enterprise information security solutions, and have the ability to achieve basic network security for SMBs and meet the basic needs of a variety of security applications."
             }
-            date={'December 2021'}
-
+            date={"December 2021"}
           />
           <Item
             title={"Barmej.com"}
@@ -142,8 +140,39 @@ const Resume = () => {
             date={
               "It was under the slogan 'Be an entrepreneur', where we learned how to turn the idea into a real project capable of generating profit"
             }
-            
           />
+        </div>
+        {/* ***************************** */}
+        <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
+          <div></div>
+          <div className="relative">
+            <div className="bg-[#f4fcfe] w-[min(100%,300px)] h-[min(100%,300px)] absolute top-0 left-0 rounded-full z-0"></div>
+            <div className="z-1 relative">
+              <Image
+                src="/portfolio/agreement_memoji.png"
+                width={180}
+                height={180}
+                alt="img_lets_talk"
+              />
+              <div className="space-y-1">
+                <span className="text-main-green text-2xl font-Architects_Daughter italic">
+                  Catcha !
+                </span>
+                <div className="text-main-blue font-semibold text-4xl">
+                  <p> Got a project?</p>
+                  <a
+                    className="hover:underline text-main-blue/80 hover:text-main-blue-hover transition-colors"
+                    href="#contact"
+                  >
+                    <UnderLine
+                      text={"Let’s Talk!"}
+                      imgName={"green_white.svg"}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

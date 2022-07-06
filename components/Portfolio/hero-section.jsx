@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BubbleButton from "./bubble-button";
 import UnderLine from "./Under-line"
 const HeroSection = () => {
   return (
@@ -30,9 +31,10 @@ const HeroSection = () => {
             I specialize in front end development and Responsive Web Design
           
           </p>
-          <div className="bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium text-xl w-fit h-fit px-8 py-4 m-auto rounded-r-full rounded-l-full cursor-pointer">
+          {/* <div className="bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium text-xl w-fit h-fit px-8 py-4 m-auto rounded-r-full rounded-l-full cursor-pointer">
             Connect With Me
-          </div>
+          </div> */}
+          <BubbleButton url={"#"} text={"Connect With Me"} />
         </div>
       </div>
     </section>
