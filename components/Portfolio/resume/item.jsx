@@ -11,8 +11,8 @@ const Item = ({ title, desc, date }) => {
           icon={icon}
         />
       </li>
-      <li className="text-main-blue text-lg font-semibold">{desc}</li>
-      <li className="text-main-blue text-base font-extralight">{date}</li>
+      <li className="text-main-blue text-lg font-normal">{desc}</li>
+      <li className="text-main-blue/60 text-base font-light">{date}</li>
     </ul>
   );
 };

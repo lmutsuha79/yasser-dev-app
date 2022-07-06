@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,59 +6,59 @@
 /* ####################
 portfolio style:
 ################ */
-.img_line{
+.img_line {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url("/portfolio/text_lines/green_white.svg");
+}
+/* .img_line_white_green {
+  background-image: url("/portfolio/text_lines/green_white.svg");
+}
+.img_line_move {
+  background-image: url("/portfolio/text_lines/move.svg");
+}
+.img_line_orange {
+  background-image: url("/portfolio/text_lines/orange.svg");
+} */
 
-  
-}
-.img_line_white_green{
-  background-image: url('/portfolio/text_lines/green_white.svg');
-}
-.img_line_move{
-  background-image: url('/portfolio/text_lines/move.svg');
-}
-.img_line_orange{
-  background-image: url('/portfolio/text_lines/orange.svg');
-}
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.container{
-  margin: auto
+.container {
+  margin: auto;
 }
 @layer components {
-  .container{
-    @apply px-4
+  .container {
+    @apply px-4;
   }
-  .bg-blue-with-hover{
+  .bg-blue-with-hover {
     @apply bg-main-blue hover:bg-main-blue-hover transition-colors;
   }
- 
-  .center_with_grid{
+
+  .center_with_grid {
     @apply grid items-center;
   }
-  .center_with_flex{
-    @apply flex justify-center items-center
+  .center_with_flex {
+    @apply flex justify-center items-center;
   }
 }
 
-h2, h3 {
+h2,
+h3 {
   scroll-margin-top: 80px;
 }
 
 /* Safari-only */
 
-@supports (-webkit-hyphens:none) {
-  h2, h3 {
-      padding-top: 80px;
-      margin-top: -80px;
+@supports (-webkit-hyphens: none) {
+  h2,
+  h3 {
+    padding-top: 80px;
+    margin-top: -80px;
   }
 }
-
 
 .example-enter {
   opacity: 0.01;
@@ -78,7 +78,6 @@ h2, h3 {
   transition: opacity 300ms ease-in;
 }
 
-
 /* ############### */
 
 a {
@@ -93,5 +92,3 @@ li.active > a {
 li > a:hover {
   color: white;
 }
-
-

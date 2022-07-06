@@ -34,9 +34,7 @@ const Resume = () => {
       <div className="container space-y-4">
         {/* title */}
 
-        {/* <h2 className={mainStyle.sectionTitle}>
-          <UnderLine text={"Resume"} imgName={"green_white.svg"} />
-        </h2> */}
+   
         <SectionTitle>
           <UnderLine text={"Resume"} imgName={"green_white.svg"} />
         </SectionTitle>
@@ -75,7 +73,7 @@ const Resume = () => {
         </div>
 
         {/* ****************  Skills  ************************ */}
-        <div cla>
+        <div>
           {/* title */}
           <ItemTitle title={"Skills"} imgName={"green_white.svg"} />
 
@@ -84,7 +82,7 @@ const Resume = () => {
             <ul>
               {devSkills.map((item) => (
                 <li
-                  className="capitalize text-main-blue text-lg font-light"
+                  className="capitalize text-main-blue text-lg font-normal"
                   key={item}
                 >
                   {item}
@@ -96,7 +94,7 @@ const Resume = () => {
             <ul>
               {generalSkills.map((item) => (
                 <li
-                  className="capitalize text-main-blue text-lg font-light"
+                  className="capitalize text-main-blue text-lg font-normal"
                   key={item}
                 >
                   {item}
@@ -111,17 +109,18 @@ const Resume = () => {
         <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
           <Item
             title={"HCIA routing and switching"}
-            date={
+            desc={
               "With HCNA certification, you demonstrate a basic understanding of small and medium-sized networks, including general network technologies, and the ability to assist the design of small and medium-sized networks, and implement the designs using Huawei routing and switching devices."
             }
-            // date={"november 2021 "}
+            date={'Octobre 2021'}
           />
           <Item
             title={"HCIA Security "}
-            date={
+            desc={
               "HCIA Security Course provides engineers with the basic ability to configure and maintain small and medium-sized enterprise information security solutions, and have the ability to achieve basic network security for SMBs and meet the basic needs of a variety of security applications."
             }
-            // date={"november 2021 "}
+            date={'December 2021'}
+
           />
           <Item
             title={"Barmej.com"}
