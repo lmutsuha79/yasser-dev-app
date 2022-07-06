@@ -1,0 +1,12 @@
+.itemHover svg, .itemHover{
+      transition: transform 0.3s ease-in-out;
+
+}
+.itemHover:hover{
+      transform: translateX(10px);
+}
+
+.itemHover:hover svg{
+      transform: translate(5px,-3px) rotate(-45deg) scale(1.1);
+
+}

@@ -9,7 +9,7 @@ const Portfolio = () => {
       <NavBar />
       <HeroSection />
       {/* <HeroSection /> */}
-      <div className="mt-[600px]"></div>
+      {/* <div className="mt-[600px]"></div> */}
       {/* <Services /> */}
     <Resume/>
       
