@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import UnderLine from "./Under-line"
 const HeroSection = () => {
   return (
     <section className="h-[calc(100vh-70px)] grid place-content-center">
@@ -21,8 +21,8 @@ const HeroSection = () => {
           <h3 className=" font-medium text-xl">
             Hi, I&apos;m Yasser<span className="text-2xl">✌️</span>
           </h3>
-          <h2 className="font-bold text-5xl  sm:text-6xl">
-            take your <span className="img_line img_line_white_green pb-4">business</span> to the Next Level
+          <h2 className="font-bold text-5xl sm:text-6xl capitalize">
+            take your <UnderLine text={'Business'} imgName={'green_white.svg'} /> to the Next Level
           </h2>
           <p className="text-lg font-medium">
             a <span className="text-xl font-bold">Web Developer</span> and{" "}
