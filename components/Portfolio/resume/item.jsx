@@ -3,7 +3,7 @@ import { faArrowRight as icon } from "@fortawesome/free-solid-svg-icons";
 import style from './style.module.css'
 const Item = ({ title, desc, date }) => {
   return (
-    <ul className={"space-y-1 cursor-pointer" + " " + style.itemHover}>
+    <ul className={"max-w-[400px] space-y-1 cursor-pointer " + " " + style.itemHover}>
       <li className="flex space-x-2 items-center">
         <h3 className="text-main-blue text-2xl font-semibold">{title}</h3>
         <FontAwesomeIcon
@@ -12,7 +12,7 @@ const Item = ({ title, desc, date }) => {
         />
       </li>
       <li className="text-main-blue text-lg font-semibold">{desc}</li>
-      <li className="text-main-blue text-base font-normal">{date}</li>
+      <li className="text-main-blue text-base font-extralight">{date}</li>
     </ul>
   );
 };

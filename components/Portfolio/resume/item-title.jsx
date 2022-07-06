@@ -1,12 +1,10 @@
-import Image from "next/image";
-import mainStyle from "../style.module.css";
+import UnderLine from "../Under-line";
 
-const ItemTitle = ({ title, imgClass, spaceY,textSize }) => {
-  spaceY = spaceY ? spaceY : 20;
+const ItemTitle = ({ title, imgName }) => {
   return (
-    <div className={"text-main-blue font-semibold"}>
-      <h2 className={`img_line ${imgClass} w-fit `} style={{paddingBottom: spaceY, fontSize: textSize ? textSize : '32px' }}>{title}</h2>
-    </div>
+    <h2 className="capitalize text-main-blue font-semibold text-2xl mb-4">
+      <UnderLine text={title} imgName={imgName}></UnderLine>
+    </h2>
   );
 };
 
