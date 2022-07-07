@@ -82,6 +82,7 @@ const NewsLetter = () => {
               name="email"
               id="email_subscribe_inp"
               placeholder="Entre your email"
+              autoComplete="off"
             />
             <button
               disabled={state === "Loading"}
