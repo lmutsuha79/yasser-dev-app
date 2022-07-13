@@ -86,7 +86,7 @@ const Footer = () => {
         {/* bottom footer */}
         <div className="text-sm text-nav-border-gray font-light text-center ">
           <span className="">Yasser-Mitsuha-Blog - Design and code by:</span>
-          <Link href="/about">
+          <Link href="/">
             <a className="text-white font-bold "> Me</a>
           </Link>
           <div>© 2022-present Yasser Mitsuha. All Rights Reserved.</div>
