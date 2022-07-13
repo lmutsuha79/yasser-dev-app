@@ -27,6 +27,7 @@ html {
 }
 
 .container {
+  max-width: 1060px;
   margin: auto;
 }
 @layer components {

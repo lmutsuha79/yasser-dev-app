@@ -36,7 +36,7 @@ const Resume = () => {
         {/* title */}
 
         <SectionTitle>
-          <UnderLine text={"Resume"} imgName={"green_white.svg"} />
+          <UnderLine imgName={"green_white.svg"}>Resume</UnderLine>
         </SectionTitle>
 
         {/* the grid */}

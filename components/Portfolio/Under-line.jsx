@@ -1,8 +1,8 @@
-const UnderLine = ({text,imgName}) => {
+const UnderLine = (props) => {
       return (
             <div className={'inline-block relative'}>
-                  <span>{text}</span>
-                  <img className="absolute" src={'/portfolio/text_lines/'+imgName} alt='img' />
+                  <span>{props.children}</span>
+                  <img className="absolute" src={'/portfolio/text_lines/'+props.imgName} alt='img' />
 
             </div>
       );
