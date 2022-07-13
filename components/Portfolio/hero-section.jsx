@@ -24,7 +24,7 @@ const HeroSection = () => {
           </h3>
           <h2 className="font-bold text-5xl sm:text-6xl capitalize">
             take your{" "}
-            <UnderLine imgName={"green_white.svg"}>Business</UnderLine>UnderLine
+            <UnderLine imgName={"green_white.svg"}>Business</UnderLine>
             to the Next Level
           </h2>
           <p className="text-lg font-medium">
