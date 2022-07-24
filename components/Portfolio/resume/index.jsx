@@ -45,7 +45,7 @@ const Resume = () => {
 
           <div>
             {/* title */}
-            <ItemTitle title={"Work Experience"} imgName={"orange.svg"} />
+            <ItemTitle title={"resume"} imgName="orange.svg"/>
             <div className="space-y-6">
               <Item
                 title={"Freelancer"}
