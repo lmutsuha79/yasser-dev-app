@@ -1,4 +1,22 @@
-.item:hover div div  {
-      background-color: red;
-      transform: scale(1.2);
+@tailwind components;
+@layer components {
+  .itemText {
+    @apply transition-all relative;
+  }
+  .item:hover .theImg{
+      @apply scale-110
+  }
+
+  .itemOverLayer{
+      @apply bg-main-blue absolute top-0 left-0 w-full h-full transition-all duration-300 max-h-0
+  }
+  .item:hover .itemOverLayer{
+      @apply max-h-full
+  }
+  .txt h2,.txt p{
+      @apply transition-colors duration-300
+  }
+  .item:hover .txt h2,.item:hover .txt p{
+      @apply text-white
+  }
 }

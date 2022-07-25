@@ -10,7 +10,8 @@ const WorksDone = () => {
           The work I do, and{" "}
           <UnderLine imgName={"orange.svg"}>business</UnderLine> I help.
         </SectionTitle>
-        <div className="grid grid-cols-2 gap-10">
+        
+        <div className="grid sm:grid-cols-2 gap-x-10 space-y-10">
           <div className="flex flex-col gap-10">
             <Item
               link={"#"}
@@ -29,7 +30,7 @@ const WorksDone = () => {
               imgName={"doob-hero.png"}
             />
           </div>
-          <div className="pt-40 flex flex-col gap-10">
+          <div className="sm:pt-40 flex flex-col gap-10">
             <Item
               link={"#"}
               title={"Magicoon"}
