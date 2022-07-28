@@ -4,13 +4,15 @@ import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
 const HeroSection = () => {
   return (
-    <section
+    <section className="pt-8 sm:pt-16 h-[calc(100vh-100px)] relative"
       style={{
         background:
           "linear-gradient(0deg, rgba(153,201,205,0.5) 0%, rgba(255,255,255,1) 70%)",
       }}
     >
-      <div className="h-[calc(100vh-200px)] grid place-content-center">
+            <WavesEffect />
+
+      <div className=" grid place-content-center">
         <div className="container space-y-4 text-center">
           {/* img */}
           <div className="bg-[#eafafa] w-[150px] mx-auto overflow-hidden rounded-full">
@@ -40,15 +42,17 @@ const HeroSection = () => {
               DZ. I specialize in front end development and Responsive Web
               Design
             </p>
-            {/* <div className="bg-main-blue hover:bg-main-blue-hover transition-colors text-white font-medium text-xl w-fit h-fit px-8 py-4 m-auto rounded-r-full rounded-l-full cursor-pointer">
-            Connect With Me
-          </div> */}
-            <BubbleButton url={"#"} text={"Connect With Me"} />
+            {/* butts */}
+            <div className="flex justify-center">
+            {/* <BubbleButton active={true} url={"#"} text={"Connect With Me"} /> */}
+            <BubbleButton url={"/cv.pdf"} text={"get my cvs?"} />
+
+
+            </div>
           </div>
         </div>
       </div>
       {/* <!--Waves Container--> */}
-      <WavesEffect />
       {/* <!--Waves end--> */}
     </section>
   );

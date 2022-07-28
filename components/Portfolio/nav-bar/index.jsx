@@ -10,9 +10,9 @@ import Style from "./style.module.css";
 const NavBar = () => {
   const [mbActive, setMbActive] = useState(false);
   return (
-    <nav className="bg-white mt-[20px]">
-      <div className="container">
-        <div className="flex justify-between items-center">
+    <nav className="bg-white sticky top-0 z-[99] h-[50px] overflow-hidden shadow-sm ">
+      <div className="container h-full">
+        <div className="flex justify-between items-center h-full">
           {/* left */}
           <div>
             <Link href="/blog" passHref>
@@ -20,7 +20,7 @@ const NavBar = () => {
                 className={
                   Style.BlogLink +
                   " " +
-                  "flex items-center cursor-pointer h-[50px] overflow-hidden"
+                  "flex items-center cursor-pointer h-full overflow-hidden"
                 }
               >
                 <BlogLink />

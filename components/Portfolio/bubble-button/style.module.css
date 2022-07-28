@@ -3,15 +3,12 @@
   .bullet {
     @apply bg-main-blue transform;
   }
-  .btn {
-    @apply  w-fit h-fit grid place-content-center px-4 py-2 text-main-blue border-4 border-main-blue text-center;
-  }
+  /* .btn {
+    @apply ;
+  } */
 }
 
 .btn {
-
- 
-  
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 3em;
@@ -33,7 +30,7 @@
   transition-delay: calc((var(--n) - 1) * 0.1s);
 }
 
-.btn:hover a {
+.btn:hover .text {
   color: white;
 }
 .btn:hover .bullet {

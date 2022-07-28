@@ -39,11 +39,9 @@
       }
     }
     /*Shrinking for mobile*/
-    @media (max-width: 768px) {
+   
+    @media (max-width: 640px) {
       .waves {
-        height:40px;
-        min-height:40px;
-      }
-     
-      
+        height:80px;
+      } 
     }

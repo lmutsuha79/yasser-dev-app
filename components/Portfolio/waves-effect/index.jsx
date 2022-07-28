@@ -1,7 +1,7 @@
 import Style from './waves.module.css'
 const WavesEffect = () => {
   return (
-    <div>
+    <div className='absolute w-full bottom-0'>
 
       <svg
         className={Style.waves}
