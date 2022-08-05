@@ -45,7 +45,7 @@ const Resume = () => {
 
           <div>
             {/* title */}
-            <ItemTitle title={"resume"} imgName="orange.svg"/>
+            <ItemTitle title={"resume"} imgName="orange.svg" />
             <div className="space-y-6">
               <Item
                 title={"Freelancer"}
@@ -164,10 +164,9 @@ const Resume = () => {
                     className="hover:underline text-main-blue/80 hover:text-main-blue-hover transition-colors"
                     href="#contact"
                   >
-                    <UnderLine
-                      text={"Let’s Talk!"}
-                      imgName={"green_white.svg"}
-                    />
+                    <div className="text-main-blue hover:text-main-blue-hover">
+                      <UnderLine imgName={"move.svg"}>Let&#39;s Talk</UnderLine>
+                    </div>
                   </a>
                 </div>
               </div>
