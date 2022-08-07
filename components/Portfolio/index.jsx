@@ -3,6 +3,7 @@ import NavBar from "./nav-bar";
 import Resume from "./resume";
 import Services from "./sercices";
 import WorksDone from "./works-done";
+import ClientsSlider from "./clients-slider"
 const Portfolio = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Portfolio = () => {
       {/* <Services /> */}
       <Resume />
       <WorksDone />
+      <ClientsSlider/>
       {/* <div className="mt-[600px]"></div> */}
     </>
   );

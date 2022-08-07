@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import image404 from "../public/404_img.png"
 export default function Custom404() {
   
   return (
@@ -22,7 +23,8 @@ export default function Custom404() {
       {/* img */}
       <div>
         <Image
-          src="/404_img.png"
+          src={image404}
+          placeholder='blur'
           width="1200"
           height="1200"
           alt="404 page img"
