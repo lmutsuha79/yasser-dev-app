@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profileImg from "../../public/portfolio/profile.png"
 import BubbleButton from "./bubble-button";
 import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
@@ -17,7 +18,8 @@ const HeroSection = () => {
           {/* img */}
           <div className="bg-[#eafafa] w-[150px] mx-auto overflow-hidden rounded-full">
             <Image
-              src={"/portfolio/profile.png"}
+              src={profileImg}
+              placeholder="blur"
               alt="profile picture"
               width={550}
               height={550}
