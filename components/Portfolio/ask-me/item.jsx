@@ -21,7 +21,7 @@ const Item = ({ question, answer }) => {
       }}
     >
       {/* question */}
-      <div className="shown_part flex justify-between items-center text-main-blue hover:text-main-blue-hover transition-colors">
+      <div className="shown_part flex justify-between items-start text-main-blue hover:text-main-blue-hover transition-colors">
         <p className=" font-semibold text-3xl">{question}</p>
         <div className="transform transition-transform item_icon cursor-pointer text-xl ">
           <FontAwesomeIcon icon={faCaretDown} />
