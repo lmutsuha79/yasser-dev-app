@@ -4,6 +4,7 @@ import Resume from "./resume";
 import Services from "./sercices";
 import WorksDone from "./works-done";
 import ClientsSlider from "./clients-slider"
+import AskMe from "./ask-me";
 const Portfolio = () => {
   return (
     <>
@@ -14,7 +15,8 @@ const Portfolio = () => {
       <Resume />
       <WorksDone />
       <ClientsSlider/>
-      {/* <div className="mt-[600px]"></div> */}
+      <AskMe />
+      <div className="mt-[100px]"></div>
     </>
   );
 };

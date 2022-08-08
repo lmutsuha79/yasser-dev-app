@@ -84,7 +84,7 @@ const Slider = () => {
           <span className="text-main-blue">{client.name}</span>
           <span className="text-main-gray font-medium">{client.position}</span>
         </div>
-        <div className="absolute bottom-auto right-0">
+        <div className="absolute bottom-auto md:bottom-0 right-0">
         <SliderController goPrev={goPrev} goNext={goNext} />
 
         </div>
