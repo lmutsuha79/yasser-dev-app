@@ -29,7 +29,6 @@ const Slider = () => {
   const [client, setClient] = useState(clients[0]);
   const [index, setIndex] = useState(0);
   const clients_length = clients.length;
-  console.log(clients_length)
   useEffect(() => {
     setClient(() => clients[index]);
     console.log();
@@ -49,14 +48,16 @@ const Slider = () => {
     });
   };
   return (
-    <div className="sm:grid grid-cols-2 gap-8 items-center relative">
+    <div className="sm:grid grid-cols-2 space-y-10 gap-8 items-center relative">
       {/* img */}
       <div className=" relative">
         <div className="overflow-hidden rounded-md">
+          {/* bg 1 */}
           <div
             style={{ backgroundColor: client.bgCollor }}
             className={`opacity-20 rounded-md w-full h-full absolute bottom-[-40px] left-[-40px]`}
           ></div>
+          {/* bg 2 */}
           <div
             style={{ backgroundColor: client.bgCollor }}
             className={`opacity-40 rounded-md w-full h-full absolute bottom-[-20px] left-[-20px]`}
@@ -83,7 +84,7 @@ const Slider = () => {
           <span className="text-main-blue">{client.name}</span>
           <span className="text-main-gray font-medium">{client.position}</span>
         </div>
-        <div className="absolute bottom-0 right-0">
+        <div className="absolute bottom-auto right-0">
         <SliderController goPrev={goPrev} goNext={goNext} />
 
         </div>
