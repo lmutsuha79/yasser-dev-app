@@ -9,18 +9,7 @@ const Item = ({ title, desc, imgName, link }) => {
     <div>
       <Link href={link} passHref>
         <div
-          onMouseOverCapture={() => {
-            setHoverStatus(true);
-          }}
-          onMouseLeave={() => {
-            setHoverStatus(false);
-          }}
-          onTouchStart={() => {
-            setHoverStatus(true);
-          }}
-          onTouchEnd={() => {
-            setHoverStatus(false);
-          }}
+        
           className={
             Style.item +
             " " +
@@ -39,12 +28,8 @@ const Item = ({ title, desc, imgName, link }) => {
               style={{ backgroundImage: `url("/portfolio/works/${imgName}")` }}
             ></div>
           </div>
-          <div className={"space-y-2" + " " + Style.itemText}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              {/* effect here */}
-              <BubbleLayer isHover={hoverStatus} />
-            </div>
-            {/* <div className={Style.itemOverLayer}></div> */}
+          <div className={"" + " " + Style.itemText}>
+            {/* text layer */}
             <div
               className={
                 Style.txt + " " + "py-4 px-2 transition-colors relative z-10"
@@ -54,6 +39,21 @@ const Item = ({ title, desc, imgName, link }) => {
                 {title}
               </h2>
               <p className="text-main-blue font-normal text-base">{desc}</p>
+            </div>
+            {/* effect layer */}
+            <div className="absolute  top-0 left-0 w-full h-full">
+              {/* effect here */}
+              {/* <BubbleLayer isHover={hoverStatus} /> */}
+              <div className={"w-full h-full" + " " + Style.jiji}>
+                <div className={Style.btn}>
+                  <div className="w-full h-[200%] absolute top-0 left-0 z-[-1]">
+                    <span className={Style.bullet}></span>
+                    <span className={Style.bullet}></span>
+                    <span className={Style.bullet}></span>
+                    <span className={Style.bullet}></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

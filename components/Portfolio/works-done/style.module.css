@@ -6,7 +6,7 @@
   .item:hover .theImg{
       @apply scale-110
   }
-
+    /* .item:hover  */
   .itemOverLayer{
       @apply bg-main-blue absolute top-0 left-0 w-full h-full transition-all duration-300 max-h-0
   }
@@ -19,4 +19,62 @@
   .item:hover .txt h2,.item:hover .txt p{
       @apply text-white
   }
+  .bullet {
+    @apply bg-main-blue transform;
+  }
+  .btn {
+    @apply w-full h-full text-main-blue;
+  }
+}
+
+
+
+
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  /* margin: 1em; */
+}
+
+.bullet {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+.item:hover .jiji {
+  height: 100%;
+}
+.item:hover .jiji .bullet {
+  transform: translateY(0) scale(2);
+}
+/* .jiji{
+      height: 100%;
+}
+
+.jiji .bullet {
+  transform: translateY(0) scale(2);
+} */
+
+.bullet:nth-child(1) {
+  --n: 1;
+}
+
+.bullet:nth-child(2) {
+  --n: 2;
+}
+
+.bullet:nth-child(3) {
+  --n: 3;
+}
+
+.bullet:nth-child(4) {
+  --n: 4;
 }
