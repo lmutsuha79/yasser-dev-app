@@ -7,14 +7,18 @@ const Item = ({ title, desc, imgName, link }) => {
   const [hoverStatus, setHoverStatus] = useState(false);
   return (
     <div>
-     
-      
       <Link href={link} passHref>
         <div
-          onMouseOver={() => {
+          onMouseOverCapture={() => {
             setHoverStatus(true);
           }}
           onMouseLeave={() => {
+            setHoverStatus(false);
+          }}
+          onTouchStart={() => {
+            setHoverStatus(true);
+          }}
+          onTouchEnd={() => {
             setHoverStatus(false);
           }}
           className={
