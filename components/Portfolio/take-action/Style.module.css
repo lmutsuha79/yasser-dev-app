@@ -1,0 +1,5 @@
+.iconsContainer {
+}
+.generalLink:hover .iconsContainer {
+  transform: translateY(-50%);
+}

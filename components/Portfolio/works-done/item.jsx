@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import BubbleLayer from "./bubble-layer";
 import Style from "./style.module.css";
 
 const Item = ({ title, desc, imgName, link }) => {

@@ -1,17 +1,18 @@
 import Image from "next/image";
-import profileImg from "../../public/portfolio/profile.png"
+import profileImg from "../../public/portfolio/profile.png";
 import BubbleButton from "./bubble-button";
 import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
 const HeroSection = () => {
   return (
-    <section className="pt-8 sm:pt-16 h-[calc(100vh-100px)] relative"
+    <section
+      className="pt-8 sm:pt-16 h-[calc(100vh-100px)] relative"
       style={{
         background:
           "linear-gradient(0deg, rgba(153,201,205,0.5) 0%, rgba(255,255,255,1) 70%)",
       }}
     >
-            <WavesEffect />
+      <WavesEffect />
 
       <div className=" grid place-content-center">
         <div className="container space-y-4 text-center">
@@ -36,7 +37,7 @@ const HeroSection = () => {
             <h2 className="font-bold text-5xl sm:text-6xl capitalize">
               take your{" "}
               <UnderLine imgName={"green_white.svg"}>Business </UnderLine>
-              to the Next Level
+             {" "}To the Next Level
             </h2>
             <p className="text-lg font-medium">
               a <span className="text-xl font-bold">Web Developer</span> and{" "}
@@ -46,10 +47,8 @@ const HeroSection = () => {
             </p>
             {/* butts */}
             <div className="flex justify-center">
-            {/* <BubbleButton active={true} url={"#"} text={"Connect With Me"} /> */}
-            <BubbleButton url={"/cv.pdf"} text={"get my cvs?"} />
-
-
+              {/* <BubbleButton active={true} url={"#"} text={"Connect With Me"} /> */}
+              <BubbleButton url={"/cv.pdf"} text={"get my cvs?"} />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const AskMe = () => {
     },
   ];
   return (
-    <section className="mt-[100px]">
+    <section className="mt-[100px] relative z-10">
       <div className="container">
         <div className="text-center">
           <SectionTitle>
