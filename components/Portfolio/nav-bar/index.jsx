@@ -34,19 +34,7 @@ const NavBar = () => {
 
           <div className="">
             <NavLinks />
-            {/* mb nav icon */}
-            {/* <div
-              className="sm:hidden"
-              onClick={() => {
-                setMbActive((curr) => !curr);
-              }}
-            >
-              <MbNav mbActive={mbActive} />
-              <FontAwesomeIcon
-                className="cursor-pointer text-main-blue hover:text-main-blue-hover transition-colors text-2xl "
-                icon={faBars}
-              />
-            </div> */}
+          
           </div>
         </div>
       </div>

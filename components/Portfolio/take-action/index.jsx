@@ -1,7 +1,7 @@
 import UnderLine from "../Under-line";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpFromBracket,faBroomBall } from "@fortawesome/free-solid-svg-icons";
 import Style from "./Style.module.css";
 import Image from "next/image";
 const TakeAction = () => {
@@ -11,18 +11,19 @@ const TakeAction = () => {
       <div className="hidden xl:block absolute top-[-30%] right-0 ">
         <Image
           src={"/portfolio/right_circle.svg"}
-          layout={"fixed"}
-          width={620}
-          height={612}
+          // layout={"fill"}
+          width={600}
+          height={300}
+
         />
       </div>
       {/* circle layer left */}
       <div className="absolute top-[-80%] left-0 ">
         <Image
           src={"/portfolio/left_circle.svg"}
-          layout={"fixed"}
-          width={620}
-          height={612}
+          // layout={"fill"}
+          width={600}
+          height={400}
         />
       </div>
       {/* text content */}
@@ -56,7 +57,7 @@ const TakeAction = () => {
                   }
                 >
                   <div className="grid place-content-center text-[40px]">
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                    <FontAwesomeIcon icon={faBroomBall} />
                   </div>
                   <div className="grid place-content-center text-[40px]">
                     <FontAwesomeIcon icon={faArrowUpFromBracket} />

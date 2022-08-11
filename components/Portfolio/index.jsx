@@ -3,9 +3,10 @@ import NavBar from "./nav-bar";
 import Resume from "./resume";
 import Services from "./sercices";
 import WorksDone from "./works-done";
-import ClientsSlider from "./clients-slider"
+import ClientsSlider from "./clients-slider";
 import AskMe from "./ask-me";
 import TakeAction from "./take-action";
+import Footer from "./footer";
 const Portfolio = () => {
   return (
     <>
@@ -15,10 +16,10 @@ const Portfolio = () => {
       {/* <Services /> */}
       <Resume />
       <WorksDone />
-      <ClientsSlider/>
+      <ClientsSlider />
       <AskMe />
       <TakeAction />
-      <div className="mt-[100px]"></div>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,6 @@
+@tailwind components;
+@layer components {
+  .iconItem {
+    @apply bg-white text-main-blue hover:bg-[#f4f6fb] transition-colors cursor-pointer rounded-full grid place-content-center p-4;
+  }
+}
