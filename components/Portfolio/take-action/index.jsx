@@ -34,9 +34,9 @@ const TakeAction = () => {
               Let me know if you want to talk about a potential collaboration.
               I’m available
             </p>
-            <p className="font-bold">
-              for <UnderLine imgName={"orange.svg"}>Freelance Work</UnderLine>.
-            </p>
+            <span className="font-bold">
+              {"for "} <UnderLine imgName={"orange.svg"}>Freelance Work</UnderLine>.
+            </span>
           </div>
           {/* link to contact */}
           <Link href="#">

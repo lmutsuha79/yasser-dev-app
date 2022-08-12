@@ -47,7 +47,7 @@ const WorksDone = () => {
     if (index === 1 || index % 2 != 0) {
       right_works.push(
         <Item
-          key={item.link}
+          key={item.title}
           link={item.link}
           title={item.title}
           desc={item.desc}
@@ -59,7 +59,7 @@ const WorksDone = () => {
       left_works.push(
 
         <Item
-          key={item.link}
+          key={item.title}
           link={item.link}
           title={item.title}
           desc={item.desc}

@@ -7,12 +7,18 @@
 /* ####################
 portfolio style:
 ################ */
+/* @keyframes img_line_ani {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 .img_line {
+  animation-name: img_line_ani;
+  animation-duration: 0.5s;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("/portfolio/text_lines/green_white.svg");
-}
+} */
 /* .img_line_white_green {
   background-image: url("/portfolio/text_lines/green_white.svg");
 }

@@ -1,12 +1,16 @@
+import Style from "./style.module.css";
 const TextLink = ({ text }) => {
   return (
-    <a
-      onMouseEnter={(e) => e.target.classList.add("img_line")}
-      onMouseLeave={(e) => e.target.classList.remove("img_line")}
-      href={'#'+text}
-    >
-      {text}
-    </a>
+    <div>
+      <a
+        onMouseEnter={(e) => e.target.classList.add(Style.hoverUnderLine)}
+        onMouseLeave={(e) => e.target.classList.remove(Style.hoverUnderLine)}
+        href={"#" + text}
+      >
+        {text}
+      </a>
+      <a className={Style.hoverUnderLine + " hidden"}></a>
+    </div>
   );
 };
 
