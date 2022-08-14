@@ -12,28 +12,47 @@ export const ThemeContext = React.createContext("false");
 function MyApp({ Component, pageProps }) {
   const [isOn, setIsOn] = useState();
 
-  useEffect(() => {
-    // initialize the theme
-    let isDark = localStorage.getItem("isDark");
-    if (isDark === null) {
-      // get the theme of device
-      // isDark = UseSystemTheme() === "dark" ? "true" : "false";
-      //
-      isDark = "false";
+  async function onDark() {
+    const darkReaderOptions = { brightness: 100, contrast: 90, sepia: 10 };
+    if (typeof window != "undefined") {
+      const { enable, disable, setFetchMethod, exportGeneratedCSS } =
+        await import("darkreader");
+      setFetchMethod(window.fetch);
+      enable({
+        brightness: 100,
+        contrast: 90,
+        sepia: 10,
+      });
     }
-    localStorage.setItem("isDark", isDark);
-    setIsOn(isDark); // stored value
-    changetheme(1);
-  }, []);
+  }
 
+  onDark();
+
+  // useEffect(() => {
+  // initialize the theme
+  // let isDark = localStorage.getItem("isDark");
+  // if (isDark === null) {
+  // get the theme of device
+  // isDark = UseSystemTheme() === "dark" ? "true" : "false";
+  //
+  //     isDark = "false";
+  //   }
+  //   localStorage.setItem("isDark", isDark);
+  //   setIsOn(isDark); // stored value
+  //   changetheme(1);
+  // }, []);
+
+  // <ThemeContext.Provider value={[isOn, setIsOn, changetheme]}>
+  //     {/* <main> */}
+  //     <div className="h-full w-full">
+  //       <Component {...pageProps} />
+  //     </div>
+  //     {/* </main> */}
+  //   </ThemeContext.Provider>
   return (
-    <ThemeContext.Provider value={[isOn, setIsOn, changetheme]}>
-      {/* <main> */}
-      <div className="h-full w-full">
-        <Component {...pageProps} />
-      </div>
-      {/* </main> */}
-    </ThemeContext.Provider>
+    <div className="h-full w-full">
+      <Component {...pageProps} />
+    </div>
   );
 }
 
