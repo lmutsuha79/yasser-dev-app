@@ -40,8 +40,10 @@ const HeroSection = () => {
              {" "}To the Next Level
             </h2>
             <p className="text-lg font-medium">
-              a <span className="text-xl font-bold">Web Developer</span> and{" "}
-              <span className="text-xl font-bold">Software Engineer</span> in
+              a <span className="text-xl font-bold">Web Developer</span> 
+              {/* and{" "}
+              <span className="text-xl font-bold">Software Engineer</span> */}
+              {" "} based in
               DZ. I specialize in front end development and Responsive Web
               Design
             </p>

@@ -32,19 +32,17 @@ const AboutAuthor = () => {
           </div>
         </div>
         <p className="text-main-blue font-light">
-            <FontAwesomeIcon icon={faQuoteLeft} className="text-main-blue-hover text-xl mr-2 transform -translate-y-2"/>
-
-          Hi, I&apos;m Yasser, a passionate web application developer from Algeria. I
-          spend most of my time discovering and learning new technologies and
-          implementing different projects. I also love to help others. That&apos;s
-          why I decided to dedicate a large part of my time to helping startups,
-          entrepreneurs, artists, business owners to build their apps and
-          websites. To enhance their online presence. I also like to work in
-          teams, for that, I dedicate a large part of my time participating in
-          clubs events and open source projects, and recently I create a team
-          known as <Link href={'/bool-gang'}><a className="text-main-blue-hover hover:text-main-blue transition-colors font-medium">Bool Gang</a></Link> to get involved and develop our skills together.
-          <FontAwesomeIcon icon={faQuoteLeft} className="text-main-blue-hover text-xl ml-2 transform rotate-180 translate-y-2"/>
-
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="text-main-blue-hover text-xl mr-2 transform -translate-y-2"
+          />
+          Hi i&#39;m yasser a Software Engineer based in DZ. I hope through this
+          blog to share with you guys my coding journey to inspire those who are
+          interested.
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="text-main-blue-hover text-xl ml-2 transform rotate-180 translate-y-2"
+          />
         </p>
       </div>
     </div>

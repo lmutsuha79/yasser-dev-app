@@ -28,16 +28,14 @@ const Footer = () => {
           <div>
             <FooterTitle title={"About"} />
             <p className="text-nav-border-gray">
-              I hope, through this blog, to share with others my long journey
-              revolving around computer science and self-development, and to
-              inspire those who are interested.
+              Hi i&#39;m yasser a Software Engineer based in DZ. I hope through this blog to share
+              with you guys my coding journey to inspire those who are
+              interested.
             </p>
           </div>
           <div>
             <FooterTitle title={"Quick links"} />
-            <div
-              className={`${style.footerLinksContainer} flex flex-col `}
-            >
+            <div className={`${style.footerLinksContainer} flex flex-col `}>
               <Link href={"/about"}>about me</Link>
               <Link href={"/privacy-policy"}>Privacy & Policy</Link>
               <Link href={"/terms-of-use"}>Terms of use</Link>
