@@ -9,6 +9,7 @@ import { getAllPosts, getSlidePosts, getRecentPosts } from "../api/posts";
 import { PageSEO } from "../../components/SEO/SEO";
 
 export default function Blog({ mostRecentPosts, slidePosts }) {
+
   return (
     <>
       <PageSEO title={"the blog"} description={"the index page of yasser mitsuha blog"}/>

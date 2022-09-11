@@ -8,6 +8,7 @@ import AskMe from "./ask-me";
 import TakeAction from "./take-action";
 import Footer from "./footer";
 const Portfolio = () => {
+
   return (
     <>
       <NavBar />

@@ -8,8 +8,16 @@ import MenuBtn from "./ui/menu-btn";
 import { useState } from "react";
 import BtnContainer from "./ui/btn-container";
 import Logo from "./logo";
+import { useEffect } from "react";
+
 
 const NavBar = () => {
+
+  useEffect(() => {
+    console.log('blog')
+    document.querySelector('body').classList.remove('body_portfolio')
+    document.querySelector('body').classList.add('body_blog');
+  },[])
   return (
       
       <nav className="h-[70px] p-4 sm:py-[15px] sm:px-[50px] bg-main-blue dark:bg-main-blue fixed w-full top-0 z-[99] ">

@@ -7,7 +7,6 @@ import Portfolio from "../components/Portfolio";
 
 export default function Home() {
   const theme = useContext(ThemeContext);
-
   return <>
     <Portfolio/>
   </>;

@@ -3,11 +3,11 @@ import Item from "./item";
 
 const AskMe = () => {
   const QandA = [
-    // {
-    //   question: "What is your work dicipline?",
-    //   answer:
-    //     "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.",
-    // },
+    {
+      question: "how many hours can you work in a week?",
+      answer:
+        "currently I'm a full-time freelancer so I can work up to 40 hours a week.",
+    },
     {
       question: "How often can we communicate?",
       answer:

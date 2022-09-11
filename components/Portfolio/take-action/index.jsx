@@ -47,7 +47,7 @@ const TakeAction = () => {
                 "flex items-center justify-center gap-4 text-[#f3ceb1] hover:text-[#d0eaeb] transition-colors underline text-5xl font-medium"
               }
             >
-              <div> Let’s design your app</div>
+              <div>{"let's bring your project to life"}</div>
               <div className="overflow-hidden h-[40px]">
                 <div
                   className={
