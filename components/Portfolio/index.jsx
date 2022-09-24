@@ -7,10 +7,13 @@ import ClientsSlider from "./clients-slider";
 import AskMe from "./ask-me";
 import TakeAction from "./take-action";
 import Footer from "./footer";
+import ContactMe from "./contact-info";
 const Portfolio = () => {
 
   return (
     <>
+      <ContactMe/>
+
       <NavBar />
       <HeroSection />
       {/* <HeroSection /> */}

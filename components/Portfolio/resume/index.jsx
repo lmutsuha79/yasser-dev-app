@@ -15,8 +15,8 @@ const Resume = () => {
     "react js ",
     "next js ",
     "tailwindcss",
-    "wroking with api",
-    "pug.js",
+    "working with api",
+    "pug.js & EJs",
     "node.js",
     "express.js",
   ];

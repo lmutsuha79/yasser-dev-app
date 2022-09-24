@@ -10,6 +10,7 @@ const ClientsSlider = () => {
           <UnderLine imgName={"green_white.svg"}>the world</UnderLine>
         </SectionTitle>
         <Slider />
+        
       </div>
     </section>
   );

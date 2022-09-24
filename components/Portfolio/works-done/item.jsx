@@ -6,7 +6,7 @@ const Item = ({ title, desc, imgName, link }) => {
   const [hoverStatus, setHoverStatus] = useState(false);
   return (
     <div>
-      <Link href={link} passHref>
+      <a href={link} target="_blanck">
         <div
         
           className={
@@ -56,7 +56,7 @@ const Item = ({ title, desc, imgName, link }) => {
             </div>
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };

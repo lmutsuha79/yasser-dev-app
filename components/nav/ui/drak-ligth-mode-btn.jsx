@@ -20,7 +20,7 @@ const DarkLigthModBtn = () => {
   return (
     <div
       onClick={() => {
-        alert('this feature is under development it will be availble soon')
+        // alert('this feature is under development it will be availble soon')
 
         const prev_is_dark = localStorage.getItem("isDark");
         changetheme(0);
@@ -41,7 +41,6 @@ const DarkLigthModBtn = () => {
           />
         </div>
       ) : (
-        // <img src="/icons/sun.webp" alt="btn" width="25px" height="25px" />
         <div className="min-w-[25px]">
           <Image
             priority="true"

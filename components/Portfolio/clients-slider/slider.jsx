@@ -7,15 +7,7 @@ import sayf from "../../../public/portfolio/clients/sayf.png";
 import SliderController from "./SliderController";
 const Slider = () => {
   const clients = [
-    {
-      title:
-        "John has helped our business deliver incredible results, leading success for our UI & UX",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut tempus id, aliquam a orci.",
-      name: "Christina Klein",
-      position: "CEO @APPLE",
-      img: img1,
-      bgCollor: "#fbe0cb",
-    },
+   
     {
       title: "Yasser has helped us to made our website called Magiccon",
       desc: "Thank you very very much for the elaborate and wonderful work that met all my conditions with you at work. The work is executed with great quality and workmanship. I was very pleased to deal with you, and God willing, we will continue soon on other projects",
@@ -24,6 +16,15 @@ const Slider = () => {
       img: sayf,
       bgCollor: "#a3a3a3",
     },
+    {
+      title:
+        "John has helped our business deliver incredible results, leading success for our UI & UX",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut tempus id, aliquam a orci.",
+      name: "Christina Klein",
+      position: "CEO @APPLE",
+      img: img1,
+      bgCollor: "#fbe0cb",
+    }
   ];
 
   const [client, setClient] = useState(clients[0]);
@@ -92,5 +93,6 @@ const Slider = () => {
     </div>
   );
 };
+
 
 export default Slider;

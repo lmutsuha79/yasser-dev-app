@@ -31,7 +31,8 @@
     "react-use-downloader": "^1.1.7",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-highlight": "^5.0.2",
-    "rehype-slug": "^5.0.1"
+    "rehype-slug": "^5.0.1",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",

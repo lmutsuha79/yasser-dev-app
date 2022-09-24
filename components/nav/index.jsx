@@ -12,14 +12,14 @@ import { useEffect } from "react";
 
 
 const NavBar = () => {
-
+  
   useEffect(() => {
-    console.log('blog')
+    // to add y cursor
     document.querySelector('body').classList.remove('body_portfolio')
     document.querySelector('body').classList.add('body_blog');
+    
   },[])
   return (
-      
       <nav className="h-[70px] p-4 sm:py-[15px] sm:px-[50px] bg-main-blue dark:bg-main-blue fixed w-full top-0 z-[99] ">
         <div className="flex items-center justify-between">
           {/* the mb_nav btn on the left side */}

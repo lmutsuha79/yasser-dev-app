@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url(./scroller.css);
+@import url('../components/Portfolio/clients-slider/slidder-style.css');
 
 
 
