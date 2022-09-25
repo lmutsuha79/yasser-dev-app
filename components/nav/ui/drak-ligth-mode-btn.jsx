@@ -20,7 +20,7 @@ const DarkLigthModBtn = () => {
   return (
     <div
       onClick={() => {
-        // alert('this feature is under development it will be availble soon')
+        alert('this feature is under development it will be availble soon')
 
         const prev_is_dark = localStorage.getItem("isDark");
         changetheme(0);

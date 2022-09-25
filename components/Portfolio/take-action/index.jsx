@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpFromBracket,faBroomBall } from "@fortawesome/free-solid-svg-icons";
 import Style from "./Style.module.css";
 import Image from "next/image";
+import { useContext } from "react";
+import { ContactShowContext } from "..";
+
 const TakeAction = () => {
+  const [closeContact,oppenContact,contactIsOn] = useContext(ContactShowContext);
   return (
     <section className="mt-[100px] relative">
       {/* circle layer right */}
@@ -39,7 +43,7 @@ const TakeAction = () => {
             </span>
           </div>
           {/* link to contact */}
-          <Link href="#">
+          <div href="#">
             <a
               className={
                 Style.generalLink +
@@ -47,7 +51,7 @@ const TakeAction = () => {
                 "flex items-center justify-center gap-4 text-[#f3ceb1] hover:text-[#d0eaeb] transition-colors underline text-5xl font-medium"
               }
             >
-              <div>{"let's bring your project to life"}</div>
+              <div onClick={oppenContact} className="cursor-pointer">{"let's bring your project to life"}</div>
               <div className="overflow-hidden h-[40px]">
                 <div
                   className={
@@ -65,7 +69,7 @@ const TakeAction = () => {
                 </div>
               </div>
             </a>
-          </Link>
+          </div>
         </div>
       </div>
     </section>

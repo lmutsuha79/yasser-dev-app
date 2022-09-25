@@ -3,7 +3,7 @@ User-agent: *
 Disallow: /
 
 # Host
-Host: undefined
+Host: https://yasser-dev-app.vercel.app/
 
 # Sitemaps
-Sitemap: undefined/sitemap.xml
+Sitemap: https://yasser-dev-app.vercel.app/sitemap.xml

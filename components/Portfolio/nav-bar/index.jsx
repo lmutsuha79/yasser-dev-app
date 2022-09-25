@@ -7,10 +7,12 @@ import MbNav from "./mb-nav";
 import NavLinks from "./nav-links";
 import Style from "./style.module.css";
 
+
+
 const NavBar = () => {
+
   const [mbActive, setMbActive] = useState(false);
   useEffect(() => {
-    console.log('portfolio')
     document.querySelector('body').classList.remove('body_blog')
     document.querySelector('body').classList.add('body_portfolio');
   },[])
@@ -31,6 +33,7 @@ const NavBar = () => {
                 <BlogLink />
                 <a className="text-main-blue font-medium text-xl">
                   yasser.blog
+                  
                 </a>
               </div>
             </Link>

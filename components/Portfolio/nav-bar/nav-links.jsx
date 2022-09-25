@@ -3,7 +3,10 @@ import Style from "./style.module.css";
 import Link from "next/link";
 import BubbleButton from "../bubble-button";
 
+import { ContactShowContext } from "..";
+import { useContext } from "react";
 const NavLinks = () => {
+  const [closeContact,oppenContact,contactIsOn] = useContext(ContactShowContext);
   return (
     <div
       className={
@@ -14,11 +17,12 @@ const NavLinks = () => {
       <TextLink text="About" />
       <TextLink text="Services" />
       {/* <TextLink text='Contact' /> */}
-      <Link href={'#'}>
-        <div className="bg-white text-main-blue border border-main-blue hover:bg-main-blue hover:text-white  transition-colors font-medium text-lg cursor-pointer px-4 py-1 rounded-md">
+      
+        <div onClick={oppenContact}
+         className="bg-white text-main-blue border border-main-blue hover:bg-main-blue hover:text-white  transition-colors font-medium text-lg cursor-pointer px-4 py-1 rounded-md">
           Contact
         </div>
-      </Link>
+    
       
     </div>
   );

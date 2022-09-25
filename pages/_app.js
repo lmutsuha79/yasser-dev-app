@@ -10,7 +10,6 @@ import { UseSystemTheme } from "../util/UseSystemTheme";
 export const ThemeContext = React.createContext("false");
 
 function MyApp({ Component, pageProps }) {
-  const [mounted,isMounted] = useState(false)
   const [isOn, setIsOn] = useState();
 
   useEffect(() => {
@@ -22,15 +21,14 @@ function MyApp({ Component, pageProps }) {
     if (isDark === null) {
       // get the theme of device
       // isDark = UseSystemTheme() === "dark" ? "true" : "false";
-      //
-      isDark = "true";
+      isDark = 'false'
     }
     localStorage.setItem("isDark", isDark);
     setIsOn(isDark); // stored value
-    changetheme(1).then(() => isMounted(() => true));
+    changetheme(1);
   }, []);
 
-  return mounted ? (
+  return (
     <ThemeContext.Provider value={[isOn, setIsOn, changetheme]}>
       {/* <main> */}
       <div className="h-full w-full">
@@ -38,8 +36,7 @@ function MyApp({ Component, pageProps }) {
       </div>
       {/* </main> */}
     </ThemeContext.Provider>
-  ) : '<div>?? probleme with mounted state</div>';
-  
+  );
 }
 
 export default MyApp;
