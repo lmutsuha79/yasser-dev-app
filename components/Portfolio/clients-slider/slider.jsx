@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import img1 from "../../../public/portfolio/clients/img1.png";
 import img2 from "../../../public/portfolio/clients/img2.png";
 import sayf from "../../../public/portfolio/clients/sayf.png";
+import likeproo from "../../../public/portfolio/clients/likeproo.png"
 
 import SliderController from "./SliderController";
 const Slider = () => {
@@ -18,12 +19,12 @@ const Slider = () => {
     },
     {
       title:
-        "John has helped our business deliver incredible results, leading success for our UI & UX",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut tempus id, aliquam a orci.",
-      name: "Christina Klein",
-      position: "CEO @APPLE",
-      img: img1,
-      bgCollor: "#fbe0cb",
+        "Yasser hedped us to create the frontend of our website called likeproo",
+      desc: "A very distinguished person in design and cooperative in terms of modifications and design changes I recommend dealing with him",
+      name: "Ammar Kotb",
+      position: "backend developer",
+      img: likeproo,
+      bgCollor: "#199ed2",
     }
   ];
 

@@ -25,7 +25,7 @@ const ContactMe = ({closeContact}) => {
             </div>
           </SectionTitle>
           <p className="mb-6 sm:px-10 text-white text-xl font-medium">
-            feel free to contact us on any of this social media platform
+            feel free to contact me on any of this social media platforms
           </p>
           <div className="flex flex-col justify-center gap-4">
             <ContactItem text={"+213 798257795"} icon={faWhatsapp} link={"#"} />
