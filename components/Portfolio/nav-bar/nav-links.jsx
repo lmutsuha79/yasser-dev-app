@@ -10,12 +10,14 @@ const NavLinks = () => {
   return (
     <div
       className={
-        Style.textLinks + " " + "hidden sm:flex items-center  space-x-4"
+        Style.textLinks + " " + "flex items-center gap-4"
       }
     >
+      <div className="hidden sm:flex  gap-4">
       <TextLink text="Work" />
       <TextLink text="About" />
       <TextLink text="Services" />
+      </div>
       {/* <TextLink text='Contact' /> */}
       
         <div onClick={oppenContact}

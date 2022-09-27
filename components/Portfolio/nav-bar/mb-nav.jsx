@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const MbNav = ({ mbActive }) => {
   return (
     <motion.nav 
-    className=""
-      // initial={false}
-      animate={mbActive ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.3, type: "spring" }}
+    // className=""
+    //   // initial={false}
+    //   animate={mbActive ? { opacity: 1 } : { opacity: 0 }}
+    //   transition={{ duration: 0.3, type: "spring" }}
     >
       <div className=" bg-main-blue/95   grid place-content-center  fixed top-0 left-0 z-50 w-screen h-screen ">
         <div className="bg-white rounded-md border-main-blue border-2 w-[min(90vw,250px)]">
