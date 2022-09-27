@@ -54,7 +54,7 @@ const HeroSlider = ({ posts }) => {
     >
       <div className="relative ">
         <div className="current_post" key={posts[postIndex]}>
-          {/* <AnimatePresence initial={true}> */}
+          {/* <AnimatePresence initial={false}> */}
             <motion.div
               key={posts[postIndex].url}
               variants={variantsMode}

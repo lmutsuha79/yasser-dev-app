@@ -1,7 +1,7 @@
 import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
 import ContactItem from "./contact-item";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import {
   faFacebookMessenger,
@@ -17,11 +17,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ContactMe = ({closeContact}) => {
   return (
     <div className="fixed top-0 left-0 z-[999] w-screen h-screen grid place-items-center ">
-      <motion.div
-       initial={{translateY: '100vh'}}
+        <AnimatePresence>
+        <motion.div
+       initial={{y: '100vh'}}
        animate={
-        {translateY: 0}
+        {y: 0}
        }
+       exit={{y: '100vh'}}
        transition={{ duration: 1,type:"spring" }}
        
       className="bg-main-blue/90 w-[95%] sm:w-[500px] rounded-lg grid place-content-start">
@@ -53,6 +55,9 @@ const ContactMe = ({closeContact}) => {
         </div>
       {/* </div> */}
       </motion.div>
+        </AnimatePresence>
+
+     
     </div>
   );
 };
