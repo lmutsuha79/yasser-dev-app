@@ -10,14 +10,6 @@ const Slider = () => {
   const clients = [
    
     {
-      title: "Yasser has helped us to made our website called Magiccon",
-      desc: "Thank you very very much for the elaborate and wonderful work that met all my conditions with you at work. The work is executed with great quality and workmanship. I was very pleased to deal with you, and God willing, we will continue soon on other projects",
-      name: "Seyfeddine Beroual",
-      position: "Art Director & Founder at Lamsa Studio",
-      img: sayf,
-      bgCollor: "#a3a3a3",
-    },
-    {
       title:
         "Yasser hedped us to create the frontend of our website called likeproo",
       desc: "A very distinguished person in design and cooperative in terms of modifications and design changes I recommend dealing with him",
@@ -25,6 +17,14 @@ const Slider = () => {
       position: "backend developer",
       img: likeproo,
       bgCollor: "#199ed2",
+    },
+    {
+      title: "Yasser has helped us to made our website called Magiccon",
+      desc: "Thank you very very much for the elaborate and wonderful work that met all my conditions with you at work. The work is executed with great quality and workmanship. I was very pleased to deal with you, and God willing, we will continue soon on other projects",
+      name: "Seyfeddine Beroual",
+      position: "Art Director & Founder at Lamsa Studio",
+      img: sayf,
+      bgCollor: "#a3a3a3",
     }
   ];
 
