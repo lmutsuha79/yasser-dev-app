@@ -25,7 +25,7 @@ const SliderItem = ({ post,variantsMode }) => {
       className={" space-y-4 sm:grid sm:grid-cols-2 sm:items-start gap-2"}
     >
       {/* post info */}
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence  exitBeforeEnter initial={false}>
       <motion.div
       key={post.title}
       initial={{opacity:0}}

@@ -53,14 +53,8 @@ const HeroSlider = ({ posts }) => {
     >
       <div className="relative ">
         <div className="current_post" key={posts[postIndex]}>
-          {/* <AnimatePresence exitBeforeEnter initial={false}> */}
             <div
-              // key={posts[postIndex].url}
-              // variants={variantsMode}
-              // initial="initial"
-              // animate="animate"
-              // exit="exit"
-              // transition="transition"
+             
             >
               <SliderItem
 
@@ -68,7 +62,6 @@ const HeroSlider = ({ posts }) => {
                 variantsMode={variantsMode}
               />
             </div>
-          {/* </AnimatePresence> */}
         </div>
       </div>
       <div className="">
