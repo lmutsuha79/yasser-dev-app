@@ -4,7 +4,7 @@ import Item from "./item";
 import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const Resume = () => {
   const devSkills = [
     "html / css",
@@ -30,8 +30,32 @@ const Resume = () => {
     "Network Layers",
     "git/github",
   ];
+  const jijivariant = {
+    hidden: {
+      opacity: 0,
+      translateY: 100,
+    },
+    show: {
+      translateY: 0,
+      opacity: 1,
+      transition: {
+        // duration:0.5,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+  const itemVariant = {
+    hidden: { opacity: 0, top: 100 },
+    show: { opacity: 1, top: 0 },
+  };
+
   return (
-    <section>
+    <motion.section
+      initial="hidden"
+      whileInView={"show"}
+      variants={jijivariant}
+    >
       <div className="container space-y-4">
         {/* title */}
 
@@ -174,7 +198,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

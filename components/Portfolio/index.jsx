@@ -30,9 +30,10 @@ const Portfolio = () => {
         
         <main className={contactIsOn ? 'blur-sm' : ''}>
           <NavBar oppenContact={oppenContact} />
+          
+
           <HeroSection />
-          {/* <HeroSection /> */}
-          {/* <Services /> */}
+         
           <Resume />
           <WorksDone />
           <ClientsSlider />

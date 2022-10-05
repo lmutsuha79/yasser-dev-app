@@ -87,6 +87,9 @@ const Slider = () => {
       </div>
       {/* text */}
       <div className="pt-4">
+         <div className="mt-10 flex justify-end sm:mt-0  sm:absolute sm:bottom-[-50px] sm:right-0">
+        <SliderController goPrev={goPrev} goNext={goNext} />
+      </div>
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={client.title}
@@ -96,7 +99,7 @@ const Slider = () => {
             transition={{ duration: 0.2,type:'tween',ease:"easeInOut"}}
             className="space-y-4"
           >
-            <h3 className="text-main-blue text-2xl font-semibold">
+            <h3 className="text-main-blue text-2xl font-semibold mt-8 sm:mt-0">
               {client.title}
             </h3>
             <p className="text-main-blue">{client.desc}</p>
@@ -111,9 +114,7 @@ const Slider = () => {
         </AnimatePresence>
       </div>
 
-      <div className="absolute bottom-[-50px] right-0">
-        <SliderController goPrev={goPrev} goNext={goNext} />
-      </div>
+     
     </div>
   );
 };
