@@ -4,21 +4,10 @@ import BubbleButton from "./bubble-button";
 import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
 import { motion } from "framer-motion";
+import { heroVariant,itemVariant} from './onScrollSectionAnimation'
+
 const HeroSection = () => {
-  const heroVariant = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-  const itemVariant = {
-    hidden: { opacity: 0, top: 100 },
-    show: { opacity: 1, top: 0 },
-  };
+
   return (
     <motion.section
       variants={heroVariant}

@@ -1,5 +1,7 @@
 import SectionTitle from "../section-title";
 import Item from "./item";
+import { motion } from "framer-motion";
+import { heroVariant, itemVariant } from "../onScrollSectionAnimation";
 
 const AskMe = () => {
   const QandA = [
@@ -25,7 +27,12 @@ const AskMe = () => {
     },
   ];
   return (
-    <section className="mt-[100px] relative z-10">
+    <motion.section
+      variants={heroVariant}
+      initial="hidden"
+      whileInView={"show"}
+      className="mt-[100px] relative z-10"
+    >
       <div className="container">
         <div className="text-center ">
           <SectionTitle>
@@ -36,11 +43,13 @@ const AskMe = () => {
         </div>
         <div className="pt-8 space-y-8 ">
           {QandA.map((item, index) => (
-            <Item key={index} question={item.question} answer={item.answer} />
+            <motion.div variants={itemVariant} key={index}>
+              <Item key={index} question={item.question} answer={item.answer} />
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
 import Item from "./item";
+import AnimatedSectionOnScroll from "../AnimatedSectionOnScroll";
 
 const WorksDone = () => {
   const left_works = [];
@@ -54,10 +56,8 @@ const WorksDone = () => {
           imgName={item.imgName}
         />
       );
-    }
-    else{
+    } else {
       left_works.push(
-
         <Item
           key={item.title}
           link={item.link}
@@ -70,24 +70,24 @@ const WorksDone = () => {
   });
 
   return (
-    <section className="mt-[100px]">
-      <div className="container">
-        <SectionTitle>
-          The work I do, and{" "}
-          <UnderLine imgName={"orange.svg"}>business</UnderLine> I help.
-        </SectionTitle>
+    <AnimatedSectionOnScroll>
+      <section
+       
+        className="mt-[100px]"
+      >
+        <div className="container">
+          <SectionTitle>
+            The work I do, and{" "}
+            <UnderLine imgName={"orange.svg"}>business</UnderLine> I help.
+          </SectionTitle>
 
-        <div className="grid sm:grid-cols-2 gap-x-10 space-y-10">
-          <div className="flex flex-col gap-10">
-            {left_works}
-           
-          </div>
-          <div className="sm:pt-40 flex flex-col gap-10">
-           {right_works}
+          <div className="grid sm:grid-cols-2 gap-x-10 space-y-10">
+            <div className="flex flex-col gap-10">{left_works}</div>
+            <div className="sm:pt-40 flex flex-col gap-10">{right_works}</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </AnimatedSectionOnScroll>
   );
 };
 

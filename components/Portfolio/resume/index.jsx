@@ -5,6 +5,10 @@ import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ResumeFace from "./resume-face";
+import { itemVariant } from "../onScrollSectionAnimation";
+import AnimatedSectionOnScroll from "../AnimatedSectionOnScroll";
+
 const Resume = () => {
   const devSkills = [
     "html / css",
@@ -30,175 +34,141 @@ const Resume = () => {
     "Network Layers",
     "git/github",
   ];
-  const jijivariant = {
-    hidden: {
-      opacity: 0,
-      translateY: 100,
-    },
-    show: {
-      translateY: 0,
-      opacity: 1,
-      transition: {
-        // duration:0.5,
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-  const itemVariant = {
-    hidden: { opacity: 0, top: 100 },
-    show: { opacity: 1, top: 0 },
-  };
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView={"show"}
-      variants={jijivariant}
-    >
-      <div className="container space-y-4">
-        {/* title */}
-
-        <SectionTitle>
-          <UnderLine imgName={"green_white.svg"}>Resume</UnderLine>
-        </SectionTitle>
-
-        {/* the grid */}
-        <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
-          {/* ****************  Work experience  ************************ */}
-
-          <div>
-            {/* title */}
-            <ItemTitle title={"resume"} imgName="orange.svg" />
-            <div className="space-y-6">
-              <Item
-                title={"Freelancer"}
-                desc={
-                  "Working as a freelancer and helping startups and entrepreneurial individuals enhance their online presence and achieve significant growth in their business growth"
-                }
-                date={"2021 - currently"}
-              />
-            </div>
-          </div>
-
-          {/* ****************  Education  ************************ */}
-          <div>
-            {/* title */}
-            <ItemTitle title={"Education"} imgName={"green_white.svg"} />
-            <div className="space-y-2">
-              <Item
-                title={"Faculty of Exact Sciences"}
-                desc={"bachelor degree in software engineering"}
-                date={"October 2020 - June 2023"}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* ****************  Skills  ************************ */}
-        <div>
+    <AnimatedSectionOnScroll>
+      <section>
+        <div className="container space-y-4">
           {/* title */}
-          <ItemTitle title={"Skills"} imgName={"green_white.svg"} />
 
-          <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
-            {/* *******  development  ***** */}
-            <ul>
-              {devSkills.map((item) => (
-                <li
-                  className="capitalize text-main-blue text-lg font-normal"
-                  key={item}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            {/* *******  general  ******** */}
+          <SectionTitle>
+            <UnderLine imgName={"green_white.svg"}>Resume</UnderLine>
+          </SectionTitle>
 
-            <ul>
-              {generalSkills.map((item) => (
-                <li
-                  className="capitalize text-main-blue text-lg font-normal"
-                  key={item}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          {/* work experince + education  */}
+          <motion.div
+            variants={itemVariant}
+            className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0"
+          >
+            {/* ****************  Work experience  ************************ */}
 
-        {/* ****************  certificates  ************************ */}
-        <ItemTitle title={"certificates"} imgName={"move.svg"} />
-        <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
-          <Item
-            title={"HCIA routing and switching"}
-            desc={
-              "With HCNA certification, you demonstrate a basic understanding of small and medium-sized networks, including general network technologies, and the ability to assist the design of small and medium-sized networks, and implement the designs using Huawei routing and switching devices."
-            }
-            date={"Octobre 2021"}
-          />
-          <Item
-            title={"HCIA Security "}
-            desc={
-              "HCIA Security Course provides engineers with the basic ability to configure and maintain small and medium-sized enterprise information security solutions, and have the ability to achieve basic network security for SMBs and meet the basic needs of a variety of security applications."
-            }
-            date={"December 2021"}
-          />
-          <Item
-            title={"Barmej.com"}
-            desc={"C language the basics"}
-            date={"20 July 2019"}
-          />
-          <Item
-            title={"One million arab coders initiative"}
-            desc={"Android Development Track with java"}
-            date={"Summer 2019"}
-          />
-          <Item
-            title={"Nadrus.com"}
-            desc={"Social Engineering"}
-            date={"06 July 2019"}
-          />
-          <Item
-            title={"Summer School 2022"}
-            date={
-              "It was under the slogan 'Be an entrepreneur', where we learned how to turn the idea into a real project capable of generating profit"
-            }
-          />
-        </div>
-        {/* ***************************** */}
-        <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
-          <div></div>
-          <div className="relative">
-            <div className="bg-[#f4fcfe] w-[min(100%,300px)] h-[min(100%,300px)] absolute top-0 left-0 rounded-full z-0"></div>
-            <div className="z-1 relative">
-              <Image
-                src="/portfolio/agreement_memoji.png"
-                width={180}
-                height={180}
-                alt="img_lets_talk"
-              />
-              <div className="space-y-1">
-                <span className="text-main-green text-2xl font-Architects_Daughter italic">
-                  Catcha !
-                </span>
-                <div className="text-main-blue font-semibold text-4xl">
-                  <p> Got a project?</p>
-                  <a
-                    className="hover:underline text-main-blue/80 hover:text-main-blue-hover transition-colors"
-                    href="#contact"
-                  >
-                    <div className="text-main-blue hover:text-main-blue-hover">
-                      <UnderLine imgName={"move.svg"}>Let&#39;s Talk</UnderLine>
-                    </div>
-                  </a>
-                </div>
+            <div>
+              {/* title */}
+              <ItemTitle title={"work experience"} imgName="orange.svg" />
+              <div className="space-y-6">
+                <Item
+                  title={"Freelancer"}
+                  desc={
+                    "Working as a freelancer and helping startups and entrepreneurial individuals enhance their online presence and achieve significant growth in their business growth"
+                  }
+                  date={"2021 - currently"}
+                />
               </div>
             </div>
-          </div>
+
+            {/* ****************  Education  ************************ */}
+            <div>
+              {/* title */}
+              <ItemTitle title={"Education"} imgName={"green_white.svg"} />
+              <div className="space-y-2">
+                <Item
+                  title={"Faculty of Exact Sciences"}
+                  desc={"bachelor degree in software engineering"}
+                  date={"October 2020 - June 2023"}
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* ****************  Skills  ************************ */}
+          <motion.div variants={itemVariant}>
+            {/* title */}
+            <ItemTitle title={"Skills"} imgName={"green_white.svg"} />
+
+            <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
+              {/* *******  development  ***** */}
+              <ul>
+                {devSkills.map((item) => (
+                  <li
+                    className="capitalize text-main-blue text-lg font-normal"
+                    key={item}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              {/* *******  general  ******** */}
+
+              <ul>
+                {generalSkills.map((item) => (
+                  <li
+                    className="capitalize text-main-blue text-lg font-normal"
+                    key={item}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* ****************  certificates  ************************ */}
+          <motion.div variants={itemVariant}>
+            <ItemTitle title={"certificates"} imgName={"move.svg"} />
+            <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
+              <Item
+                title={"HCIA routing and switching"}
+                desc={
+                  "With HCNA certification, you demonstrate a basic understanding of small and medium-sized networks, including general network technologies, and the ability to assist the design of small and medium-sized networks, and implement the designs using Huawei routing and switching devices."
+                }
+                date={"Octobre 2021"}
+              />
+              <Item
+                title={"HCIA Security "}
+                desc={
+                  "HCIA Security Course provides engineers with the basic ability to configure and maintain small and medium-sized enterprise information security solutions, and have the ability to achieve basic network security for SMBs and meet the basic needs of a variety of security applications."
+                }
+                date={"December 2021"}
+              />
+              <Item
+                title={"Barmej.com"}
+                desc={"C language the basics"}
+                date={"20 July 2019"}
+              />
+              <Item
+                title={"One million arab coders initiative"}
+                desc={"Android Development Track with java"}
+                date={"Summer 2019"}
+              />
+              <Item
+                title={"Nadrus.com"}
+                desc={"Social Engineering"}
+                date={"06 July 2019"}
+              />
+              <Item
+                title={"Summer School 2022"}
+                date={
+                  "It was under the slogan 'Be an entrepreneur', where we learned how to turn the idea into a real project capable of generating profit"
+                }
+              />
+            </div>
+          </motion.div>
+          {/* ***************************** */}
+
+          {/* photo resume */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="sm:grid sm:grid-cols-2 gap-8 space-y-8 sm:space-y-0">
+              <div></div>
+              <ResumeFace />
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </motion.section>
+      </section>
+    </AnimatedSectionOnScroll>
   );
 };
 

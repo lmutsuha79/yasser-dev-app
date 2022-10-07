@@ -1,7 +1,6 @@
 import TextLink from "./text-link";
 import Style from "./style.module.css";
-import Link from "next/link";
-import BubbleButton from "../bubble-button";
+
 
 import { ContactShowContext } from "..";
 import { useContext } from "react";
