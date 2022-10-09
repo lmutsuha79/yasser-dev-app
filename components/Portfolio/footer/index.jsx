@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
             <a
               className="text-main-blue hover:text-main-blue-hover transition-colors font-medium"
-              href="#"
+              href="mailto:khelilyasser79@gmail.com"
             >
               khelilyasser79@gmail.com
             </a>

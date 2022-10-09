@@ -1,20 +1,33 @@
 import Link from "next/link";
 import { useState } from "react";
 import Style from "./style.module.css";
-
-const Item = ({ title, desc, imgName, link }) => {
+import TechsList from "./techs-list";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+const Item = ({ title, desc, imgName, link, techs }) => {
   const [hoverStatus, setHoverStatus] = useState(false);
+  useEffect(() => {
+    console.log(hoverStatus);
+  }, [hoverStatus]);
   return (
     <div>
-      <a href={link} target="_blanck">
-        <div
-        
+      <a className="" href={link} target="_blanck">
+        <motion.div
+          onHoverStart={() => setHoverStatus(true)}
+          onHoverEnd={() => setHoverStatus(false)}
           className={
             Style.item +
             " " +
-            "show_item flex flex-col cursor-pointer rounded-md overflow-hidden shadow-md"
+            "relative show_item flex flex-col cursor-pointer rounded-md overflow-hidden shadow-md"
           }
         >
+          {/* techs tags container */}
+          <div className="absolute top-3 right-[-6px] z-10">
+            {/* {hoverStatus && ( */}
+              <TechsList hoverStatus={hoverStatus} items={techs} />
+             {/* )} */}
+          </div>
+
           {/* img container */}
           <div className="overflow-hidden">
             {/* img div */}
@@ -42,7 +55,6 @@ const Item = ({ title, desc, imgName, link }) => {
             {/* effect layer */}
             <div className="absolute  top-0 left-0 w-full h-full">
               {/* effect here */}
-              {/* <BubbleLayer isHover={hoverStatus} /> */}
               <div className={"w-full h-full" + " " + Style.jiji}>
                 <div className={Style.btn}>
                   <div className="w-full h-[200%] absolute top-0 left-0 z-[-1]">
@@ -55,7 +67,7 @@ const Item = ({ title, desc, imgName, link }) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </a>
     </div>
   );
