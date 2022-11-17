@@ -51,7 +51,7 @@
             "url": "undefined/blog/posts/react-the-full-guid",
             "title": "React The Full Guid",
             "summary": "SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.",
-            "date_modified": "2020-11-21T00:00:00.000Z",
+            "date_modified": "2020-11-20T23:00:00.000Z",
             "author": {
                 "name": "khelil yasser djamel eddine",
                 "url": "https://twitter.com/YasserKhelil"

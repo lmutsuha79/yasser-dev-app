@@ -4,7 +4,7 @@
         <title>yasser mitsuha</title>
         <link>undefined</link>
         <description>I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.</description>
-        <lastBuildDate>Sun, 09 Oct 2022 08:02:23 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Nov 2022 21:16:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -44,7 +44,7 @@
             <title><![CDATA[React The Full Guid]]></title>
             <link>undefined/blog/posts/react-the-full-guid</link>
             <guid>url</guid>
-            <pubDate>Sat, 21 Nov 2020 00:00:00 GMT</pubDate>
+            <pubDate>Fri, 20 Nov 2020 23:00:00 GMT</pubDate>
             <description><![CDATA[SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.]]></description>
             <content:encoded><![CDATA[SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.]]></content:encoded>
             <author>khelilyasser79@gmail.com (khelil yasser djamel eddine)</author>

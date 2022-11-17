@@ -24,7 +24,7 @@ const HeroSection = () => {
         <WavesEffect />
 
         <div className=" grid place-content-center">
-          <div className="container space-y-4 text-center">
+          <div className="container  text-center">
             {/* img */}
             <motion.div variants={itemVariant}>
               <div className="bg-[#eafafa] w-[150px] mx-auto overflow-hidden rounded-full">
@@ -42,7 +42,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* text content */}
-            <div className="text-main-blue space-y-6 w-[min(100%,678px)] mx-auto">
+            <div className="text-main-blue  w-[min(100%,678px)] mx-auto">
               <motion.div variants={itemVariant}>
                 <h3 className=" font-medium text-xl">
                   Hi, I&apos;m Yasser<span className="text-2xl">✌️</span>
@@ -50,7 +50,7 @@ const HeroSection = () => {
               </motion.div>
               <motion.h2
                 variants={itemVariant}
-                className="font-bold text-5xl sm:text-6xl capitalize"
+                className="mb-2 font-bold text-5xl sm:text-6xl capitalize"
               >
                 take your{" "}
                 <UnderLine imgName={"green_white.svg"}>Business </UnderLine> To

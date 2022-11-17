@@ -5,7 +5,7 @@ export default function Custom404() {
   
   return (
     <div className="container grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 place-content-center items-center h-screen">
-      {/* text */}
+      {/* text */}   
       <div className="text-main-blue font-medium flex flex-col items-center sm:items-start space-y-2">
         <h2 className="font-semibold text-6xl sm:text-9xl" >404</h2>
         <span className="text-3xl md:text-5xl">Ooops!</span>
