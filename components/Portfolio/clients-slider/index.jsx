@@ -8,7 +8,7 @@ import AnimatedSectionOnScroll from "../AnimatedSectionOnScroll";
 const ClientsSlider = () => {
   return (
     <AnimatedSectionOnScroll>
-      <section className="mt-[100px]">
+      <section id="testimonial" className="mt-[100px]">
         <div className="container">
           <SectionTitle>
             Trusted by brands all over{" "}

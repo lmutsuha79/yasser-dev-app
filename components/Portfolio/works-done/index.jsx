@@ -80,7 +80,7 @@ const WorksDone = () => {
 
   return (
     <AnimatedSectionOnScroll>
-      <section className="mt-[100px]">
+      <section id="portfolio" className="mt-[40px]">
         <div className="container">
           <SectionTitle>
             The work I did, and{" "}

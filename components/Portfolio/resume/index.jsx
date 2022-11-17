@@ -37,7 +37,7 @@ const Resume = () => {
 
   return (
     <AnimatedSectionOnScroll>
-      <section>
+      <section id="resume" className="mt-[100px]">
         <div className="container space-y-4">
           {/* title */}
 

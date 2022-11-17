@@ -13,9 +13,10 @@ const NavLinks = () => {
       }
     >
       <div className="hidden sm:flex  gap-4">
-      <TextLink text="Work" />
-      <TextLink text="About" />
-      <TextLink text="Services" />
+      <TextLink text="portfolio" />
+      <TextLink text="testimonial" />
+      <TextLink text="resume" />
+      <TextLink text="Q&A" />
       </div>
       {/* <TextLink text='Contact' /> */}
       

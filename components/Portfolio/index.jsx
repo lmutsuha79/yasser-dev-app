@@ -35,9 +35,9 @@ const Portfolio = () => {
 
           <HeroSection />
          
-          <Resume />
           <WorksDone />
           <ClientsSlider />
+          <Resume />
           <AskMe />
           <TakeAction oppenContact={oppenContact} />
           <Footer />
