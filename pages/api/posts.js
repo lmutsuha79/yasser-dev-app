@@ -44,13 +44,11 @@ export const getAllPosts = () => {
       // the newest first
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
-
   return posts;
 };
 
 export const getRelatedPosts = (meta) => {
   const { tags, url } = meta;
-
   const relatedPosts = getAllPosts().filter((post) => {
     // check if the arry of tags passed contains one of tags in other post tags
     // return the post if one of he's tags similar to the Main post
@@ -75,9 +73,7 @@ export const getPostsByTag = (tagName) => {
 
 export const getRecentPosts = (allPosts,max) => {
   return allPosts.slice(0,max??4);
-  
 }
 export const getSlidePosts = (allPosts) => {
   return allPosts.filter(post => post.InSlide);
-  
 }

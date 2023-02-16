@@ -31,9 +31,4 @@ export async function getServerSideProps(context) {
     },
   };
 }
-// export async function getSatticPaths(){
 
-// }
-// export async function getStaticProps(){
-
-// }

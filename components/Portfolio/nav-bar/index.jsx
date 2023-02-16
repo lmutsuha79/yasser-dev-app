@@ -32,7 +32,7 @@ const NavBar = () => {
               >
                 <BlogLink />
                 <a className="text-main-blue font-medium text-xl">
-                  yasser.blog
+                yasser.blog
                   
                 </a>
               </div>

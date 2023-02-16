@@ -18,7 +18,7 @@ export default async function subscription(req, res) {
     email_address: email,
     status: "subscribed",
   };
-
+  
   const options = {
     headers: {
       "Content-Type": "application/json",
@@ -31,15 +31,11 @@ export default async function subscription(req, res) {
 
     if (response.status >= 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the newsletter. Shoot me an email at ogbonnakell@gmail and I'll add you to the list.`,
+        error: `There was an error subscribing to the newsletter. Shoot me an email at khelilyasser79@gmail.com and I'll add you to the list.`,
       });
     }
     return res.status(201).json({ message: "success" });
   } catch (error) {
     return res.status(500).json({ error: error.response.data.title });
-    // .json({
-    //   error: error,
-    //   // errorDescription: error.response.data.title,
-    // });
   }
 }

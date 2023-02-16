@@ -1,13 +1,14 @@
 import Image from "next/image";
-import profileImg from "../../public/portfolio/profile.png";
+// import profileImg from "../../public/portfolio/profile.png";
+import profileImg from "../../public/portfolio/profile2.png";
+
 import BubbleButton from "./bubble-button";
 import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
 import { motion } from "framer-motion";
-import { heroVariant,itemVariant} from './onScrollSectionAnimation'
+import { heroVariant, itemVariant } from "./onScrollSectionAnimation";
 
 const HeroSection = () => {
-
   return (
     <motion.section
       variants={heroVariant}
@@ -29,6 +30,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariant}>
               <div className="bg-[#eafafa] w-[150px] mx-auto overflow-hidden rounded-full">
                 <Image
+                  draggable={false}
                   src={profileImg}
                   placeholder="blur"
                   alt="profile picture"
@@ -57,10 +59,17 @@ const HeroSection = () => {
                 the Next Level
               </motion.h2>
 
-              <motion.p variants={itemVariant} className="text-lg font-medium">
+              {/* <motion.p variants={itemVariant} className="text-lg ">
                 a <span className="text-xl font-bold">Web Developer</span> based
                 in DZ. I specialize in front end development and Responsive Web
                 Design
+              </motion.p> */}
+              <motion.p variants={itemVariant} className="text-lg">
+                a passionate{" "}
+                <span className="underline font-bold">Web Developer</span>, I
+                have spent the past few years building top-notch websites and
+                helping numerous businesses grow and enhance their online
+                presence
               </motion.p>
               {/* butts */}
               <motion.div

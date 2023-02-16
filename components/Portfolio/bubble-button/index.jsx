@@ -13,7 +13,7 @@ const BubbleButton = ({ url, text }) => {
         className={
           Style.btn +
           " " +
-          "rounded-md  w-fit h-fit grid place-content-center px-4 py-2 text-main-blue border-4 border-main-blue text-center"
+          "bg-white rounded-md  w-fit h-fit grid place-content-center px-4 py-2 text-main-blue border-4 border-main-blue text-center"
         }
       >
         <span
