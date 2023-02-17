@@ -16,6 +16,14 @@ const WorksDone = ({ numToShow }) => {
       techs: ["Html/Css", "JavaScript", "tailwindCss"],
     },
     {
+      title: "Like Pro",
+      link: "https://likeproo.com/",
+      desc: "صمم خصيصاً لتحصل على افضل اتصال مع جمهورك و لتزيد ولاء عملائك لعلامتك التجارية.",
+      imgName: "like_pro.png",
+      techs: ["tailwind", "JavaScript", "Alpine.js"],
+    },
+
+    {
       title: "TO-do Chrom Extention",
       link: "https://github.com/lamani79/to_do_list_chrom_widget.git",
       desc: "Jobriver is a Polish employment platform. It often helps developers to find a job that suits them easily by filtering!",

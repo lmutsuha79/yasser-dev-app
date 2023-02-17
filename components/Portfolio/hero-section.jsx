@@ -64,7 +64,7 @@ const HeroSection = () => {
                 in DZ. I specialize in front end development and Responsive Web
                 Design
               </motion.p> */}
-              <motion.p variants={itemVariant} className="text-lg">
+              <motion.p variants={itemVariant} className="text-lg relative z-10">
                 a passionate{" "}
                 <span className="underline font-bold">Web Developer</span>, I
                 have spent the past few years building top-notch websites and

@@ -10,7 +10,7 @@ const Brands = () => {
         <section id="brands" className="mt-[60px]">
           <div className="text-center">
             <SectionTitle>
-              <UnderLine imgName={"orange.svg"}>Brands I helped</UnderLine>
+              <UnderLine imgName={"orange.svg"}>Brands</UnderLine>
             </SectionTitle>
 
             <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8">
