@@ -6,7 +6,7 @@ const TextLink = ({ text }) => {
       className="capitalize"
         onMouseEnter={(e) => e.target.classList.add(Style.hoverUnderLine)}
         onMouseLeave={(e) => e.target.classList.remove(Style.hoverUnderLine)}
-        href={"#" + text}
+        href={"/#" + text}
       >
         {text}
       </a>

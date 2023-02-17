@@ -4,10 +4,10 @@ import UnderLine from "../Under-line";
 import Item from "./item";
 import AnimatedSectionOnScroll from "../AnimatedSectionOnScroll";
 
-const WorksDone = () => {
+const WorksDone = ({ numToShow }) => {
   const left_works = [];
   const right_works = [];
-  const works = [
+  let works = [
     {
       title: "Magicoon",
       link: "https://magicoon.com/",
@@ -51,6 +51,9 @@ const WorksDone = () => {
       techs: ["Html/Css", "JavaScript", "Scss"],
     },
   ];
+  if (numToShow) {
+    works = works.slice(0, numToShow);
+  }
   works.forEach((item, index) => {
     if (index === 1 || index % 2 != 0) {
       right_works.push(
@@ -72,7 +75,6 @@ const WorksDone = () => {
           desc={item.desc}
           imgName={item.imgName}
           techs={item.techs}
-
         />
       );
     }
@@ -80,7 +82,7 @@ const WorksDone = () => {
 
   return (
     <AnimatedSectionOnScroll>
-      <section id="portfolio" className="mt-[40px]">
+      <section id="portfolio" className="mt-[100px]">
         <div className="container">
           <SectionTitle>
             The work I did, and{" "}

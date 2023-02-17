@@ -10,7 +10,7 @@ import Footer from "./footer";
 import ContactMe from "./contact-info";
 import { useState } from "react";
 import React from "react";
-
+import Brands from "./brands";
 
 export const ContactShowContext = React.createContext(false);
 
@@ -27,15 +27,15 @@ const Portfolio = () => {
   return (
     <>
       {contactIsOn && <ContactMe closeContact={closeContact} />}
-      <ContactShowContext.Provider value={[closeContact,oppenContact,contactIsOn]}>
-        
-        <main className={contactIsOn ? 'blur-sm' : ''}>
+      <ContactShowContext.Provider
+        value={[closeContact, oppenContact, contactIsOn]}
+      >
+        <main className={contactIsOn ? "blur-sm" : ""}>
           <NavBar oppenContact={oppenContact} />
-          
 
           <HeroSection />
-         
-          <WorksDone />
+          <Brands />
+          <WorksDone numToShow={6} />
           <ClientsSlider />
           <Resume />
           <AskMe />
