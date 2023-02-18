@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 const Item = ({ title, desc, imgName, link, techs }) => {
   const [hoverStatus, setHoverStatus] = useState(false);
-  useEffect(() => {
-    console.log(hoverStatus);
-  }, [hoverStatus]);
+  // useEffect(() => {
+  //   console.log(hoverStatus);
+  // }, [hoverStatus]);
   return (
     <div>
       <a className="" href={link} target="_blanck">
@@ -50,7 +50,7 @@ const Item = ({ title, desc, imgName, link, techs }) => {
               <h2 className=" text-main-blue font-semibold text-2xl">
                 {title}
               </h2>
-              <p className="text-main-blue font-normal text-base">{desc}</p>
+              <p className="text-main-blue-hover font-normal text-base">{desc}</p>
             </div>
             {/* effect layer */}
             <div className="absolute  top-0 left-0 w-full h-full">
