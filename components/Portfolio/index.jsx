@@ -37,7 +37,7 @@ const Portfolio = () => {
           <Brands />
           <WorksDone numToShow={6} />
           <ClientsSlider />
-          <Resume />
+          {/* <Resume /> */}
           <AskMe />
           <TakeAction oppenContact={oppenContact} />
           <Footer />

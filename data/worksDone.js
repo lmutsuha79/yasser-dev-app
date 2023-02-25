@@ -13,13 +13,12 @@ const works = [
     imgName: "like_pro.png",
     techs: ["tailwind", "JavaScript", "Alpine.js"],
   },
-
   {
-    title: "TO-do Chrom Extention",
-    link: "https://github.com/lamani79/to_do_list_chrom_widget.git",
-    desc: "Jobriver is a Polish employment platform. It often helps developers to find a job that suits them easily by filtering!",
-    imgName: "to_do_chrom_1.jpg",
-    techs: ["Html/Css", "Sass", "JavaScript"],
+    title: "Yasser Dev Blog",
+    link: "https://yasser-dev-app.vercel.app/blog",
+    desc: "fully functional blog web app contains many useful features made by mdx,tailwind,NextJs",
+    imgName: "yaser-dev-blog.png",
+    techs: ["Rect / NextJs", "tailwind css", "Mdx"],
   },
   {
     title: "Jadoo tailwind Template",
@@ -29,19 +28,28 @@ const works = [
     techs: ["Html/Css", "JavaScript", "tailwindCss"],
   },
   {
-    title: "Doob Template",
-    link: "https://lamani79.github.io/Doob_template/",
-    desc: "Jobriver is a Polish employment platform. It often helps developers to find a job that suits them easily by filtering!",
-    imgName: "doob-hero.png",
-    techs: ["Html/Css", "Scss", "JavaScript"],
-  },
-  {
     title: "Pomodoro PWA with Vue",
     link: "https://happy-sinoussi-447aef.netlify.app/",
     desc: "A customizable productivity tool created with Vue JS, featuring focus mode, theme options, and editable work/break intervals for efficient time management and increased productivity.",
     imgName: "pomodoro_vue_app-1.webp",
     techs: ["Vue.js", "PWA"],
   },
+  {
+    title: "TO-do Chrom Extention",
+    link: "https://github.com/lamani79/to_do_list_chrom_widget.git",
+    desc: "Jobriver is a Polish employment platform. It often helps developers to find a job that suits them easily by filtering!",
+    imgName: "to_do_chrom_1.jpg",
+    techs: ["Chrom Extention", "Html/Css", "Sass", "JavaScript"],
+  },
+
+  {
+    title: "Doob Template",
+    link: "https://lamani79.github.io/Doob_template/",
+    desc: "Jobriver is a Polish employment platform. It often helps developers to find a job that suits them easily by filtering!",
+    imgName: "doob-hero.png",
+    techs: ["Html/Css", "Scss", "JavaScript"],
+  },
+
   {
     title: "Type BlogTemplate",
     link: "https://lamani79.github.io/first_bloger_template/",
