@@ -7,6 +7,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Style from "./Style.module.css";
+import AppInfo from "../../../data/AppInfo";
+
 FontAwesomeIcon;
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.facebook.com/khelil.yasserdjameledine"
+              href={AppInfo.facebook}
               className={Style.iconItem}
             >
               <FontAwesomeIcon icon={faFacebook} />
@@ -30,7 +32,7 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/khelil__yasser/"
+              href={AppInfo.instagram}
               className={Style.iconItem}
             >
               <FontAwesomeIcon icon={faInstagram} />
@@ -38,7 +40,7 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/mitsuha79/"
+              href={AppInfo.linkedin}
               className={Style.iconItem}
             >
               <FontAwesomeIcon icon={faLinkedin} />
@@ -51,9 +53,9 @@ const Footer = () => {
             </div>
             <a
               className="text-main-blue hover:text-main-blue-hover transition-colors font-medium"
-              href="mailto:khelilyasser79@gmail.com"
+              href={`mailto:${AppInfo.email}`}
             >
-              khelilyasser79@gmail.com
+              {AppInfo.email}
             </a>
           </div>
         </div>
