@@ -1,12 +1,12 @@
 import Style from "./style.module.css";
-const TextLink = ({ text }) => {
+const TextLink = ({ text, url }) => {
   return (
     <div>
       <a
-      className="capitalize"
+        className="capitalize"
         onMouseEnter={(e) => e.target.classList.add(Style.hoverUnderLine)}
         onMouseLeave={(e) => e.target.classList.remove(Style.hoverUnderLine)}
-        href={"/#" + text}
+        href={url ? url : "/#" + text}
       >
         {text}
       </a>
