@@ -5,11 +5,15 @@ import useDownloader from "react-use-downloader";
 const BubbleButton = ({ url, text }) => {
   // const { download } = useDownloader();
   return (
-    <a href="/cv.pdf" target={'_blank'}
+    <a
+      href={url}
+      rel="noreferrer"
+      target={"_blank"}
       className="flex justify-center cursor-pointer"
       // onClick={() => download("/cv.pdf", "cv.pdf")}
     >
-      <div type={"submit"}
+      <div
+        type={"submit"}
         className={
           Style.btn +
           " " +
@@ -32,7 +36,7 @@ const BubbleButton = ({ url, text }) => {
           <span className={Style.bullet}></span>
         </div>
       </div>
-      </a>
+    </a>
   );
 };
 
