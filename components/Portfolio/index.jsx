@@ -11,6 +11,7 @@ import ContactMe from "./contact-info";
 import { useState } from "react";
 import React from "react";
 import Brands from "./brands";
+import Techs from "./techs";
 
 export const ContactShowContext = React.createContext(false);
 
@@ -36,6 +37,7 @@ const Portfolio = () => {
           <HeroSection />
           <Brands />
           <WorksDone numToShow={6} />
+          <Techs />
           <ClientsSlider />
           {/* <Resume /> */}
           <AskMe />
