@@ -13,6 +13,7 @@ const TechItem = ({img}) => {
           height={"150px"}
           objectFit={"contain"}
           alt={"magicoon_icon"}
+          
         />
       </div>
     </div>

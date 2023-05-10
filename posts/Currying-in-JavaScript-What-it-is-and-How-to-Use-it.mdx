@@ -1,0 +1,98 @@
+---
+title: "Currying in JavaScript: What it is and How to Use it"
+tags:
+  - functional-programming
+  - javaScript
+date: 2023/03/02
+excerpt: "Currying is a functional programming technique that involves transforming a function that takes multiple arguments into a series of functions that take one argument each. In JavaScript, currying can be used to create more modular and reusable code. In this post, we'll explain what currying is, how to use it in JavaScript, and some SEO considerations to keep in mind when writing about currying."
+img: /posts_img/currying_js.webp
+url: Currying-in-JavaScript-What-it-is-and-How-to-Use-it
+intro: "Currying is a functional programming technique that involves transforming a function that takes multiple arguments into a series of functions that take one argument each. In JavaScript, currying can be used to create more modular and reusable code. In this post, we'll explain what currying is, how to use it in JavaScript, and some SEO considerations to keep in mind when writing about currying."
+twitterId: ""
+slide: true
+---
+
+
+
+<section>
+## What is Currying?
+
+Currying is a technique for transforming a function that takes multiple arguments into a series of functions that take one argument each. For example, consider the following function that takes two arguments:
+
+```javascript
+function add(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+```
+
+This curried version of the add function can be used like this:
+
+```javascript
+const add5 = add(5);
+console.log(add5(3)); // 8
+console.log(add5(7)); // 12
+```
+
+In this example, we've created a new function add5 by calling add(5). This returns a function that takes one argument, which we then call with the argument 3 and 7.
+
+</section>
+<section>
+## How to Use Currying in JavaScript
+Currying can be used in many different ways in JavaScript. Here are a few examples:
+
+</section>
+<section>
+### Example 1: A curried version of the `fetch` function
+```javascript
+const curryFetch = (url) => (options) => fetch(url, options);
+
+const getPosts = curryFetch('/posts')({ method: 'GET' });
+const createPost = curryFetch('/posts')({ method: 'POST' });
+
+// Usage:
+getPosts()
+  .then(response => response.json())
+  .then(posts => console.log(posts));
+
+createPost({ title: 'New post', body: 'Lorem ipsum' })
+  .then(response => response.json())
+  .then(post => console.log(post));
+
+```
+</section>
+<section>
+### Example 2: A curried version of the `reduce` function
+```javascript
+const curryReduce = (reducer, initialValue) => (arr) => arr.reduce(reducer, initialValue);
+
+const sum = curryReduce((acc, curr) => acc + curr, 0);
+const product = curryReduce((acc, curr) => acc * curr, 1);
+
+// Usage:
+const nums = [1, 2, 3, 4, 5];
+console.log(sum(nums)); // 15
+console.log(product(nums)); // 120
+
+```
+</section>
+<section>
+### Example 3: A curried version of the `map` function
+```javascript
+const curryMap = (mapper) => (arr) => arr.map(mapper);
+
+const double = curryMap((x) => x * 2);
+const triple = curryMap((x) => x * 3);
+
+// Usage:
+const nums = [1, 2, 3, 4, 5];
+console.log(double(nums)); // [2, 4, 6, 8, 10]
+console.log(triple(nums)); // [3, 6, 9, 12, 15]
+
+```
+</section>
+<section>
+## Conclusion
+In conclusion, currying is a powerful technique for creating more modular and reusable code in JavaScript. By transforming a function that takes multiple arguments into a series of functions that each take one argument, we can create functions that are more flexible and composable. Currying can be used in many different ways, from creating curried versions of built-in functions like fetch, reduce, and map, to creating custom curried functions for specific use cases. When writing about currying in JavaScript, it's important to keep SEO considerations in mind, such as using relevant keywords and providing clear explanations of the concept. With the information and examples provided in this post, you should now have a better understanding of what currying is and how to use it in your JavaScript code.
+</section>

@@ -77,7 +77,7 @@ const HeroSection = () => {
                 className="flex justify-center"
               >
                 {/* <BubbleButton active={true} url={"#"} text={"Connect With Me"} /> */}
-                <BubbleButton url={"/resume"} text={"get my cvs?"} />
+                <BubbleButton url={"/resume"} text={"get my resume?"} />
               </motion.div>
             </div>
           </div>

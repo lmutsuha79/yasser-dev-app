@@ -4,7 +4,7 @@
         <title>yasser mitsuha</title>
         <link>undefined</link>
         <description>I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.</description>
-        <lastBuildDate>Wed, 01 Mar 2023 21:32:36 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 May 2023 09:00:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>undefined</link>
         </image>
         <copyright>All rights reserved 2023, yasser mitsuha</copyright>
+        <item>
+            <title><![CDATA[Currying in JavaScript: What it is and How to Use it]]></title>
+            <link>undefined/blog/posts/Currying-in-JavaScript-What-it-is-and-How-to-Use-it</link>
+            <guid>url</guid>
+            <pubDate>Wed, 01 Mar 2023 23:00:00 GMT</pubDate>
+            <description><![CDATA[Currying is a functional programming technique that involves transforming a function that takes multiple arguments into a series of functions that take one argument each. In JavaScript, currying can be used to create more modular and reusable code. In this post, we'll explain what currying is, how to use it in JavaScript, and some SEO considerations to keep in mind when writing about currying.]]></description>
+            <content:encoded><![CDATA[Currying is a functional programming technique that involves transforming a function that takes multiple arguments into a series of functions that take one argument each. In JavaScript, currying can be used to create more modular and reusable code. In this post, we'll explain what currying is, how to use it in JavaScript, and some SEO considerations to keep in mind when writing about currying.]]></content:encoded>
+            <author>khelilyasser79@gmail.com (khelil yasser djamel eddine)</author>
+        </item>
         <item>
             <title><![CDATA[Higher order functions javaScript]]></title>
             <link>undefined/blog/posts/higher-order-functions-javascript</link>

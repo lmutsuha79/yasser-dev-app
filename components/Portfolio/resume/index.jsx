@@ -1,9 +1,7 @@
-import mainStyle from "../style.module.css";
 import ItemTitle from "./item-title";
 import Item from "./item";
 import SectionTitle from "../section-title";
 import UnderLine from "../Under-line";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ResumeFace from "./resume-face";
 import { itemVariant } from "../onScrollSectionAnimation";
@@ -43,16 +41,22 @@ const Resume = () => {
         <div className="container space-y-4">
           {/* title */}
 
-        <div className="flex justify-between items-center">
-        <SectionTitle>
-            <UnderLine imgName={"green_white.svg"}>Resume</UnderLine>
-          </SectionTitle>
-
-          <button className="flex items-center  gap-2 cursor-pointer text-lg font-medium text-main-blue hover:text-main-blue-hover transition-colors underline">
-            <div>Download pdf verstion</div>
-            <FontAwesomeIcon className="text-main-blue" icon={faDownload}/>
-          </button>
-        </div>
+          <div className="flex justify-between items-center">
+            <SectionTitle>
+              <UnderLine imgName={"green_white.svg"}>Resume</UnderLine>
+            </SectionTitle>
+            <a
+              href="/resume.pdf"
+              download="khelil_yasser_resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="flex items-center  gap-2 cursor-pointer text-lg font-medium text-main-blue hover:text-main-blue-hover transition-colors underline">
+                <div>Download pdf version</div>
+                <FontAwesomeIcon className="text-main-blue" icon={faDownload} />
+              </button>
+            </a>
+          </div>
 
           {/* work experince + education  */}
           <motion.div
