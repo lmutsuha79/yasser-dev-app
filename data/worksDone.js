@@ -3,7 +3,9 @@ const works = [
     title: "Feedback Flow",
     link: "https://feedback-flow-l3.vercel.app/",
     desc: "Unlocking Insights: Empowering Google Play App Owners with Actionable Feedback Analysis",
-    imgName: "feedback_flow_gif.gif",
+    hoverImg: "feedback_flow_gif2.gif",
+    imgName: "feedback_flow.png",
+
     techs: [
       "next.js",
       "supabase",

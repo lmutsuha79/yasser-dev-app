@@ -40,6 +40,7 @@ const WorksDone = ({ numToShow }) => {
     } else {
       left_works.push(
         <Item
+          hoverImg={item.hoverImg}
           key={item.title}
           link={item.link}
           title={item.title}
@@ -65,7 +66,6 @@ const WorksDone = ({ numToShow }) => {
             <div className="sm:pt-40 flex flex-col gap-10">{right_works}</div>
           </div>
           <div>
-
             {/* toggle display all btn  */}
             <div className="grid place-content-center">
               <span
