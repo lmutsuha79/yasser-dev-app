@@ -34,6 +34,7 @@ const Resume = () => {
     "Network Layers",
     "git/github",
   ];
+  
 
   return (
     <AnimatedSectionOnScroll>

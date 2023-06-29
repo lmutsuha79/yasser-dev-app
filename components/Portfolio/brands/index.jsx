@@ -14,9 +14,29 @@ const Brands = () => {
                 <UnderLine imgName={"orange.svg"}>Brands</UnderLine>
               </SectionTitle>
 
-              <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8">
-                <BrandContainer img={"/portfolio/brands/magicoon.png"} />
-                <BrandContainer img={"/portfolio/brands/likePro.png"} />
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-8">
+                <BrandContainer
+                  img={"/portfolio/brands/magicoon.png"}
+                  link={"https://magicoon.com/"}
+                />
+                <BrandContainer
+                  img={"/portfolio/brands/likePro.png"}
+                  link={"https://likeproo.com/"}
+                />
+                <BrandContainer
+                  img={"/portfolio/brands/feed_back_flow.png"}
+                  link={"https://feedback-flow-l3.vercel.app/"}
+                />
+                <BrandContainer
+                  img={"/portfolio/brands/jarShop.png"}
+                  link={"https://jar-shop.com/"}
+                />
+                <BrandContainer
+                  img={"/portfolio/brands/allo_khayii.jpg"}
+                  link={
+                    "https://www.facebook.com/profile.php?id=100092428299332"
+                  }
+                />
               </div>
             </div>
           </div>

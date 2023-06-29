@@ -35,7 +35,7 @@ const Item = ({ title, desc, imgName, link, techs }) => {
               className={
                 Style.theImg +
                 " " +
-                " transform transition-transform duration-700 min-h-[420px] bg-cover bg-no-repeat bg-center"
+                " transform transition-transform duration-700 min-h-[300px] bg-cover bg-no-repeat bg-top"
               }
               style={{ backgroundImage: `url("/portfolio/works/${imgName}")` }}
             ></div>

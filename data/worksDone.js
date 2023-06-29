@@ -1,5 +1,19 @@
 const works = [
   {
+    title: "Feedback Flow",
+    link: "https://feedback-flow-l3.vercel.app/",
+    desc: "Unlocking Insights: Empowering Google Play App Owners with Actionable Feedback Analysis",
+    imgName: "feedback_flow_gif.gif",
+    techs: [
+      "next.js",
+      "supabase",
+      "tailwindCss",
+      "web scraping",
+      "sentiment_js",
+      "oppenAI API",
+    ],
+  },
+  {
     title: "Magicoon",
     link: "https://magicoon.com/",
     desc: "Free and premium high-quality vector icons library, that provides multiple formats and styles, made for designers and developers.",
@@ -18,7 +32,7 @@ const works = [
     link: "https://yasser-dev-app.vercel.app/blog",
     desc: "fully functional blog web app contains many useful features made by mdx,tailwind,NextJs",
     imgName: "yaser-dev-blog.png",
-    techs: ["Rect / NextJs", "tailwind css", "Mdx"],
+    techs: [" React/NextJs", "tailwind css", "Mdx"],
   },
   {
     title: "Jadoo tailwind Template",
