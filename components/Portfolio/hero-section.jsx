@@ -7,6 +7,7 @@ import UnderLine from "./Under-line";
 import WavesEffect from "./waves-effect";
 import { motion } from "framer-motion";
 import { heroVariant, itemVariant } from "./onScrollSectionAnimation";
+import AppInfo from "../../data/AppInfo";
 
 const HeroSection = () => {
   return (
@@ -64,7 +65,10 @@ const HeroSection = () => {
                 in DZ. I specialize in front end development and Responsive Web
                 Design
               </motion.p> */}
-              <motion.p variants={itemVariant} className="text-lg relative z-10">
+              <motion.p
+                variants={itemVariant}
+                className="text-lg relative z-10"
+              >
                 a passionate{" "}
                 <span className="underline font-bold">Web Developer</span>, I
                 have spent the past few years building top-notch websites and
@@ -77,7 +81,17 @@ const HeroSection = () => {
                 className="flex justify-center"
               >
                 {/* <BubbleButton active={true} url={"#"} text={"Connect With Me"} /> */}
-                <BubbleButton url={"/resume"} text={"get my resume?"} />
+                <BubbleButton
+                  url={AppInfo.resume}
+                  text={"get my resume?"}
+                  download={true}
+                />
+                {/* <a
+                  href="https://drive.google.com/file/d/1_8zIOLoWfIeeJQgvnCRSMX4HeCE7alm8/view"
+                  download="cv.pdf"
+                >
+                  Download CV
+                </a> */}
               </motion.div>
             </div>
           </div>

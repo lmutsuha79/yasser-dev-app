@@ -23,7 +23,7 @@ const works = [
     techs: ["vite", "JavaScript", "tailwindCss"],
   },
   {
-    title: "Like Pro",
+    title: "jar Shop",
     link: "https://jar-shop.com",
     desc: "Votre destination unique pour tous vos besoins d'achat",
     imgName: "jar-shop.png",
