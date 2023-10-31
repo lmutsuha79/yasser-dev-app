@@ -7,7 +7,7 @@ const Brands = () => {
   return (
     <>
       <AnimatedSectionOnScroll>
-        <section id="brands" className="mt-[60px]">
+        <section id="brands" className="mt-[60px] sm:mt-[120px]">
           <div className="container">
             <div className="text-center">
               <SectionTitle>
