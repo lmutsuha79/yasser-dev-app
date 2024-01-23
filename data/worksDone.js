@@ -2,7 +2,7 @@ const works = [
   {
     title: "Feedback Flow",
     link: "https://feedback-flow-l3.vercel.app/",
-    desc: "Unlocking Insights: Empowering Google Play App Owners with Actionable Feedback Analysis",
+    desc: "a web application that helps app owners on Google Play to improve their application based on customer reviews and ratings. The application will collect customer reviews and ratings and perform sentiment analysis on them to determine customer satisfaction levels. ",
     hoverImg: "feedback_flow_gif2.gif",
     imgName: "feedback_flow.png",
 
@@ -14,6 +14,13 @@ const works = [
       "sentiment_js",
       "oppenAI API",
     ],
+  },
+  {
+    title: "Allo Khayi (Local Delivery Management System)",
+    link: "https://github.com/lmutsuha79/Delivery-Managment-System/",
+    desc: "This web-based application is designed to streamline the operations of a local delivery agency, enhancing customer satisfaction while addressing key challenges in order management, delivery personnel management, and salary calculation, including a percentage-based component for each successful delivery.",
+    imgName: "allo-khayi.jpeg",
+    techs: ["Nextjs", "Tailwind", "PrimeReact", "Prisma ORM", "SQLite"],
   },
   {
     title: "Magicoon",

@@ -4,7 +4,7 @@
         <title>yasser mitsuha</title>
         <link>undefined</link>
         <description>I hope, through this blog, to share with others my long journey revolving around computer science and self-development, and to inspire those who are interested.</description>
-        <lastBuildDate>Tue, 31 Oct 2023 07:49:12 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jan 2024 18:47:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>/site_data/avatar.png</url>
             <link>undefined</link>
         </image>
-        <copyright>All rights reserved 2023, yasser mitsuha</copyright>
+        <copyright>All rights reserved 2024, yasser mitsuha</copyright>
         <item>
             <title><![CDATA[Currying in JavaScript: What it is and How to Use it]]></title>
             <link>undefined/blog/posts/Currying-in-JavaScript-What-it-is-and-How-to-Use-it</link>

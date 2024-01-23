@@ -9,8 +9,8 @@ const BrandContainer = ({ img, link }) => {
           <Image
             draggable={false}
             src={img}
-            width={"250px"}
-            height={"100px"}
+            width={"220px"}
+            height={"120px"}
             objectFit={"contain"}
             alt={"magicoon_icon"}
           />

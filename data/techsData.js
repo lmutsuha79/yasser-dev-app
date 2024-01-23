@@ -9,6 +9,23 @@ export const front_techs = [
   },
   {
     title: "html",
+    img: "/portfolio/techs/react-query.png",
+  },
+  {
+    title: "html",
+    img: "/portfolio/techs/react-hook-form.png",
+  },
+ 
+  {
+    title: "html",
+    img: "/portfolio/techs/zod.png",
+  },
+  {
+    title: "html",
+    img: "/portfolio/techs/bear.jpg",
+  },
+  {
+    title: "html",
     img: "/portfolio/techs/redux.jpg",
   },
   {
@@ -39,7 +56,7 @@ export const back_techs = [
   },
   {
     title: "html",
-    img: "/portfolio/techs/laravel.jpg",
+    img: "/portfolio/techs/prisma.jpeg",
   },
   {
     title: "html",
